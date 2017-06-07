@@ -18,13 +18,16 @@
   },
   "homepage": "https://github.com/sashimii/CoreWebStarterKit#readme",
   "devDependencies": {
+    "axios": "^0.16.2",
     "browser-sync": "^2.18.7",
     "browserify": "^14.0.0",
     "bulkify": "^1.4.2",
     "gulp": "^3.9.1",
     "gulp-bundle-assets": "^2.27.1",
     "gulp-concat": "^2.6.1",
+    "gulp-data": "^1.2.1",
     "gulp-sass": "^3.1.0",
+    "gulp-swig": "^0.8.0",
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {

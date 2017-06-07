@@ -1,0 +1,37 @@
+<div class="hero-container hero-container--A" data-component-id="{{ component_id }}">
+    <div class="col-xs-12 col-sm-4 hero-body">
+        <h2 class="hero-body__title">{{ title }}</h2>
+        <p class="hero-body__subtitle"></p>
+        <p class="hero-body__text hero-body__text--line1">{{ line_1 }}</p>
+        <p class="hero-body__text hero-body__text--line2">{{ line_2 }}</p>
+      	{% if line_3 %}
+        	<p class="hero-body__text hero-body__text--line3">{{ line_3 }}</p>
+     	  {% endif %}
+        <a class="hero-body__cta-button" href="#"><span>{{ call_to_action }}</span></a>
+    </div>
+    <div class="hero-footer">
+    	<a class="hero-footer__legal" href="#">{{ bottom }}</a>
+    </div>
+</div>
+
+<!-- Styles -->
+
+<!-- <link rel="stylesheet" href="https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-05-18/main_dq2RJLU.css"> -->
+<style>
+	.hero-container--A[data-component-id="{{ component_id }}"] {
+    	margin: auto;
+   		background: url('{{ background_url }}') no-repeat 100% 0;
+      background-position: center;
+      background-attachment: fixed;
+      background-size: cover;
+	}
+
+  .hero-container--A
+    .hero-body
+      .hero-body__title {
+        font-family: 'JFCalibre', sans-serif;
+      }
+  /*.hero-body__text {
+    width: 50*/
+  /*}*/
+</style>

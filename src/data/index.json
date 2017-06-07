@@ -1,0 +1,22 @@
+{
+  "heroA" : {
+    "title" : "24% off rain gear*",
+    "line_1": "March 10-15th | Online & In-Store",
+    "line_2": "Use Code: RAINYDAYS",
+    "call_to_action": "Shop Now",
+    "bottom": "*Offer Details",
+    "background_url": "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-05-18/promo-bg.png"
+  },
+  "heroB": {
+    "title" : "Save $10, $15, or $20",
+    "subtitle": "when you spend $50 or more on Joe Fresh Apparel",
+    "line_1": "",
+    "line_2": "",
+    "line_3": "",
+    "bottom": "*Details & Exclusions",
+    "call_to_action": "Shop Now"
+  },
+  "blackBar" : {
+    "text_copy" : "Give 25%, <strong>Get $10 off</strong> <a href=\"#\">Refer a Friend</a>"
+  }
+}
