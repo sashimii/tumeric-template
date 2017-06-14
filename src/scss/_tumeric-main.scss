@@ -1,0 +1,475 @@
+/*
+ * @import url('bootstrap.css');
+ * @import url('fonts.css');
+ */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'JFCalibre', arial, helvetica, san-serif;
+    font-size: 16px;
+}
+
+/* ==========================================================================
+   HERO CONTAINER SHARED STYLES
+   ========================================================================== */
+
+.hero-container {
+    position: relative;
+    width: 100%;
+    max-width: 1280px;
+    overflow: hidden;
+    transform-style: preserve-3d;
+}
+
+    .hero-body {
+        display: block;
+        position: relative;
+        top: 50%;
+        transform: perspective(1px) translateY(-50%);
+        color: black;
+    }
+        .hero-body__title {
+            margin: 0 0 10px;
+            font-family: 'JFCalibreBold', arial, helvetica, san-serif;
+            font-size: 80px;
+            font-weight: 800;
+            text-transform: uppercase;
+            line-height: 1em;
+        }
+
+        .hero-body__subtitle {
+            display: none;
+        }
+        .hero-body__text {
+            font-size: 16px;
+            line-height: 0.5em;
+        }
+        .hero-body__code {
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        .hero-body__cta-button {
+            display: inline-block;
+            width: 125px;
+            height: 50px;
+            margin-top: 20px;
+            background-color:black;
+            line-height: 50px;
+            vertical-align: middle;
+            font-size: 12px;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: white;
+        }
+    .hero-footer {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+        .hero-footer__cta-button {
+            display: block;
+            margin: 20px auto 30px auto;
+            width: 125px;
+            height: 50px;
+            background-color:black;
+            line-height: 50px;
+            vertical-align: middle;
+            font-size: 12px;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: white;
+
+        }
+        .hero-footer__legal {
+            position: absolute;
+            bottom: 0;
+            right: 10px;
+            display: block;
+            font-size: 10px;
+            text-decoration: none;
+            color: black;
+        }
+
+/* ==========================================================================
+   HERO CONTAINER STYLE A
+   ========================================================================== */
+.hero-container--A {
+    background: url('../img/promo-bg.png') no-repeat 100% 0;
+    height: 420px;
+}
+.hero-container--A
+    .hero-body {
+        width: 100%;
+        padding: 0 0 0 100px;
+        color: #d6656f;
+}
+.hero-container--A
+    .hero-body:not(:first-child) {
+        display: none;
+}
+.hero-container--A
+    .hero-body
+        .hero-body__title {
+            width: 480px;
+}
+.hero-container--A
+    .hero-body
+        .hero-body__subtitle {
+            display: block;
+}
+.hero-container--A
+    .hero-body
+        .hero-body__code {
+            font-family: 'JFCalibreBold';
+}
+.hero-container--A
+    .hero-body
+        .hero-body__cta-button {
+            background-color:#ca4e5b;
+}
+
+/* Media Queries for Responsive Design. */
+/* Tablet */
+@media (max-width: 768px) {
+    .hero-container--A {
+        max-width: 768px;
+        background-position-x: -250px;
+    }
+    .hero-container--A
+        .hero-body
+            .hero-body__title {
+                width: 280px;
+                font-size: 40px;
+            }
+}
+
+/* Phone */
+@media (min-width: 320px)
+   and (max-width: 568px) {
+    .hero-container--A {
+        height: 242px;
+        max-width: 568px;
+        background-size: 738px;
+    }
+    .hero-container--A
+        .hero-body {
+            padding: 10px 0 0 20px;
+            position: relative;
+            top: initial;
+            transform: none;
+        }
+    .hero-container--A
+        .hero-body
+            .hero-body__title {
+                width: 200px;
+                margin-top: 15px;
+                font-size: 30px;
+            }
+    .hero-container--A
+        .hero-body
+            .hero-body__text {
+                display: none;
+            }
+    .hero-container--A
+        .hero-body
+            .hero-body__cta-button {
+                width: 80px;
+                height: 40px;
+                margin-top: 10px;
+                font-size: 10px;
+                line-height: 40px;
+            }
+}
+
+/* Phone landscape */
+@media (min-width: 320px)
+   and (max-width: 568px)
+   and (orientation: landscape) {
+    .hero-container--A {
+        background-position-x: -200px;
+        background-size: 818px;
+    }
+    .hero-container--A
+        .hero-body {
+            padding: 30px 0 0 60px;
+        }
+}
+
+
+/* ==========================================================================
+   HERO CONTAINER STYLE B
+   ========================================================================== */
+
+.hero-container--B {
+    background: url('../img/promo-bg.png') no-repeat 100% 0;
+    height: 420px;
+}
+.hero-container--B
+    .hero-body:not(:first-child) {
+        display: none;
+}
+.hero-container--B
+    .hero-body {
+        width: 100%;
+        text-align: center;
+        color: #495a7b;
+}
+.hero-container--B
+    .hero-body
+        .hero-body__title {
+            width: 100%;
+}
+.hero-container--B
+    .hero-body
+        .hero-body__subtitle {
+            display: block;
+            font-family: 'JFCalibreBold';
+}
+.hero-container--B
+    .hero-body
+        .hero-body__text {
+            width: 35%;
+            margin: 0 auto;
+            line-height: 1;
+}
+.hero-container--B
+    .hero-body
+        .hero-body__cta-button {
+            background-color:#b68eba;
+}
+
+/* Media Queries for Responsive Design. */
+/* Tablet */
+@media (max-width: 768px) {
+    .hero-container--B {
+        max-width: 768px;
+    }
+    .hero-container--B
+        .hero-body
+            .hero-body__title {
+                font-size: 60px;
+            }
+}
+
+/* Phone */
+@media (min-width: 320px)
+   and (max-width: 568px) {
+    .hero-container--B {
+        height: 242px;
+        max-width: 568px;
+    }
+    .hero-container--B
+        .hero-body
+            .hero-body__title {
+                font-size: 30px;
+            }
+    .hero-container--B
+        .hero-body
+            .hero-body__text--line2 {
+                display: none;
+            }
+    .hero-container--B
+        .hero-body
+            .hero-body__cta-button {
+                width: 80px;
+                height: 40px;
+                margin-top: 10px;
+                font-size: 10px;
+                line-height: 40px;
+            }
+}
+
+/* ==========================================================================
+   HERO CONTAINER STYLE C
+   ========================================================================== */
+
+.hero-container--C {
+    background: none;
+    background-color: #cccccc;
+}
+.hero-container--C
+    .hero-header {
+        margin: 20px 0 30px;
+        text-align: center;
+        color: #6c6c6c;
+}
+.hero-container--C
+    .hero-body {
+        text-align: center;
+        color: #6c6c6c;
+        top: 0;
+        transform: none;
+}
+.hero-container--C
+    .hero-body
+        .hero-body__title {
+            width: 100%;
+            font-family: 'JFCalibre';
+            font-size: 20px;
+            font-weight: 200;
+            text-transform: none;
+}
+.hero-container--C
+    .hero-body
+        .hero-body__subtitle {
+            display: block;
+            font-family: 'JFCalibreBold';
+            font-size: 60px;
+            line-height: 1em;
+            color: #ec4a1b;
+}
+.hero-container--C
+    .hero-footer
+        .hero-footer__cta-button {
+            background-color:#ec4a1b;
+}
+
+/* Media Queries for Responsive Design. */
+/* Tablet */
+@media (max-width: 768px) {
+    .hero-container--C {
+        max-width: 768px;
+    }
+    .hero-container--C
+        .hero-body
+            .hero-body__title {
+                font-size: 25px;
+            }
+    .hero-container--C
+        .hero-body
+            .hero-body__subtitle {
+                font-size: 50px;
+            }
+}
+
+/* Phone */
+@media (min-width: 320px)
+   and (max-width: 568px) {
+    .hero-container--C {
+        max-width: 568px;
+    }
+    .hero-container--C
+        .hero-header {
+            margin: 20px 0 0;
+    }
+    .hero-container--C
+        .hero-body {
+            padding: 20px 0 0;
+        }
+    .hero-container--C
+        .hero-body
+            .hero-body__title {
+                float: left;
+                width: 49%;
+                font-size: 20px;
+                text-align: right;
+            }
+    .hero-container--C
+        .hero-body
+            .hero-body__subtitle {
+                float: left;
+                width: 49%;
+                margin-left: 5px;
+                font-size: 25px;
+                text-align: left;
+                line-height: 0.9em;
+            }
+    .hero-container--C
+        .hero-body
+            .hero-body__text--line2 {
+                display: none;
+            }
+    .hero-container--C
+        .hero-body
+            .hero-body__cta-button {
+                width: 80px;
+                height: 40px;
+                margin-top: 10px;
+                font-size: 10px;
+                line-height: 40px;
+            }
+}
+
+/* ==========================================================================
+   HIGHLIGHT CONTAINER SHARED STYLES
+   ========================================================================== */
+
+.highlight-container {
+    position: relative;
+    width: 100%;
+    max-width: 1280px;
+    overflow: hidden;
+}
+    .highlight-tile {
+        display: block;
+        position: relative;
+        color: black;
+        transform-style: preserve-3d;
+        height: 210px;
+        border-bottom: 10px solid white;
+    }
+    .highlight-tile--large {
+        border-right: none;
+    }
+        .highlight-tile__bg-image {
+            display: block;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            margin-left: -15px;
+        }
+    .highlight-body {
+        position: relative;
+        top: 50%;
+        transform: perspective(1px) translateY(-50%);
+    }
+        .highlight-body__cta-link {
+            font-family: 'JFCalibreBold';
+            color: #6c6c6c;
+        }
+        .highlight-body__cta-link--arrow-right::after {
+            border: solid black;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+            margin-left: 3px;
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            content: "";
+        }
+
+/* Media Queries for Responsive Design. */
+/* Tablet */
+@media (min-width: 768px) {
+    .highlight-tile {
+        border-right: 10px solid white;
+    }
+    .highlight-tile:nth-child(3) {
+            border-right: none;
+    }
+    .highlight-tile--large {
+        height: 420px;
+        transform: none;
+        border-right: none;
+    }
+    .highlight-tile--large
+        .highlight-body {
+            top: 25%;
+        }
+}
+/* Desktop */
+@media (min-width: 991px) {
+    .highlight-container {
+        height: 420px;
+    }
+    .highlight-tile:nth-child(3) {
+            border-right: 10px solid white;
+    }
+    .highlight-tile--large {
+        height: 100%;
+        transform: perspective(1px) translateY(-50%);
+    }
+}

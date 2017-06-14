@@ -1,0 +1,62 @@
+<div class="tumeric hero-container hero-preset-c" data-component-id="{{ component_id }}">
+    <div class="promo-body">
+      <div class="promo-text">
+        <p>{{ date }} <span class="promo-pipe">|</span> <br class="hide-desktop-up"/> {{ description }}</p>
+      </div>
+      <div class="promo-list">
+
+        {% if promo_spend_1 or promo_save_1 or promo_code_1 %}
+        <div class="promo-list-item">
+          <div class="promo-text">
+            <p class="promo-details">
+              <span class="promo-spend">{{ promo_spend_1 }}</span>
+              <span class="promo-save">{{ promo_save_1 }}</span>
+            </p>
+            <p>Use Code: <strong>{{ promo_code_1 }}</strong></p>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if promo_spend_2 or promo_save_2 or promo_code_2 %}
+        <div class="promo-list-item">
+          <div class="promo-text">
+            <p class="promo-details">
+              <span class="promo-spend">{{ promo_spend_2 }}</span>
+              <span class="promo-save">{{ promo_save_2 }}</span>
+            </p>
+            <p>Use Code: <strong>{{ promo_code_2 }}</strong></p>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if promo_spend_3 or promo_save_3 or promo_code_3 %}
+        <div class="promo-list-item">
+          <div class="promo-text">
+            <p class="promo-details">
+              <span class="promo-spend">{{ promo_spend_3 }}</span>
+              <span class="promo-save">{{ promo_save_3 }}</span>
+            </p>
+            <p>Use Code: <strong>{{ promo_code_3 }}</strong></p>
+          </div>
+        </div>
+        {% endif %}
+
+      </div>
+      <a class="cta-button" href="#"><span>{{ call_to_action }}</span></a>
+    </div>
+    <a class="promo-footer-legal" href="#">{{ bottom }}</a>
+</div>
+
+<!-- Styles -->
+
+<!-- <link rel="stylesheet" href="https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-05-18/main_dq2RJLU.css"> -->
+<style>
+	.hero-preset-c[data-component-id="{{ component_id }}"] {
+    	margin: auto;
+   		background: url('{{ background_url }}') no-repeat 100% 0;
+      background-position: center;
+      background-size: cover;
+	}
+
+
+</style>

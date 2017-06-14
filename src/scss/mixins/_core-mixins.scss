@@ -1,0 +1,37 @@
+@mixin extend-cta($colour) {
+  .cta-button {
+    width: 80px;
+    height: 40px;
+    margin-top: 10px;
+    font-size: 10px;
+    line-height: 40px;
+    background-color: $colour;
+  }
+}
+
+@mixin underline($pixel-width, $colour) {
+  padding-bottom: 0.1rem;
+  border-bottom-width: $pixel-width;
+  border-bottom-color: $colour;
+  border-bottom-style: solid;
+}
+
+
+@mixin mock-flexbox($number-of-columns, $class-name) {
+  &:first-child {
+    &:nth-last-child(1) {
+      width: 100%;
+    }
+  }
+  @if $number-of-columns > 1 {
+    @for $i from 2 through $number-of-columns {
+      &:first-child:nth-last-child(#{$i}), &:first-child:nth-last-child(#{$i}) ~div.#{$class-name} {
+            width: (1/$i) * 100%;
+      }
+    }
+  }
+}
+
+@mixin clearfix() {
+  overflow: auto;
+}

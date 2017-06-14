@@ -25,7 +25,7 @@ var files = {
     dist: 'dist/data/'
   },
   css: {
-    src: 'src/scss/*.scss',
+    src: ['src/scss/*.scss', 'src/scss/**/*.scss'],
     dist: 'dist/css/'
   },
   fonts: {

@@ -1,22 +1,64 @@
 {
-  "heroA" : {
-    "title" : "24% off rain gear*",
-    "line_1": "March 10-15th | Online & In-Store",
-    "line_2": "Use Code: RAINYDAYS",
-    "call_to_action": "Shop Now",
-    "bottom": "*Offer Details",
-    "background_url": "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-05-18/promo-bg.png"
-  },
-  "heroB": {
-    "title" : "Save $10, $15, or $20",
-    "subtitle": "when you spend $50 or more on Joe Fresh Apparel",
-    "line_1": "",
-    "line_2": "",
-    "line_3": "",
-    "bottom": "*Details & Exclusions",
-    "call_to_action": "Shop Now"
+  "hero" : {
+    "preset_a" : {
+      "component_id" : "random_id_0",
+      "title" : "25% off <br/> rain gear*",
+      "line_1": "March 10-15th | Online & In-Store",
+      "line_2": "Use Code: <strong>RAINYDAYS</strong>",
+      "call_to_action": "Shop Now",
+      "bottom": "*Offer Details",
+      "background_url": "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-05-18/promo-bg.png"
+    },
+    "preset_b": {
+      "component_id" : "random_id_1",
+      "title" : "Save $10, $15, or $20",
+      "subtitle": "when you spend $50 <br/> or more on Joe Fresh Apparel",
+      "line_1": "<strong>One Week only! Online + In-store</strong>",
+      "line_2": "Scratch and save online now and we'll email you a second chance to save on <strong>April 20th</strong> to share or use for yourself.",
+      "line_3": "",
+      "bottom": "*Details & Exclusions",
+      "call_to_action": "Shop Now",
+      "background_url" : "https://assets.awwwards.com/awards/images/2015/04/pattern.jpg"
+    },
+    "preset_c": {
+      "component_id" : "random_id_2",
+      "date": "March 1st-3rd",
+      "description" : "Online Exclusive | Sitewide*",
+      "promo_spend_1": "Spend $50",
+      "promo_save_1": "Save 20%",
+      "promo_code_1": "SPRINGSAVE20",
+      "promo_spend_2": "Spend $100",
+      "promo_save_2": "Save 25%",
+      "promo_code_2": "SPRINGSAVE20",
+      "promo_spend_3": "Spend $150",
+      "promo_save_3": "Save 30%",
+      "promo_code_3": "SPRINGSAVE20",
+      "bottom": "*Details & Exclusions",
+      "call_to_action": "Shop Now",
+      "background_url": "https://s-media-cache-ak0.pinimg.com/600x315/f4/ac/6a/f4ac6aac3afb587f6cae04155656fca3.jpg"
+    }
   },
   "blackBar" : {
     "text_copy" : "Give 25%, <strong>Get $10 off</strong> <a href=\"#\">Refer a Friend</a>"
+  },
+  "promo_tiles" : {
+    "preset_c" : {
+      "title_1" : "Spend $75+ <br/> Get 15,000 PC Plus Points*",
+      "call_to_action_1" : "Shop Now",
+      "bottom_1" : "*Offer Details",
+      "text_colour_1" : "black",
+      "background_url_1" : "https://previews.123rf.com/images/yuzach/yuzach1508/yuzach150800013/43143865-Cute-trible-geometric-seamless-pattern-in-cartoon-style-with-fox-bear-lodge-houses-arrows-feathers-f-Stock-Vector.jpg",
+      "title_2" : "25% OFF <br/> on Adult Swimwear*",
+      "call_to_action_2" : "Shop Now",
+      "bottom_2" : "*Offer Details",
+      "text_colour_2" : "white",
+      "background_url_2" : "https://static.vecteezy.com/system/resources/previews/000/098/402/non_2x/dark-floral-pattern-background-vector.jpg",
+      "title_3" : "Buy Two and <br/> Save on Kids' Tees*",
+      "call_to_action_3" : "Shop Now",
+      "bottom_3" : "*Offer Details",
+      "text_colour_3" : "grey",
+      "background_url_3" : "https://s-media-cache-ak0.pinimg.com/originals/10/53/ae/1053aed75b68abd81372f5e1918f98c7.jpg"
+    }
+
   }
 }

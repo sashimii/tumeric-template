@@ -1,0 +1,210 @@
+
+.hero-container {
+  @include clearfix();
+  // max-width: 1280px;
+  width: 100%;
+  float: left;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin:auto;
+
+
+  &.hero-preset-a {
+
+    $primary-color: $color-primary-hero-a;
+
+    .promo-body {
+
+      padding: 1em 0 8em 1.5em;
+      position: relative;
+      top: initial;
+      transform: none;
+      @include tablet-up() {
+        padding: 4.5em 0 6em 4.5em;
+      }
+    }
+
+    .promo-title {
+      width: 55%;
+      font-size: 2.25em;
+      text-transform: uppercase;
+      color: $primary-color;
+      @include tablet-up() {
+        font-size: 4.25em;
+        width: 45%;
+      };
+    }
+
+    .promo-subtitle {
+      display: block;
+    }
+
+    .promo-text {
+      color: $primary-color;
+      line-height: 1.5;
+      margin: 0;
+      font-size: 1.25em;
+      @include mobile-only() {
+        display: none;
+      }
+    }
+
+    .cta-button {
+      background-color: $primary-color;
+    }
+
+
+  }
+
+  &.hero-preset-b {
+
+    $text-color: $color-text-hero-b;
+    $cta-color: $color-cta-hero-b;
+
+    .promo-body {
+      padding: 4rem 0 7rem 0;
+      color: $text-color;
+      @include tablet-up() {
+        padding: 7rem 0 5rem 0;
+      };
+    }
+
+    .promo-title {
+      font-size: 4.1em;
+      line-height: 1;
+      @include tablet-up() {
+        font-size: 3em;
+        line-height: 0.5;
+      }
+    }
+
+    .promo-subtitle {
+      width: 70%;
+      font-size: 1.25em;
+      line-height: 1;
+      margin: auto;
+      @include tablet-up() {
+        width: 90%;
+        font-size: 1.5em;
+        line-height: 1;
+      }
+    }
+
+    .promo-body {
+      text-align: center;
+    }
+
+    .promo-text {
+      margin: auto;
+      padding: 1.75em 0;
+      font-size: 1em;
+      p {
+        font-weight: 400;
+        margin: 0;
+        line-height: 1.25;
+      }
+
+      @include tablet-up() {
+        width: 52.5%;
+      };
+
+      @include mobile-only() {
+        p {
+          &:nth-child(1n+2) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .cta-button {
+      background-color: $cta-color;
+    }
+
+  }
+
+  &.hero-preset-c {
+    $orange: $color-jf-orange;
+    $grey: $color-jf-grey;
+
+    .promo-pipe {
+      display: none;
+      @include desktop-up() {
+        display: inline;
+      }
+    }
+
+
+    .promo-body {
+      padding: 0.5rem 0 7rem 0;
+      text-align: center;
+
+      @include tablet-up() {
+        padding: 5rem 0 5rem 0;
+      }
+    }
+
+    div {
+      &.promo-list-item {
+        float:left;
+        width: 100%;
+
+        @include tablet-up() {
+          @include mock-flexbox($number-of-columns: 3, $class-name: 'promo-list-item');
+        }
+      }
+    }
+
+    .promo-text {
+      margin: 1.75em;
+
+      p {
+        color: $grey;
+        font-weight: 400;
+        font-size: 1.2em;
+        line-height: 1.2;
+      }
+
+      .promo-details {
+
+        font-size: 1.75em;
+        line-height: 1;
+        margin:0;
+
+        p {
+          margin:0;
+        }
+
+        @include tablet-up() {
+          span {
+            display:block;
+          }
+        }
+
+        .promo-spend {
+          font-weight: 300;
+          @include tablet-up() {
+            font-size: 1.15em;
+          }
+        }
+
+        .promo-save {
+          font-weight: 700;
+          color: $orange;
+          @include tablet-up() {
+            font-size: 2em;
+          }
+        }
+
+      }
+
+    }
+
+    .cta-button {
+      background-color: $orange;
+    }
+
+  }
+
+}
