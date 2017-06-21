@@ -7,7 +7,10 @@
       "line_2": "Use Code: <strong>RAINYDAYS</strong>",
       "call_to_action": "Shop Now",
       "bottom": "*Offer Details",
-      "background_url": "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-05-18/promo-bg.png"
+      "text_colour": "white",
+      "background_url_mobile": "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Hero-b3.jpg",
+      "background_url_tablet": "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Hero-b2.jpg",
+      "background_url_desktop": "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Hero-b1.jpg"
     },
     "preset_b": {
       "component_id" : "random_id_1",
@@ -43,22 +46,64 @@
   },
   "promo_tiles" : {
     "preset_c" : {
+      "component_id": "random_id_3",
       "title_1" : "Spend $75+ <br/> Get 15,000 PC Plus Points*",
       "call_to_action_1" : "Shop Now",
       "bottom_1" : "*Offer Details",
       "text_colour_1" : "black",
-      "background_url_1" : "https://previews.123rf.com/images/yuzach/yuzach1508/yuzach150800013/43143865-Cute-trible-geometric-seamless-pattern-in-cartoon-style-with-fox-bear-lodge-houses-arrows-feathers-f-Stock-Vector.jpg",
+      "background_url_1_mobile" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/promo_tiles_preset_c_1--mobile.png",
+      "background_url_1_tablet" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/promo_tiles_preset_c_1--tablet.png",
+      "background_url_1_desktop" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/promo_tiles_preset_c_1--desktop.png",
       "title_2" : "25% OFF <br/> on Adult Swimwear*",
       "call_to_action_2" : "Shop Now",
       "bottom_2" : "*Offer Details",
       "text_colour_2" : "white",
-      "background_url_2" : "https://static.vecteezy.com/system/resources/previews/000/098/402/non_2x/dark-floral-pattern-background-vector.jpg",
+      "background_url_2_mobile" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/promo_tiles_preset_c_2--tabletmobile.jpg",
+      "background_url_2_tablet" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/promo_tiles_preset_c_2--tabletmobile.jpg",
+      "background_url_2_desktop" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/promo_tiles_preset_c_2--desktop.jpg",
       "title_3" : "Buy Two and <br/> Save on Kids' Tees*",
       "call_to_action_3" : "Shop Now",
       "bottom_3" : "*Offer Details",
       "text_colour_3" : "grey",
-      "background_url_3" : "https://s-media-cache-ak0.pinimg.com/originals/10/53/ae/1053aed75b68abd81372f5e1918f98c7.jpg"
+      "background_url_3_mobile" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/promo_tiles_preset_c_3--tabletmobile.jpg",
+      "background_url_3_tablet" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/promo_tiles_preset_c_3--tabletmobile.jpg",
+      "background_url_3_desktop" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/promo_tiles_preset_c_3--desktop.jpg"
     }
 
+  },
+  "announcement" : {
+    "preset_a" : {
+      "component_id": "random_id_4",
+      "title_1" : "Spend $75+ <br/> Get 15,000 PC Plus Points*",
+      "call_to_action_1" : "Shop Now",
+      "bottom_1" : "*Offer Details",
+      "text_colour_1" : "black",
+      "align_1" : "left",
+      "background_url_1_mobile" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/promo_tiles_preset_c_1--mobile.png",
+      "background_url_1_tablet" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/promo_tiles_preset_c_1--tablet.png",
+      "background_url_1_desktop" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/promo_tiles_preset_c_1--desktop.png",
+      "title_2" : "25% OFF <br/> on Adult Swimwear*",
+      "call_to_action_2" : "Start earning and sharing",
+      "bottom_2" : "*Offer Details",
+      "text_colour_2" : "white",
+      "align_2" : "right",
+      "background_url_2_mobile" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Announcement-b3.jpg",
+      "background_url_2_tablet" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Announcement-b2.jpg",
+      "background_url_2_desktop" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Announcement-b1.jpg"
+    }
+  },
+  "featureCollection" : {
+    "preset_a" : {
+      "eyebrow_text" : "Adults",
+      "title" : "Spirit of Sport",
+      "description" : "Active-inspired fabrics meet polish silhouettes for functional fashion.",
+      "collection_img_1": "img/fcollection-image-a.jpg",
+      "collection_img_2": "img/fcollection-image-b.jpg",
+      "call_to_action": "Explore the Collection",
+      "text_colour" : "white",
+      "background_url_mobile" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Editorial-b3.jpg",
+      "background_url_tablet" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Editorial-b1.jpg",
+      "background_url_desktop" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Editorial-b1.jpg"
+    }
   }
 }

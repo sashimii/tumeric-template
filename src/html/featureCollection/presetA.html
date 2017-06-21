@@ -1,0 +1,48 @@
+<div class="container">
+
+  <div class="tumeric homepage-fcollection-container fcollection-preset-a" data-component-id="{{ component_id }}">
+
+    <div class="fcollection-bg-container">
+
+      <div class="fcollection-body">
+
+        <div class="fcollection-content fcollection-text {{ text_colour }}">
+          <p class="fcollection-section-name"> {{ eyebrow_text }} </p>
+          <div class="fcollection-colour-bar {{ text_colour }}"></div>
+          <h2 class="fcollection-title"> {{ title | safe }}</h2>
+          <p class="fcollection-description"> {{ description | safe }} </p>
+          <a href="#" class="cta-button {{ text_colour }}"> {{ call_to_action }}</a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<!-- Styles -->
+
+<style>
+
+
+  .fcollection-preset-a[data-component-id="{{ component_id }}"] .fcollection-bg-container {
+      background-image: url('{{ background_url_mobile }}');
+  }
+
+  @media screen and (min-width:35.625em) {
+    .fcollection-preset-a[data-component-id="{{ component_id }}"] .fcollection-bg-container {
+        background-image: url('{{ background_url_tablet }}');
+    }
+  }
+
+  @media screen and (min-width:60em) {
+    .fcollection-preset-a[data-component-id="{{ component_id }}"] .fcollection-bg-container {
+        background-image: url('{{ background_url_desktop }}');
+    }
+  }
+
+</style>

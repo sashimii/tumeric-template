@@ -1,0 +1,123 @@
+.fcollection-container {
+
+  @include tablet-up() {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+}
+
+.tumeric {
+
+  .cta-button {
+    font-weight: 600;
+    &.white {
+      background-color: white;
+      color: black;
+    }
+  }
+
+}
+
+
+.homepage-fcollection-container {
+
+  width: 100%;
+
+  &.fcollection-preset-a {
+
+    height: 550px;
+    @include desktop-up() {
+      height: 650px;
+    }
+
+    .fcollection-bg-container {
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin:auto;
+
+
+    }
+
+    .fcollection-body {
+      @include desktop-up() {
+        width: 35%;
+      }
+    }
+
+    .fcollection-content {
+      text-align: center;
+
+      @include desktop-up() {
+          text-align: left;
+      }
+
+
+      &.fcollection-text {
+
+        &.white {
+          color: white;
+        }
+        padding: 7em 0 3em 0;
+        @include tablet-up() {
+          padding: 11.5em 0 3em 0;
+        }
+
+        @include desktop-up() {
+          padding: 9em 0 3em 5em;
+
+        }
+
+        .fcollection-section-name {
+          line-height: 1.5;
+          margin: 0;
+          font-size: 1.5em;
+        }
+
+        .fcollection-colour-bar {
+          // float: left;
+          background-color: black;
+          &.white {
+            background-color: white;
+          }
+          margin-top: -0.3em;
+          margin: auto;
+          @include desktop-up() {
+            margin: 0;
+          }
+          width: 2.5em;
+          height: 0.4em;
+        }
+
+        .fcollection-title {
+          font-size: 4.5em;
+          font-weight: 700;
+          text-transform: uppercase;
+          @include tablet-up() {
+            font-size: 4.25em;
+          };
+        }
+
+        .fcollection-description {
+          padding: 0 1em;
+          line-height: 1.5;
+          margin: 0;
+          font-size: 1.25em;
+
+          @include desktop-up() {
+              padding: 0;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

@@ -69,7 +69,8 @@ gulp.task('serve', ['fonts', 'sass', 'images', 'templates'], () => {
 gulp.task('fonts', () => {
   return gulp.src(files.fonts.src)
     .pipe(gulp.dest(files.fonts.dist))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.stream())
+    .on('error', swallowError);
 });
 
 // Images
@@ -84,7 +85,8 @@ gulp.task('images', () => {
       )
     )
     .pipe(gulp.dest(files.images.dist))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.stream())
+    .on('error', swallowError);
 });
 
 // gulp.task('data', () => {
@@ -111,11 +113,8 @@ gulp.task('templates', () => {
 });
 
 function swallowError (error) {
-
-  // If you want details of the error in the console
-  console.log(error.toString())
-
-  this.emit('end')
+  console.log(error)
+  // this.emit('end')
 }
 
 // gulp.task('data-watch', ['templates'], (done) => {

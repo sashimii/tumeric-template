@@ -1,15 +1,15 @@
 <div class="tumeric hero-container hero-preset-a" data-component-id="{{ component_id }}">
     <div class="promo-body">
-        <h2 class="promo-title">{{ title | safe }}</h2>
+        <h2 class="promo-title {{ text_colour }}">{{ title | safe }}</h2>
         <p class="promo-subtitle"></p>
         <div>
-          <p class="promo-text">{{ line_1 | safe }}</p>
-          <p class="promo-text">{{ line_2 | safe }}</p>
+          <p class="promo-text {{ text_colour }}">{{ line_1 | safe }}</p>
+          <p class="promo-text {{ text_colour }}">{{ line_2 | safe }}</p>
         	{% if line_3 %}
-          	<p class="promo-text">{{ line_3 | safe }}</p>
+          	<p class="promo-text {{ text_colour }}">{{ line_3 | safe }}</p>
        	  {% endif %}
         </div>
-        <a class="cta-button" href="#"><span>{{ call_to_action }}</span></a>
+        <a class="cta-button {{ text_colour }}" href="#"><span>{{ call_to_action }}</span></a>
     </div>
     <a class="promo-footer-legal" href="#">{{ bottom }}</a>
 </div>
@@ -18,7 +18,22 @@
 
 <!-- <link rel="stylesheet" href="https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-05-18/main_dq2RJLU.css"> -->
 <style>
+
+
+
   .hero-preset-a[data-component-id="{{ component_id }}"] {
-      background-image: url('{{ background_url }}');
+      background-image: url('{{ background_url_mobile }}');
+  }
+
+  @media screen and (min-width:35.625em) {
+    .hero-preset-a[data-component-id="{{ component_id }}"] {
+        background-image: url('{{ background_url_tablet }}');
+    }
+  }
+
+  @media screen and (min-width:60em) {
+    .hero-preset-a[data-component-id="{{ component_id }}"] {
+        background-image: url('{{ background_url_desktop }}');
+    }
   }
 </style>

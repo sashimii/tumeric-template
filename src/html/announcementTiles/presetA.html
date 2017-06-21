@@ -3,30 +3,30 @@
       <h2 class="promo-section-title">Find Out More</h2>
       <div>
         {% if title_1 or text_colour_1 or call_to_action_1 or bottom_1 %}
-          <div class="promo-box-tile announcement">
-            <div class="promo-box {{ text_colour_1 }} ">
-              <div class="promo-body">
+          <div class="promo-box-tile announcement  {{ text_colour_1 }} ">
+            <div class="promo-box">
+              <div class="promo-body float-{{ align_1 }}">
                 <h3 class="promo-title">{{ title_1 | safe }}</h2>
                 <a class="cta-button" href="#">
                   {{ call_to_action_1}}
                 </a>
               </div>
-              <a class="promo-footer-legal" href="#">{{ bottom_1 }}</a>
             </div>
+            <a class="promo-footer-legal" href="#">{{ bottom_1 }}</a>
           </div>
         {% endif %}
 
         {% if title_2 or text_colour_2 or call_to_action_2 or bottom_2 %}
-          <div class="promo-box-tile announcement">
-            <div class="promo-box {{ text_colour_2 }} ">
-              <div class="promo-body">
+          <div class="promo-box-tile announcement  {{ text_colour_2 }} ">
+            <div class="promo-box">
+              <div class="promo-body float-{{ align_2 }}">
                 <h3 class="promo-title">{{ title_2 | safe }}</h2>
                 <a class="cta-button" href="#">
                   {{ call_to_action_2}}
                 </a>
               </div>
-              <a class="promo-footer-legal" href="#">{{ bottom_2 }}</a>
             </div>
+            <a class="promo-footer-legal" href="#">{{ bottom_2 }}</a>
           </div>
         {% endif %}
       </div>
@@ -37,14 +37,31 @@
 
 <style>
 
+
   .promo-preset-c[data-component-id='{{ component_id }}'] .promo-box-tile:nth-child(1) .promo-box {
-      background-image: url('{{ background_url_1 }}');
+      background-image: url('{{ background_url_1_mobile }}');
   }
   .promo-preset-c[data-component-id='{{ component_id }}'] .promo-box-tile:nth-child(2) .promo-box {
-      background-image: url('{{ background_url_2 }}');
+      background-image: url('{{ background_url_2_mobile }}');
   }
-  .promo-preset-c[data-component-id='{{ component_id }}'] .promo-box-tile:nth-child(3) .promo-box {
-      background-image: url('{{ background_url_3 }}');
+
+  @media screen and (min-width:35.625em) {
+    .promo-preset-c[data-component-id='{{ component_id }}'] .promo-box-tile:nth-child(1) .promo-box {
+        background-image: url('{{ background_url_1_tablet }}');
+    }
+    .promo-preset-c[data-component-id='{{ component_id }}'] .promo-box-tile:nth-child(2) .promo-box {
+        background-image: url('{{ background_url_2_tablet }}');
+    }
   }
+
+  @media screen and (min-width:60em) {
+    .promo-preset-c[data-component-id='{{ component_id }}'] .promo-box-tile:nth-child(1) .promo-box {
+        background-image: url('{{ background_url_1_desktop }}');
+    }
+    .promo-preset-c[data-component-id='{{ component_id }}'] .promo-box-tile:nth-child(2) .promo-box {
+        background-image: url('{{ background_url_2_desktop }}');
+    }
+  }
+
 
 </style>
