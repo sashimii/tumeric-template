@@ -1,0 +1,420 @@
+@import 'colours';
+
+// Typographic Elements
+
+// TM is short for Tumeric
+// Spits out namespaced styles
+@mixin tm($class-name) {
+  .#{$namespace}__#{$class-name} {
+      @content;
+  }
+}
+
+// Handling Fill vs Stroke
+@mixin cta($style) {
+  &.#{$style} {
+    @include tm('cta') {
+      &-button {
+        @if $style == 'fill' {
+          @content;
+        } @else if $style == 'stroke' {
+          @content;
+        }
+      }
+    }
+  }
+}
+
+@mixin aspect-ratio($name, $width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .#{$name}-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+// Handling Colours
+@mixin cta-colour($colour) {
+
+  @if $colour == "black" {
+    @include cta('fill') {
+      background-color: $black;
+      color: $white;
+    }
+    @include cta('stroke') {
+      border-color: $black;
+      color: $black;
+    }
+  }
+  @else if $colour == "white" {
+    @include cta('fill') {
+      background-color: $white;
+      color: $black;
+    }
+    @include cta('stroke') {
+      border-color: $white;
+      color: $white;
+    }
+  }
+  @else if $colour == "orange" {
+    @include cta('fill') {
+      background-color: $orange;
+      color: $white;
+    }
+    @include cta('stroke') {
+      border-color: $orange;
+      color: $orange;
+    }
+  }
+  @else {
+    @include cta('fill') {
+      background-color: $white;
+      color: $orange;
+    }
+    @include cta('stroke') {
+      border-color: $white;
+      color: $white;
+    }
+  }
+
+}
+
+@include tm('typography') {
+  font-family: 'JFCalibre', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-weight: 300;
+  width: 100%;
+
+
+  p, h1 {
+    font-family: inherit;
+    font-weight: inherit;
+    text-transform: inherit;
+  }
+
+  @include tm('copy') {
+    float: left;
+    width: 100%;
+    margin: 0 0 2rem 0;
+    h1, p {
+      margin: 0;
+    }
+  }
+
+  &.colour {
+    // Evergreen Colour Themes
+    &-black {
+      color: $black;
+      @include cta-colour("black");
+    }
+
+    &-orange {
+      color: $orange;
+      @include cta-colour("orange");
+
+      &-black {
+        @include cta-colour("black");
+        @include tm('header') {
+          color: $orange;
+        }
+        @include tm('subcopy') {
+          color: $black;
+        }
+      }
+    }
+
+    &-white {
+      @include cta-colour("white");
+      color: $white;
+    }
+
+
+    // Stroke or Fill?
+    &-fill {
+
+    }
+
+    &-stroke {
+
+    }
+
+  }
+
+
+  &.classic {
+    @include tm('header') {
+      font-weight: 700;
+    }
+  }
+
+  &.semibold {
+    @include tm('header') {
+      font-weight: 600;
+    }
+  }
+
+  &.light {
+    @include tm('header') {
+      font-weight: 300;
+    }
+  }
+
+  &.thin {
+    @include tm('header') {
+      font-weight: 200;
+    }
+  }
+
+  &.classic,
+  &.semibold,
+  &.light,
+  &.thin {
+    @include tm('header') {
+      &:first-letter {
+        text-transform: capitalize;
+      }
+    }
+
+    &.uppercase {
+      @include tm('header') {
+        text-transform: uppercase;
+      }
+    }
+    &.titlecase {
+      @include tm('header') {
+        text-transform: capitalize;
+      }
+    }
+    &.lowercase {
+      @include tm('header') {
+        text-transform: lowercase;
+        &:first-letter {
+          text-transform: lowercase;
+        }
+      }
+    }
+
+  }
+
+  &.classic,
+  &.semibold {
+    @include tm('subcopy') {
+      font-weight: 400;
+    }
+  }
+
+  &.light,
+  &.thin {
+    @include tm('subcopy') {
+      font-weight: 300;
+    }
+  }
+
+
+
+  &__header {
+
+
+  }
+
+  &__subcopy {
+
+  }
+
+  @include tm('cta') {
+    width: 100%;
+    float:left;
+    &-button {
+      padding: 12.5px 25px 7.5px 25px;
+      font-weight: 400;
+      text-transform: uppercase;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &.stroke {
+    @include tm('cta-button') {
+      border-style: solid;
+      border-width: 1px;
+    }
+  }
+
+}
+
+
+@include tm('hero') {
+  float: left;
+  width: 100%;
+
+  &-container {
+    background-image: url('https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Hero-b3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+    @include aspect-ratio('hero',320,420);
+    // width: 320px;
+    // height: 420px;
+
+    // @include tall-mobile-only() {
+    //   width: 320px;
+    //   height: 420px;
+    // }
+
+    @include tablet-up() {
+      @include aspect-ratio('hero',768,420);
+      // width: 768px;
+      // height: 420px;
+    }
+
+    @include desktop-up() {
+      @include aspect-ratio('hero',1280,465);
+      // width: 1280px;
+      // height: 465px;
+    }
+
+  }
+
+}
+
+@include tm('promotion') {
+  float: left;
+  width: 100%;
+
+  &-container {
+    float: left;
+    width: 100%;
+
+
+    @include tm('promotion-box') {
+      background-image: url('https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Hero-b2.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @include aspect-ratio('promotion',320,250);
+
+      @include tablet-up() {
+
+        // width: 768px;
+        // height: 420px;
+        float: left;
+
+        &:nth-child(1) {
+          width: 100%;
+          @include aspect-ratio('promotion',735,200);
+        }
+        &:nth-child(2),
+        &:nth-child(3) {
+          width: (1/2) * 100%;
+          @include aspect-ratio('promotion',360,255);
+        }
+      }
+
+      @include desktop-up() {
+        float: left;
+        &:nth-child(1) {
+          width: (1/3) * 100%;
+          @include aspect-ratio('promotion',340,290);
+        }
+        &:nth-child(2) {
+          width: (1/3) * 100%;
+          @include aspect-ratio('promotion',340,290);
+        }
+        &:nth-child(3) {
+          width: (1/3) * 100%;
+          @include aspect-ratio('promotion',340,290);
+        }
+        // width: 1280px;
+        // height: 465px;
+      }
+    }
+
+
+  }
+
+}
+
+@include tm('offer-details') {
+  float: right;
+  position: relative;
+  right: 1em;
+  bottom: 2em;
+}
+
+
+@include tm('alignment') {
+
+  @include tm('typography') {
+    width: 100%;
+    float: left;
+
+  }
+
+  &.left {
+    float: left;
+    position: absolute;
+    padding-left: 2em;
+    @include tm('typography') {
+      width: 80%;
+      float: left;
+      text-align: left;
+    }
+  }
+
+  &.center {
+    float: left;
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    @include tm('typography') {
+      float: left;
+      text-align: center;
+    }
+  }
+
+  &.right {
+    float: right;
+    position: absolute;
+    right: 2em;
+    @include tm('typography') {
+      float: right;
+      text-align: right;
+      @include tm('copy') {
+        width:80%;
+        float: right;
+      }
+    }
+  }
+
+  &.bottom {
+    bottom: 2em;
+  }
+
+  &.middle {
+    position: relative;
+    top: 50%;
+    width: 100%;
+    @include tm('typography') {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+  }
+
+  &.top {
+    top: 2em;
+  }
+
+}
