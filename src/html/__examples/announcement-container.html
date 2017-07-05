@@ -1,0 +1,87 @@
+<div class="tumeric__announcement"  >
+  <h2 class="tumeric__announcement-header">Find Out More</h2>
+  <div class="tumeric__announcement-container" data-component-id="{{ component_id }}">
+    <div class="tumeric__padding-box">
+      <div class="tumeric__announcement-box">
+        <div class="announcement-content">
+          <div class="tumeric__alignment {{ alignment_1 }}">
+            <div class="tumeric__typography {{ type_style }}  colour-{{ colour_1 }} {{ button_style_1 }}">
+              <div class="tumeric__copy">
+                <div class="tumeric__text-block">
+                  {% if eyebrow_text_1 %}
+                  <h3 class="tumeric__eyebrow-text">{{ eyebrow_text_1 }}</h3>
+                  <div class="tumeric__eyebrow"></div>
+                  {% endif %}
+                  <h2 class="tumeric__header">{{ header_1 | safe }}</h2>
+                  <p class="tumeric__subcopy">{{ subcopy_1 | safe }}</p>
+                </div>
+              </div>
+              <div class="tumeric__cta">
+                <a class="tumeric__cta-button" href="#">{{ call_to_action_1 }}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tumeric__offer-details ">
+        <a class="colour-{{ colour_1 }}" href="#">{{ offer_details_1 }}</a>
+      </div>
+    </div>
+    <div class="tumeric__padding-box">
+      <div class="tumeric__announcement-box">
+        <div class="announcement-content">
+          <div class="tumeric__alignment {{ alignment_2 }}">
+            <div class="tumeric__typography {{ type_style }}  colour-{{ colour_2 }} {{ button_style_2 }}">
+              <div class="tumeric__copy">
+                <div class="tumeric__text-block">
+                  {% if eyebrow_text_2 %}
+                  <h3 class="tumeric__eyebrow-text">{{ eyebrow_text_2 }}</h3>
+                  <div class="tumeric__eyebrow"></div>
+                  {% endif %}
+                  <h2 class="tumeric__header">{{ header_2 | safe }}</h2>
+                  <p class="tumeric__subcopy">{{ subcopy_2 | safe }}</p>
+                </div>
+              </div>
+              <div class="tumeric__cta">
+                <a class="tumeric__cta-button" href="#">{{ call_to_action_2 }}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tumeric__offer-details ">
+        <a class="colour-{{ colour_2 }}" href="#">{{ offer_details_2 }}</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Styles -->
+<style>
+  .tumeric__announcement-container[data-component-id="{{ component_id }}"] .tumeric__padding-box:nth-child(1) .tumeric__announcement-box {
+      background-image: url('{{ background_url_1_mobile }}');
+      color:black;
+  }
+
+  .tumeric__announcement-container[data-component-id="{{ component_id }}"] .tumeric__padding-box:nth-child(2) .tumeric__announcement-box {
+      background-image: url('{{ background_url_2_mobile }}');
+  }
+
+  @media screen and (min-width:35.625em) {
+    .tumeric__announcement-container[data-component-id="{{ component_id }}"] .tumeric__padding-box:nth-child(1) .tumeric__announcement-box {
+        background-image: url('{{ background_url_1_tablet }}');
+    }
+    .tumeric__announcement-container[data-component-id="{{ component_id }}"] .tumeric__padding-box:nth-child(2) .tumeric__announcement-box {
+        background-image: url('{{ background_url_2_tablet }}');
+    }
+  }
+
+  @media screen and (min-width:60em) {
+    .tumeric__announcement-container[data-component-id="{{ component_id }}"] .tumeric__padding-box:nth-child(1) .tumeric__announcement-box {
+        background-image: url('{{ background_url_1_desktop }}');
+    }
+    .tumeric__announcement-container[data-component-id="{{ component_id }}"] .tumeric__padding-box:nth-child(2) .tumeric__announcement-box {
+        background-image: url('{{ background_url_2_desktop }}');
+    }
+  }
+</style>

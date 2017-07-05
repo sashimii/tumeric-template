@@ -12,8 +12,9 @@
     border-width: 0.125em;
     border-style: solid;
     @include desktop-up() {
-      font-size: 1em;
+      line-height: 3.5;
       border-width: 0.2em;
+      font-size: 1.5rem;
     }
   }
 

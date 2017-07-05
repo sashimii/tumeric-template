@@ -1,4 +1,68 @@
 {
+  "new_components" : {
+    "examples": {
+      "hero": {
+        "a" : {
+          "component_id": "alksjdasd",
+          "alignment": "top left",
+          "type_style": "classic uppercase",
+          "colour": "white-orange",
+          "eyebrow_text": "",
+          "header": "lorem ipsum <br/> dolor sit",
+          "subcopy": "Etiam ut vestibulum orci. Nam tempus <br/> auctor eleifend. Pellentesque semper.",
+          "call_to_action": "Shop Now",
+          "offer_details": "*Offer Details",
+          "button_style": "stroke",
+          "background_url_mobile" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Hero-b3.jpg",
+          "background_url_tablet" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Hero-b2.jpg",
+          "background_url_desktop" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Hero-b1.jpg"
+        }
+      },
+      "featured_collection": {
+        "component_id": "alksjdasd",
+        "alignment": "top left",
+        "type_style": "classic uppercase",
+        "colour": "white",
+        "eyebrow_text": "Quando Efficiendi",
+        "header": "lorem ipsum <br/> dolor sit",
+        "subcopy": "Etiam ut vestibulum orci. Nam tempus <br/> auctor eleifend. Pellentesque semper.",
+        "call_to_action": "Shop Now",
+        "offer_details": "*Offer Details",
+        "button_style": "fill",
+        "background_url_mobile" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-07-04/Fall-Homepage-Mocks-Editorial-b3.jpg",
+        "background_url_tablet" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-07-04/Fall-Homepage-Mocks-Editorial-b2.jpg",
+        "background_url_desktop" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-07-04/Fall-Homepage-Mocks-Editorial-b1.jpg"
+      },
+      "announcement": {
+        "a": {
+          "component_id": "kausdjhfilu",
+          "type_style": "classic uppercase",
+          "alignment_1": "top left",
+          "colour_1": "white",
+          "button_style_1": "stroke",
+          "eyebrow_text_1": "",
+          "header_1" : "lorem ipsum <br/> dolor sit",
+          "subcopy_1": "Etiam ut vestibulum orci. Nam tempus <br/> auctor eleifend. Pellentesque semper.",
+          "call_to_action_1": "Shop Now",
+          "offer_details_1" : "*Offer Details",
+          "background_url_1_mobile" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/promo_tiles_preset_c_1--mobile.png",
+          "background_url_1_tablet" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/promo_tiles_preset_c_1--tablet.png",
+          "background_url_1_desktop" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/promo_tiles_preset_c_1--desktop.png",
+          "alignment_2": "top left",
+          "colour_2": "white",
+          "button_style_2": "stroke",
+          "eyebrow_text_2": "",
+          "header_2" : "lorem ipsum <br/> dolor sit",
+          "subcopy_2": "Etiam ut vestibulum orci. Nam tempus <br/> auctor eleifend. Pellentesque semper.",
+          "call_to_action_2": "Shop Now",
+          "offer_details_2" : "*Offer Details",
+          "background_url_2_mobile" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Announcement-b3.jpg",
+          "background_url_2_tablet" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Announcement-b2.jpg",
+          "background_url_2_desktop" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Announcement-b1.jpg"
+        }
+      }
+    }
+  },
   "hero" : {
     "preset_a" : {
       "component_id" : "random_id_0",

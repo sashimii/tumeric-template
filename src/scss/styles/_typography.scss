@@ -109,31 +109,75 @@
     }
   }
 
+  @include tm('eyebrow') {
+    display: inline-block;
+    background-color: $black;
+    height: 0.5em;
+    width: 2em;
+  }
+
+  @include tm('eyebrow-text') {
+
+  }
+
   &.colour {
     // Evergreen Colour Themes
     &-black {
       color: $black;
       @include cta-colour("black");
+      @include tm("eyebrow") {
+        background: $black;
+      }
     }
 
     &-orange {
       color: $orange;
       @include cta-colour("orange");
+      @include tm("eyebrow") {
+        background: $orange;
+      }
 
       &-black {
         @include cta-colour("black");
         @include tm('header') {
           color: $orange;
+          @include tm("eyebrow") {
+            background: $black;
+          }
         }
         @include tm('subcopy') {
           color: $black;
         }
       }
+
+      &-white {
+        @include cta-colour("none");
+        @include tm('header') {
+          color: $orange;
+          @include tm("eyebrow") {
+            background: $white;
+          }
+        }
+        @include tm('subcopy') {
+          color: $white;
+        }
+      }
     }
 
     &-white {
-      @include cta-colour("white");
       color: $white;
+      @include cta-colour("white");
+      @include tm("eyebrow") {
+        background: $white;
+      }
+
+      &-orange {
+        color: $white;
+        @include cta-colour("orange");
+        @include tm("eyebrow") {
+          background: $white;
+        }
+      }
     }
 
 
@@ -240,6 +284,9 @@
         text-decoration: none;
       }
     }
+    &-app-store-button {
+      width: 11rem;
+    }
   }
 
   &.stroke {
@@ -295,14 +342,103 @@
     float: left;
     width: 100%;
 
+    @include tm('padding-box') {
+      float: left;
+      width: 100%;
+      @include tm('promotion-box') {
+        @include aspect-ratio('promotion',320,250);
+      }
+      @include tablet-up() {
+        &:nth-child(1) {
+          width: 100%;
+          @include tm('promotion-box') {
+            @include aspect-ratio('promotion',735,200);
+          }
+
+        }
+        &:nth-child(2),
+        &:nth-child(3) {
+          width: (1/2) * 100%;
+          @include tm('promotion-box') {
+            @include aspect-ratio('promotion',360,255);
+          }
+        }
+      }
+
+      @include desktop-up() {
+        &:nth-child(1) {
+          // padding: 1rem 0.5rem 1rem 1rem;
+          width: (1/3) * 100%;
+          @include tm('promotion-box') {
+            @include aspect-ratio('promotion',340,290);
+          }
+        }
+        &:nth-child(2) {
+
+          width: (1/3) * 100%;
+
+          @include tm('promotion-box') {
+            @include aspect-ratio('promotion',340,290);
+          }
+        }
+        &:nth-child(3) {
+          // padding: 1rem 1rem 1rem 0.5rem;
+          width: (1/3) * 100%;
+          @include tm('promotion-box') {
+            @include aspect-ratio('promotion',340,290);
+          }
+        }
+      }
+
+
+      padding:1rem;
+    }
+
 
     @include tm('promotion-box') {
       background-image: url('https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Hero-b2.jpg');
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+    }
 
-      @include aspect-ratio('promotion',320,250);
+
+  }
+
+}
+
+@include tm('announcement') {
+  float: left;
+  width: 100%;
+
+  &-header {
+    font-size: 2.25rem;
+    text-align: center;
+    font-weight: 600;
+    color: #6b6b6a;
+  }
+
+  &-container {
+    float: left;
+    width: 100%;
+
+    @include tm('padding-box') {
+      float: left;
+      width: 100%;
+      @include tablet-up() {
+        width: 50%;
+      }
+      padding: 1rem;
+    }
+
+
+    @include tm('announcement-box') {
+      background-image: url('https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Hero-b2.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      @include aspect-ratio('announcement',320,250);
 
       @include tablet-up() {
 
@@ -311,29 +447,20 @@
         float: left;
 
         &:nth-child(1) {
-          width: 100%;
-          @include aspect-ratio('promotion',735,200);
+          @include aspect-ratio('announcement',360,215);
         }
-        &:nth-child(2),
-        &:nth-child(3) {
-          width: (1/2) * 100%;
-          @include aspect-ratio('promotion',360,255);
+        &:nth-child(2) {
+          @include aspect-ratio('announcement',360,215);
         }
       }
 
       @include desktop-up() {
         float: left;
         &:nth-child(1) {
-          width: (1/3) * 100%;
-          @include aspect-ratio('promotion',340,290);
+          @include aspect-ratio('announcement',510,240);
         }
         &:nth-child(2) {
-          width: (1/3) * 100%;
-          @include aspect-ratio('promotion',340,290);
-        }
-        &:nth-child(3) {
-          width: (1/3) * 100%;
-          @include aspect-ratio('promotion',340,290);
+          @include aspect-ratio('announcement',510,240);
         }
         // width: 1280px;
         // height: 465px;
@@ -345,11 +472,159 @@
 
 }
 
+@include tm('announcement-b') {
+  float: left;
+  width: 100%;
+
+  &-container {
+    padding: 2rem 0;
+    float: left;
+    width: 100%;
+    background-color: #f9f9fa;
+
+    @include tm('padding-box') {
+      float: left;
+      width: 100%;
+      @include tablet-up() {
+        width: 50%;
+      }
+      padding: 1rem;
+    }
+
+    @include tm('announcement-img') {
+      // float: left;
+      overflow: hidden;
+      // width: 45%;
+      // margin-top: -20rem;
+      .image-content {
+        display: block;
+        height: 165px;
+        width: auto;
+        margin: 5rem 0 5rem -17rem;
+        @include tablet-up() {
+          height: 180px;
+          margin: 5rem 0;
+        }
+        @include desktop-up() {
+          height: 220px;
+          margin: 5rem 0 5rem 2rem;
+        }
+      }
+
+    }
+
+
+    @include tm('announcement-b-box') {
+      float: left;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+
+      @include tm('alignment') {
+        &.left {
+          padding: 0;
+
+          @include tm('typography') {
+            width: 90%;
+          }
+        }
+      }
+
+      // @include aspect-ratio('announcement-b',320,250);
+
+      @include tablet-up() {
+
+        // width: 768px;
+        // height: 420px;
+        // float: left;
+
+        // @include aspect-ratio('announcement-b',360,215);
+
+      }
+
+      @include desktop-up() {
+          // @include aspect-ratio('announcement-b',510,240);
+      }
+
+      @include tm('announcement-b-aside') {
+
+        // float:left;
+
+      }
+
+    }
+
+
+  }
+
+}
+
+@include tm('feature') {
+  float: left;
+  width: 100%;
+
+  &-container {
+    background-image: url('https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Hero-b3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+    @include aspect-ratio('feature',320,580);
+    // width: 320px;
+    // height: 420px;
+
+    // @include tall-mobile-only() {
+    //   width: 320px;
+    //   height: 420px;
+    // }
+
+    @include tablet-up() {
+      @include aspect-ratio('feature',735,795);
+      // width: 768px;
+      // height: 420px;
+    }
+
+    @include desktop-up() {
+      @include aspect-ratio('feature',1050,670);
+      // width: 1280px;
+      // height: 465px;
+    }
+
+  }
+
+}
+
 @include tm('offer-details') {
   float: right;
   position: relative;
   right: 1em;
   bottom: 2em;
+
+  &.colour,
+  .colour {
+    // Evergreen Colour Themes
+    &-black {
+      text-decoration: underline;
+      color: $black;
+
+    }
+
+    &-orange {
+      text-decoration: underline;
+      color: $orange;
+      &-black {
+        text-decoration: underline;
+        color: $black;
+      }
+    }
+
+    &-white {
+      text-decoration: underline;
+      color: $white;
+    }
+  }
+
 }
 
 
@@ -369,6 +644,8 @@
       width: 80%;
       float: left;
       text-align: left;
+
+
     }
   }
 
@@ -380,6 +657,9 @@
     @include tm('typography') {
       float: left;
       text-align: center;
+      @include tm("eyebrow") {
+        margin: auto;
+      }
     }
   }
 
@@ -393,6 +673,10 @@
       @include tm('copy') {
         width:80%;
         float: right;
+
+        @include tm("eyebrow") {
+          text-align: right;
+        }
       }
     }
   }
