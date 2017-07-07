@@ -4,15 +4,15 @@
       "hero": {
         "a" : {
           "component_id": "alksjdasd",
-          "alignment": "top left",
-          "type_style": "classic uppercase",
-          "colour": "white-orange",
+          "alignment": "bottom left",
+          "type_style": "classic lowercase",
+          "colour": "black",
           "eyebrow_text": "",
           "header": "lorem ipsum <br/> dolor sit",
           "subcopy": "Etiam ut vestibulum orci. Nam tempus <br/> auctor eleifend. Pellentesque semper.",
           "call_to_action": "Shop Now",
           "offer_details": "*Offer Details",
-          "button_style": "stroke",
+          "button_style": "fill",
           "background_url_mobile" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Hero-b3.jpg",
           "background_url_tablet" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Hero-b2.jpg",
           "background_url_desktop" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Hero-b1.jpg"

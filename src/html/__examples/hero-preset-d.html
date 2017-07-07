@@ -1,0 +1,42 @@
+<div class="tumeric__hero">
+  <div class="tumeric__hero-container" data-component-id="{{ component_id }}">
+    <div class="hero-content">
+      <div class="tumeric__alignment {{ alignment }}">
+        <div class="tumeric__typography {{ type_style }} colour-{{ colour }} {{ button_style }}">
+          <div class="tumeric__copy">
+            <div class="tumeric__text-block">
+              <h1 class="tumeric__header">{{ header | safe }}</h1>
+            </div>
+          </div>
+          <div class="tumeric__cta">
+            <a class="tumeric__cta-button" href="#">{{ call_to_action }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tumeric__offer-details">
+    <a class="colour-{{ colour }}" href="#">{{ offer_details }}</a>
+  </div>
+</div>
+
+
+<!-- Styles -->
+
+<style>
+  .tumeric__hero-container[data-component-id="{{ component_id }}"] {
+      background-image: url({{ background_url_mobile }});
+  }
+
+  @media screen and (min-width:35.625em) {
+    .tumeric__hero-container[data-component-id="{{ component_id }}"] {
+        background-image: url({{ background_url_tablet }});
+    }
+  }
+
+  @media screen and (min-width:60em) {
+    .tumeric__hero-container[data-component-id="{{ component_id }}"] {
+        background-image: url({{ background_url_desktop }});
+    }
+  }
+</style>
