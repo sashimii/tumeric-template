@@ -42,8 +42,8 @@
   }
 }
 
-// Handling Colours
-@mixin cta-colour($colour) {
+// Handling Evergreen Colours
+@mixin cta-evergreen($colour) {
 
   @if $colour == "black" {
     @include cta('fill') {
@@ -88,6 +88,52 @@
 
 }
 
+// Handling Seasonal Colours
+@mixin cta-seasonal($colour) {
+
+  @if $colour == "navy" {
+    @include cta('fill') {
+      background-color: $navy;
+      color: $white;
+    }
+    @include cta('stroke') {
+      border-color: $navy;
+      color: $navy;
+    }
+  }
+  @else if $colour == "maroon" {
+    @include cta('fill') {
+      background-color: $maroon;
+      color: $white;
+    }
+    @include cta('stroke') {
+      border-color: $maroon;
+      color: $maroon;
+    }
+  }
+  @else if $colour == "camel" {
+    @include cta('fill') {
+      background-color: $camel;
+      color: $navy;
+    }
+    @include cta('stroke') {
+      border-color: $camel;
+      color: $camel;
+    }
+  }
+  @else {
+    @include cta('fill') {
+      background-color: $white;
+      color: $navy;
+    }
+    @include cta('stroke') {
+      border-color: $white;
+      color: $white;
+    }
+  }
+
+}
+
 @include tm('typography') {
   font-family: 'JFCalibre', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-weight: 300;
@@ -109,6 +155,116 @@
     }
   }
 
+  @include tm('hero-preset-c') {
+
+    &.fr {
+
+      @include tm('subheader') {
+        font-size: 1.25rem;
+        margin:0;
+      }
+
+      @include tm('header') {
+        font-size: 2.5rem;
+        margin:0;
+      }
+
+      @include tm('subcopy') {
+        margin:0;
+      }
+
+      @include tablet-up() {
+        @include tm('subheader') {
+          font-size: 2rem;
+        }
+
+        @include tm('header') {
+          font-size: 4rem;
+        }
+
+        @include tm('subcopy') {
+
+        }
+      }
+      @include desktop-up() {
+        @include tm('subheader') {
+          font-size: 2rem;
+        }
+
+        @include tm('header') {
+          font-size: 4rem;
+        }
+
+        @include tm('subcopy') {
+
+        }
+      }
+    }
+    @include tm('subheader') {
+      font-size: 1.5rem;
+      margin:0;
+    }
+
+    @include tm('header') {
+      font-size: 3rem;
+      margin:0;
+    }
+
+    @include tm('subcopy') {
+      margin:0;
+    }
+
+    @include tablet-up() {
+      @include tm('subheader') {
+        font-size: 2rem;
+      }
+
+      @include tm('header') {
+        font-size: 4rem;
+      }
+
+      @include tm('subcopy') {
+
+      }
+    }
+    @include desktop-up() {
+      @include tm('subheader') {
+        font-size: 3rem;
+      }
+
+      @include tm('header') {
+        font-size: 6rem;
+      }
+
+      @include tm('subcopy') {
+
+      }
+    }
+
+    @include tm('text-block') {
+
+      float:left;
+      width: 100%;
+      margin: 1rem 0;
+
+
+      @include tablet-up() {
+        @include mock-flexbox($number-of-columns: 3, $class-name: 'tumeric__text-block');
+      }
+
+    }
+
+  }
+
+  @include mobile-only() {
+    @include tm('subcopy') {
+      padding: 0rem 3rem 0 0;
+    }
+  };
+
+
+
+
   @include tm('eyebrow') {
     display: inline-block;
     background-color: $black;
@@ -117,14 +273,22 @@
   }
 
   @include tm('eyebrow-text') {
+    font-size: 2rem;
+    font-weight: 500;
+  }
 
+  @include tm('subheader') {
+    margin-top:0;
+  }
+  @include tm('header') {
+    margin-bottom:0;
   }
 
   &.colour {
     // Evergreen Colour Themes
     &-black {
       color: $black;
-      @include cta-colour("black");
+      @include cta-evergreen("black");
       @include tm("eyebrow") {
         background: $black;
       }
@@ -132,13 +296,13 @@
 
     &-orange {
       color: $orange;
-      @include cta-colour("orange");
+      @include cta-evergreen("orange");
       @include tm("eyebrow") {
         background: $orange;
       }
 
       &-black {
-        @include cta-colour("black");
+        @include cta-evergreen("black");
         @include tm('header') {
           color: $orange;
           @include tm("eyebrow") {
@@ -151,7 +315,7 @@
       }
 
       &-white {
-        @include cta-colour("none");
+        @include cta-evergreen("none");
         @include tm('header') {
           color: $orange;
           @include tm("eyebrow") {
@@ -166,18 +330,34 @@
 
     &-white {
       color: $white;
-      @include cta-colour("white");
+      @include cta-evergreen("white");
       @include tm("eyebrow") {
         background: $white;
       }
 
       &-orange {
         color: $white;
-        @include cta-colour("orange");
+        @include cta-evergreen("orange");
         @include tm("eyebrow") {
           background: $white;
         }
       }
+    }
+
+    &-navy {
+      color: $white;
+      @include cta-seasonal("navy");
+      @include tm("eyebrow") {
+        background: $white;
+      }
+    }
+
+    &-maroon {
+
+    }
+
+    &-camel {
+
     }
 
 
@@ -197,10 +377,16 @@
     @include tm('header') {
       font-weight: 700;
     }
+    @include tm('subheader') {
+      font-weight: 700;
+    }
   }
 
   &.semibold {
     @include tm('header') {
+      font-weight: 600;
+    }
+    @include tm('subheader') {
       font-weight: 600;
     }
   }
@@ -209,10 +395,16 @@
     @include tm('header') {
       font-weight: 300;
     }
+    @include tm('subheader') {
+      font-weight: 300;
+    }
   }
 
   &.thin {
     @include tm('header') {
+      font-weight: 200;
+    }
+    @include tm('subheader') {
       font-weight: 200;
     }
   }
@@ -629,6 +821,7 @@
 
 
 @include tm('alignment') {
+  width:100%;
 
   @include tm('typography') {
     width: 100%;
@@ -641,7 +834,6 @@
     position: absolute;
     padding-left: 2em;
     @include tm('typography') {
-      width: 80%;
       float: left;
       text-align: left;
 
