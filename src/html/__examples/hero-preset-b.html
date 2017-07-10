@@ -2,26 +2,47 @@
 <div class="tumeric__hero">
   <div class="tumeric__hero-container" data-component-id="{{ component_id }}">
     <div class="hero-content">
-      <div class="tumeric__alignment top left">
-        <div class="tumeric__typography classic  colour-black fill">
+      <div class="tumeric__alignment {{ alignment }}">
+        <div class="tumeric__typography {{ type_style }}  colour-{{ colour }} {{ button_style }}">
           <div class="tumeric__copy">
             <div class="tumeric__text-block">
-              <!-- <p class="tumeric__eyebrow-text">Quando Efficiendi</p>
-              <div class="tumeric__eyebrow"></div> -->
-
-              <h2 class="tumeric__header">lorem ipsum <br/> dolor sit</h2>
-              <h3 class="tumeric__subheader">eum justo dicunt ponderum te <br/> in posse vivendo menandri nec.</h3>
-              <p class="tumeric__subcopy">Etiam ut vestibulum orci. Nam tempus <br/> auctor eleifend. Pellentesque semper.</p>
+              {% if eyebrow_text %}
+              <p class="tumeric__eyebrow-text">{{ eyebrow_text }}</p>
+              <div class="tumeric__eyebrow"></div>
+              {% endif %}
+              <h2 class="tumeric__header">{{ header | safe }}</h2>
+              <h3 class="tumeric__subheader">{{ subheader | safe }}</h3>
+              <p class="tumeric__subcopy">{{ subcopy | safe }}</p>
             </div>
           </div>
           <div class="tumeric__cta">
-            <a class="tumeric__cta-button" href="#">Shop Now</a>
+            <a class="tumeric__cta-button" href="#">{{ call_to_action }}</a>
           </div>
         </div>
       </div>
     </div>
   </div>
   <div class="tumeric__offer-details ">
-    <a class="colour-white" href="#">*Offer Details</a>
+    <a class="colour-{{ colour }}" href="#">{{ offer_details }}</a>
   </div>
 </div>
+
+<!-- Styles -->
+
+<style>
+  .tumeric__hero-container[data-component-id="{{ component_id }}"] {
+      background-image: url({{ background_url_mobile }});
+  }
+
+  @media screen and (min-width:35.625em) {
+    .tumeric__hero-container[data-component-id="{{ component_id }}"] {
+        background-image: url({{ background_url_tablet }});
+    }
+  }
+
+  @media screen and (min-width:60em) {
+    .tumeric__hero-container[data-component-id="{{ component_id }}"] {
+        background-image: url({{ background_url_desktop }});
+    }
+  }
+</style>

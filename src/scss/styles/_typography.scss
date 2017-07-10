@@ -19,6 +19,12 @@
           @content;
         } @else if $style == 'stroke' {
           @content;
+        } @else if $style == 'none' {
+          font-size: 1.65rem;
+          font-weight: 500;
+          text-decoration: underline;
+          text-transform: capitalize;
+          @content;
         }
       }
     }
@@ -54,6 +60,10 @@
       border-color: $black;
       color: $black;
     }
+    @include cta('none') {
+
+      color: $black;
+    }
   }
   @else if $colour == "white" {
     @include cta('fill') {
@@ -62,6 +72,10 @@
     }
     @include cta('stroke') {
       border-color: $white;
+      color: $white;
+    }
+    @include cta('none') {
+
       color: $white;
     }
   }
@@ -74,6 +88,10 @@
       border-color: $orange;
       color: $orange;
     }
+    @include cta('none') {
+
+      color: $orange;
+    }
   }
   @else {
     @include cta('fill') {
@@ -82,6 +100,10 @@
     }
     @include cta('stroke') {
       border-color: $white;
+      color: $white;
+    }
+    @include cta('none') {
+
       color: $white;
     }
   }
@@ -155,36 +177,66 @@
     }
   }
 
-  @include tm('hero-preset-c') {
+  @include tm('cta-button') {
+    text-decoration: none;
+  }
 
-    &.fr {
+  @include tm('text-block') {
+    h1 {
+      &:first-child:last-child {
+        font-size: 7rem;
+      }
 
-      @include tm('text-block') {
-
-        @include desktop-up() {
-          flaot: left;
-          width: (1/3) * 100%;
-        }
-        @include tablet-only() {
-          &:first-child {
-            float: left;
-            width: 100%;
-          }
-
-          &:nth-child(2), &:nth-child(3) {
-            float: left;
-            width: (1/2) * 100%;
-          }
+      @include tablet-up() {
+        &:first-child:last-child {
+          font-size: 9rem;
         }
       }
 
+      @include desktop-up() {
+        &:first-child:last-child {
+          font-size: 8vh;
+        }
+      }
+
+    }
+  }
+
+  @include tm('hero-preset-e') {
+    text-align: center;
+    width: 100%;
+    @include tablet-up() {
+      text-align: center;
+      width: 1/2 * 100%;
+    }
+    @include desktop-up() {
+      text-align: center;
+      width: 1/3 * 100%;
+    }
+
+    @include tm('pc-plus-img') {
+      padding:1rem;
+      width:80%;
+    }
+
+
+  }
+
+  @include tm('hero-preset-c') {
+    float: left;
+    width: 100%;
+    margin-bottom: 1rem;
+
+
+    &.fr {
+
       @include tm('subheader') {
-        font-size: 1.25rem;
+        font-size: 1.25em;
         margin:0;
       }
 
       @include tm('header') {
-        font-size: 2.5rem;
+        font-size: 2.5em;
         margin:0;
       }
 
@@ -194,26 +246,38 @@
 
       @include tablet-up() {
         @include tm('subheader') {
-          font-size: 1.75rem;
+          font-size: 1em;
         }
 
         @include tm('header') {
-          font-size: 3rem;
+          font-size: 2em;
         }
 
         @include tm('subcopy') {
 
         }
       }
+      @include desktop-up() {
+        @include tm('subheader') {
+          font-size: 1em;
+        }
 
+        @include tm('header') {
+          font-size: 2em;
+        }
+
+        @include tm('subcopy') {
+
+        }
+      }
     }
     @include tm('subheader') {
-      font-size: 1.5rem;
+      font-size: 1em;
       margin:0;
     }
 
     @include tm('header') {
-      font-size: 3rem;
+      font-size: 2em;
       margin:0;
     }
 
@@ -223,11 +287,11 @@
 
     @include tablet-up() {
       @include tm('subheader') {
-        font-size: 2rem;
+        font-size: 1.5rem;
       }
 
       @include tm('header') {
-        font-size: 4rem;
+        font-size: 3rem;
       }
 
       @include tm('subcopy') {
@@ -236,11 +300,11 @@
     }
     @include desktop-up() {
       @include tm('subheader') {
-        font-size: 3rem;
+        font-size: 2em;
       }
 
       @include tm('header') {
-        font-size: 6rem;
+        font-size: 4em;
       }
 
       @include tm('subcopy') {
@@ -251,6 +315,11 @@
     &.en {
       @include tm('text-block') {
 
+        float:left;
+        width: 100%;
+        margin: 1rem 0;
+
+
         @include tablet-up() {
           @include mock-flexbox($number-of-columns: 3, $class-name: 'tumeric__text-block');
         }
@@ -258,17 +327,38 @@
       }
     }
 
+    &.fr {
+      @include tm('text-block') {
+        float: left;
+        width: 100%;
+      }
 
+      @include tablet-up() {
+        @include tm('text-block') {
+          float: left;
+          &:first-child {
+            width: 100%;
+          }
+          &:nth-child(2), &:nth-child(3) {
+            width: (1/2) * 100%;
+          }
+        }
+      }
+
+      @include desktop-up() {
+        @include tm('text-block') {
+          float: left;
+          &:first-child, &:nth-child(2), &:nth-child(3) {
+            width: (1/3) * 100%;
+          }
+
+        }
+      }
+
+    }
 
   }
 
-  @include tm('text-block') {
-
-    float:left;
-    width: 100%;
-    margin: 1rem 0;
-
-  }
   @include mobile-only() {
     @include tm('subcopy') {
       padding: 0rem 3rem 0 0;
@@ -295,17 +385,6 @@
   }
   @include tm('header') {
     margin-bottom:0;
-
-    // Handles Preset D
-    &:first-child:nth-last-child(1) {
-      font-size: 7rem;
-    }
-
-    @include tablet-up() {
-      &:first-child:nth-last-child(1) {
-        font-size: 10rem;
-      }
-    }
   }
 
   &.colour {
@@ -520,6 +599,7 @@
   width: 100%;
 
   &-container {
+    overflow: hidden;
     background-image: url('https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Hero-b3.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -812,6 +892,7 @@
 }
 
 @include tm('offer-details') {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   float: right;
   position: relative;
   right: 1em;

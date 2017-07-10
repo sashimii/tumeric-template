@@ -2,38 +2,61 @@
 <div class="tumeric__hero">
   <div class="tumeric__hero-container" data-component-id="{{ component_id }}">
     <div class="hero-content">
-      <div class="tumeric__alignment middle left">
-        <div class="tumeric__typography classic  colour-white fill">
+      <div class="tumeric__alignment {{ alignment }}">
+        <div class="tumeric__typography {{ type_style }}  colour-{{ colour }} {{ button_style }}">
           <div class="tumeric__copy">
-            <p class="tumeric__eyebrow-text hidden-xs">Quando Efficiendi</p>
+            {% if eyebrow_text %}
+            <p class="tumeric__eyebrow-text hidden-xs">{{ eyebrow_text }}</p>
             <div class="tumeric__eyebrow hidden-xs"></div>
+            {% endif %}
             <div class="tumeric__hero-preset-c en">
               <div class="tumeric__text-block">
-                <h3 class="tumeric__subheader">Buy 2</h3>
-                <h2 class="tumeric__header">Save 20%</h2>
-                <p class="tumeric__subcopy">Use Code <strong>SPENDWOW</strong></p>
+                <h3 class="tumeric__subheader">{{ subheader_1 | safe }}</h3>
+                <h2 class="tumeric__header">{{ header_1 | safe }}</h2>
+                <p class="tumeric__subcopy">{{ code_1 | safe }}</p>
               </div>
               <div class="tumeric__text-block">
-                <h3 class="tumeric__subheader">Buy 3</h3>
-                <h2 class="tumeric__header">Save 25%</h2>
-                <p class="tumeric__subcopy">Use Code <strong>SPENDWOW</strong></p>
+                <h3 class="tumeric__subheader">{{ subheader_2 | safe }}</h3>
+                <h2 class="tumeric__header">{{ header_2 | safe }}</h2>
+                <p class="tumeric__subcopy">{{ code_2 | safe }}</p>
               </div>
               <div class="tumeric__text-block">
-                <h3 class="tumeric__subheader">Buy 4</h3>
-                <h2 class="tumeric__header">Save 30%</h2>
-                <p class="tumeric__subcopy">Use Code <strong>SPENDWOW</strong></p>
+                <h3 class="tumeric__subheader">{{ subheader_3 | safe }}</h3>
+                <h2 class="tumeric__header">{{ header_3 | safe }}</h2>
+                <p class="tumeric__subcopy">{{ code_3 | safe }}</p>
               </div>
             </div>
-            <p class="tumeric__subcopy">Etiam ut vestibulum orci. Nam tempus auctor eleifend. Pellentesque semper.</p>
+            <p class="tumeric__subcopy">{{ subcopy | safe}}</p>
           </div>
           <div class="tumeric__cta">
-            <a class="tumeric__cta-button" href="#">Shop Now</a>
+            <a class="tumeric__cta-button" href="#">{{ call_to_action }}</a>
           </div>
         </div>
       </div>
     </div>
   </div>
   <div class="tumeric__offer-details ">
-    <a class="colour-white" href="#">*Offer Details</a>
+    <a class="colour-{{ colour }}" href="#">{{ offer_details }}</a>
   </div>
 </div>
+
+
+<!-- Styles -->
+
+<style>
+  .tumeric__hero-container[data-component-id="{{ component_id }}"] {
+      background-image: url({{ background_url_mobile }});
+  }
+
+  @media screen and (min-width:35.625em) {
+    .tumeric__hero-container[data-component-id="{{ component_id }}"] {
+        background-image: url({{ background_url_tablet }});
+    }
+  }
+
+  @media screen and (min-width:60em) {
+    .tumeric__hero-container[data-component-id="{{ component_id }}"] {
+        background-image: url({{ background_url_desktop }});
+    }
+  }
+</style>
