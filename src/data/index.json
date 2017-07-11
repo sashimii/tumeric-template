@@ -154,6 +154,45 @@
           "background_url_2_tablet" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Announcement-b2.jpg",
           "background_url_2_desktop" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Announcement-b1.jpg"
         }
+      },
+      "promo": {
+        "c": {
+          "component_id": "kausdjhfilu",
+          "type_style": "classic uppercase",
+          "alignment_1": "top left",
+          "colour_1": "white",
+          "button_style_1": "stroke",
+          "eyebrow_text_1": "",
+          "header_1" : "lorem ipsum <br/> dolor sit",
+          "subcopy_1": "Etiam ut vestibulum orci. Nam tempus <br/> auctor eleifend. Pellentesque semper.",
+          "call_to_action_1": "Shop Now",
+          "offer_details_1" : "*Offer Details",
+          "background_url_1_mobile" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/promo_tiles_preset_c_1--mobile.png",
+          "background_url_1_tablet" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/promo_tiles_preset_c_1--tablet.png",
+          "background_url_1_desktop" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/promo_tiles_preset_c_1--desktop.png",
+          "alignment_2": "top left",
+          "colour_2": "white",
+          "button_style_2": "stroke",
+          "eyebrow_text_2": "",
+          "header_2" : "lorem ipsum <br/> dolor sit",
+          "subcopy_2": "Etiam ut vestibulum orci. Nam tempus <br/> auctor eleifend. Pellentesque semper.",
+          "call_to_action_2": "Shop Now",
+          "offer_details_2" : "*Offer Details",
+          "background_url_2_mobile" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Announcement-b3.jpg",
+          "background_url_2_tablet" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Announcement-b2.jpg",
+          "background_url_2_desktop" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Announcement-b1.jpg",
+          "alignment_3": "top left",
+          "colour_3": "white",
+          "button_style_3": "stroke",
+          "eyebrow_text_3": "",
+          "header_3" : "lorem ipsum <br/> dolor sit",
+          "subcopy_3": "Etiam ut vestibulum orci. Nam tempus <br/> auctor eleifend. Pellentesque semper.",
+          "call_to_action_3": "Shop Now",
+          "offer_details_3" : "*Offer Details",
+          "background_url_3_mobile" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Announcement-b3.jpg",
+          "background_url_3_tablet" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Announcement-b2.jpg",
+          "background_url_3_desktop" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Announcement-b1.jpg"
+        }
       }
     }
   },

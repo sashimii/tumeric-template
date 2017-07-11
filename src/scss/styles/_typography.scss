@@ -429,6 +429,17 @@
           color: $white;
         }
       }
+
+      &-navy {
+        color: $orange;
+        @include cta-seasonal("navy");
+        @include tm("subcopy") {
+          color: $navy;
+        }
+        @include tm("eyebrow") {
+          background: $orange;
+        }
+      }
     }
 
     &-white {
@@ -436,6 +447,28 @@
       @include cta-evergreen("white");
       @include tm("eyebrow") {
         background: $white;
+      }
+
+      &-navy {
+        color: $white;
+        @include cta-seasonal("navy");
+        @include tm("subcopy") {
+          color: $navy;
+        }
+        @include tm("eyebrow") {
+          background: $white;
+        }
+      }
+
+      &-camel {
+        color: $white;
+        @include cta-seasonal("camel");
+        @include tm("subcopy") {
+          color: $camel;
+        }
+        @include tm("eyebrow") {
+          background: $white;
+        }
       }
 
       &-orange {
@@ -448,19 +481,54 @@
     }
 
     &-navy {
-      color: $white;
+      color: $navy;
       @include cta-seasonal("navy");
       @include tm("eyebrow") {
-        background: $white;
+        background: $navy;
+      }
+
+      &-white {
+        color: $navy;
+        @include cta-evergreen("white");
+        @include tm("eyebrow") {
+          background: $navy;
+        }
+      }
+
+      &-orange {
+        color: $navy;
+        @include cta-evergreen("orange");
+        @include tm("eyebrow") {
+          background: $navy;
+        }
       }
     }
 
     &-maroon {
-
+      color: $maroon;
+      @include cta-seasonal("maroon");
+      @include tm("eyebrow") {
+        background: $navy;
+      }
     }
 
     &-camel {
+      color: $camel;
+      @include cta-seasonal("camel");
+      @include tm("eyebrow") {
+        background: $camel;
+      }
 
+      &-white {
+        color: $camel;
+        @include cta-evergreen("white");
+        @include tm("subcopy") {
+          color: $white;
+        }
+        @include tm("eyebrow") {
+          background: $camel;
+        }
+      }
     }
 
 
