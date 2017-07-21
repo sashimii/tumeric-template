@@ -127,13 +127,19 @@
         "background_url_tablet" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-07-04/Fall-Homepage-Mocks-Editorial-b2.jpg",
         "background_url_desktop" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-07-04/Fall-Homepage-Mocks-Editorial-b1.jpg"
       },
+      "featured_video" : {
+        "video_url_desktop": "img/video-b1.mp4",
+        "video_url_tablet": "img/video-b2.mp4",
+        "video_url_mobile": "img/video-b3.mp4",
+        "call_to_action": "Shop the Collection"
+      },
       "announcement": {
         "a": {
           "component_id": "kausdjhfilu",
-          "type_style": "classic uppercase",
+          "type_style": "classic titlecase ",
           "alignment_1": "top left",
-          "colour_1": "white",
-          "button_style_1": "stroke",
+          "colour_1": "white-camel",
+          "button_style_1": "fill",
           "eyebrow_text_1": "",
           "header_1" : "lorem ipsum <br/> dolor sit",
           "subcopy_1": "Etiam ut vestibulum orci. Nam tempus <br/> auctor eleifend. Pellentesque semper.",
@@ -193,6 +199,12 @@
           "background_url_3_tablet" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Announcement-b2.jpg",
           "background_url_3_desktop" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Announcement-b1.jpg"
         }
+      },
+      "blackBar" : {
+        "text_copy_1" : "Give 25%, <strong>Get $10 off</strong> <a href=\"#\">Refer a Friend</a>",
+        "text_copy_2" : "Give 35%%, <strong>Get $10 off</strong> <a href=\"#\">Refer a Friend</a>",
+        "text_copy_3" : "Give 45%%, <strong>Get $10 off</strong> <a href=\"#\">Refer a Friend</a>",
+        "carousel_interval" : 3
       }
     }
   },

@@ -1,0 +1,27 @@
+<div class="tumeric__video container">
+  <div class="tumeric__video-box embed-responsive embed-responsive-16by9">
+    <video id="tumeric-video" class="embed-responsive-item" autoplay loop>
+
+    </video>
+  </div>
+  <p class="tumeric__video-cta text-center"><a href="#">{{ call_to_action }}</a></p>
+</div>
+
+<script>
+
+  var video = $('#tumeric-video');
+
+  var windowWidth = $(window).width();
+
+  if (windowWidth <= 425) {
+      //It is a small screen
+      video.append("<source src='{{ video_url_mobile }}' type='video/mp4' >");
+  } else if (windowWidth > 425 && windowWidth < 1024 ) {
+    // Tablets
+    video.append("<source src='{{ video_url_tablet }}' type='video/mp4' >");
+  } else {
+    //It is a big screen or desktop
+    video.append("<source src='{{ video_url_desktop }}' type='video/mp4' >");
+  }
+
+</script>

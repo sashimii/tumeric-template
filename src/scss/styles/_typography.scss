@@ -1,4 +1,5 @@
 @import 'colours';
+@import 'fall-fonts';
 
 // Typographic Elements
 
@@ -16,8 +17,10 @@
     @include tm('cta') {
       &-button {
         @if $style == 'fill' {
+          font-weight: 600;
           @content;
         } @else if $style == 'stroke' {
+          font-weight: 600;
           @content;
         } @else if $style == 'none' {
           font-size: 1.65rem;
@@ -580,10 +583,33 @@
     }
   }
 
+  // Fall Font
+
+  &.fall {
+    @include tm('header') {
+      font-family: Newton, serif;
+      font-weight: 400;
+    }
+
+    &.bold {
+      @include tm('header') {
+        font-weight: 500;
+      }
+    }
+
+    &.extrabold {
+      @include tm('header') {
+        font-weight: 600;
+      }
+    }
+
+  }
+
   &.classic,
   &.semibold,
   &.light,
-  &.thin {
+  &.thin,
+  &.fall {
     @include tm('header') {
       &:first-letter {
         text-transform: capitalize;
@@ -965,6 +991,7 @@
   position: relative;
   right: 1em;
   bottom: 2em;
+  margin-bottom: -2em;
 
   &.colour,
   .colour {
@@ -972,6 +999,11 @@
     &-black {
       text-decoration: underline;
       color: $black;
+
+      &-orange {
+        text-decoration: underline;
+        color: $orange;
+      }
 
     }
 
@@ -982,12 +1014,69 @@
         text-decoration: underline;
         color: $black;
       }
+
+      &-white {
+        text-decoration: underline;
+        color: $white;
+      }
+
+      &-navy {
+        text-decoration: underline;
+        color: $navy;
+      }
     }
 
     &-white {
       text-decoration: underline;
       color: $white;
+
+      &-orange {
+        text-decoration: underline;
+        color: $orange;
+      }
+
+      &-navy {
+        text-decoration: underline;
+        color: $navy;
+      }
+
+      &-camel {
+        text-decoration: underline;
+        color: $camel;
+      }
+
     }
+
+    &-navy {
+      text-decoration: underline;
+      color: $navy;
+
+
+      &-white {
+        text-decoration: underline;
+        color: $white;
+      }
+
+      &-orange {
+        text-decoration: underline;
+        color: $orange;
+      }
+    }
+
+    &-maroon {
+      text-decoration: underline;
+      color: $maroon;
+    }
+
+    &-camel {
+      text-decoration: underline;
+      color: $camel;
+      &-white {
+        text-decoration: underline;
+        color: $white;
+      }
+    }
+
   }
 
 }
@@ -1066,4 +1155,79 @@
     top: 2em;
   }
 
+}
+
+
+@include tm('carousel') {
+
+  // .carousel-fade {
+  //     .carousel-inner {
+  //         .item {
+  //             transition-property: opacity;
+  //         }
+  //
+  //         .item,
+  //         .active.left,
+  //         .active.right {
+  //             opacity: 0;
+  //         }
+  //
+  //         .active,
+  //         .next.left,
+  //         .prev.right {
+  //             opacity: 1;
+  //         }
+  //
+  //         .next,
+  //         .prev,
+  //         .active.left,
+  //         .active.right {
+  //             left: 0;
+  //             transform: translate3d(0, 0, 0);
+  //         }
+  //     }
+  //
+  //     .carousel-control {
+  //         z-index: 2;
+  //     }
+  // }
+  //
+  // .carousel,
+  // .carousel-inner,
+  // .carousel-inner .item {
+  //     height: 100%;
+  // }
+  //
+  // .item:nth-child(1) {
+  //     background: #74C390;
+  // }
+  //
+  // .item:nth-child(2) {
+  //     background: #51BCE8;
+  // }
+  //
+  // .item:nth-child(3) {
+  //     background: #E46653;
+  // }
+  //
+
+}
+
+@include tm('video') {
+  @include tm('video-box') {
+    margin: 0 0 1rem 0;
+  }
+  @include tm('video-cta') {
+    font-family: 'JFCalibre', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    a {
+      font-size: 1.75rem;
+      color: $black;
+      text-decoration: underline;
+      &:hover {
+        color: $black;
+        text-decoration: underline;
+      }
+
+    }
+  }
 }
