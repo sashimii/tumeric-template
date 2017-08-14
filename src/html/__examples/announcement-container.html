@@ -6,7 +6,7 @@
         <div class="tumeric__announcement-box">
           <div class="announcement-content">
             <div class="tumeric__alignment announcement-padding {{ alignment_1 }}">
-              <div class="tumeric__typography {{ type_style }}  colour-{{ colour_1 }} {{ button_style_1 }}">
+              <div class="tumeric__typography {{ type_style_1 }}  colour-{{ colour_1 }} {{ button_style_1 }}">
                 <div class="tumeric__copy">
                   <div class="tumeric__text-block announcement-text">
                     {% if eyebrow_text_1 %}
@@ -32,7 +32,7 @@
         <div class="tumeric__announcement-box">
           <div class="announcement-content">
             <div class="tumeric__alignment announcement-padding {{ alignment_2 }}">
-              <div class="tumeric__typography {{ type_style }}  colour-{{ colour_2 }} {{ button_style_2 }}">
+              <div class="tumeric__typography {{ type_style_2 }}  colour-{{ colour_2 }} {{ button_style_2 }}">
                 <div class="tumeric__copy">
                   <div class="tumeric__text-block announcement-text">
                     {% if eyebrow_text_2 %}
@@ -65,28 +65,32 @@
   .tumeric__announcement-container[data-component-id="{{ component_id }}"] .tumeric__padding-box:nth-child(1) .tumeric__announcement-box {
       background-image:
         url({{ background_url_1 }}-b3.jpg),
-        url({{ background_url_1 }}-b3.png);
+        url({{ background_url_1 }}-b3.png),
+        url({{ background_url_1 }}-b3.gif);
       color:black;
   }
 
   .tumeric__announcement-container[data-component-id="{{ component_id }}"] .tumeric__padding-box:nth-child(2) .tumeric__announcement-box {
       background-image:
         url({{ background_url_2 }}-b3.jpg),
-        url({{ background_url_2 }}-b3.png);
+        url({{ background_url_2 }}-b3.png),
+        url({{ background_url_2 }}-b3.gif);
   }
 
   @media screen and (min-width:35.625em) {
     .tumeric__announcement-container[data-component-id="{{ component_id }}"] .tumeric__padding-box:nth-child(1) .tumeric__announcement-box {
         background-image:
           url({{ background_url_1 }}-b2.jpg),
-          url({{ background_url_1 }}-b2.png);
+          url({{ background_url_1 }}-b2.png),
+          url({{ background_url_1 }}-b2.gif);
         color:black;
     }
 
     .tumeric__announcement-container[data-component-id="{{ component_id }}"] .tumeric__padding-box:nth-child(2) .tumeric__announcement-box {
         background-image:
           url({{ background_url_2 }}-b2.jpg),
-          url({{ background_url_2 }}-b2.png);
+          url({{ background_url_2 }}-b2.png),
+          url({{ background_url_2 }}-b2.gif);
     }
   }
 
@@ -94,14 +98,16 @@
     .tumeric__announcement-container[data-component-id="{{ component_id }}"] .tumeric__padding-box:nth-child(1) .tumeric__announcement-box {
         background-image:
           url({{ background_url_1 }}-b1.jpg),
-          url({{ background_url_1 }}-b1.png);
+          url({{ background_url_1 }}-b1.png),
+          url({{ background_url_1 }}-b1.gif);
         color:black;
     }
 
     .tumeric__announcement-container[data-component-id="{{ component_id }}"] .tumeric__padding-box:nth-child(2) .tumeric__announcement-box {
         background-image:
           url({{ background_url_2 }}-b1.jpg),
-          url({{ background_url_2 }}-b1.png);
+          url({{ background_url_2 }}-b1.png),
+          url({{ background_url_2 }}-b1.gif);
     }
   }
 
@@ -115,8 +121,10 @@
         background-image:
           url({{ background_url_1 }}-b3@2x.jpg),
           url({{ background_url_1 }}-b3@2x.png),
+          url({{ background_url_1 }}-b3@2x.gif),
           url({{ background_url_1 }}-b3.jpg),
-          url({{ background_url_1 }}-b3.png);
+          url({{ background_url_1 }}-b3.png),
+          url({{ background_url_1 }}-b3.gif);
         color:black;
     }
 
@@ -124,8 +132,10 @@
       background-image:
         url({{ background_url_2 }}-b3@2x.jpg),
         url({{ background_url_2 }}-b3@2x.png),
+        url({{ background_url_2 }}-b3@2x.gif),
         url({{ background_url_2 }}-b3.jpg),
-        url({{ background_url_2 }}-b3.png);
+        url({{ background_url_2 }}-b3.png),
+        url({{ background_url_2 }}-b3.gif);
     }
 
   }
@@ -137,16 +147,20 @@
       background-image:
         url({{ background_url_1 }}-b2@2x.jpg),
         url({{ background_url_1 }}-b2@2x.png),
+        url({{ background_url_1 }}-b2@2x.gif),
         url({{ background_url_1 }}-b2.jpg),
-        url({{ background_url_1 }}-b2.png);
+        url({{ background_url_1 }}-b2.png),
+        url({{ background_url_1 }}-b2.gif);
     }
 
     .tumeric__announcement-container[data-component-id="{{ component_id }}"] .tumeric__padding-box:nth-child(2) .tumeric__announcement-box {
       background-image:
         url({{ background_url_2 }}-b2@2x.jpg),
         url({{ background_url_2 }}-b2@2x.png),
+        url({{ background_url_2 }}-b2@2x.gif),
         url({{ background_url_2 }}-b2.jpg),
-        url({{ background_url_2 }}-b2.png);
+        url({{ background_url_2 }}-b2.png),
+        url({{ background_url_2 }}-b2.gif);
     }
   }
 
@@ -158,16 +172,20 @@
       background-image:
         url({{ background_url_1 }}-b1@2x.jpg),
         url({{ background_url_1 }}-b1@2x.png),
+        url({{ background_url_1 }}-b1@2x.gif),
         url({{ background_url_1 }}-b1.jpg),
-        url({{ background_url_1 }}-b1.png);
+        url({{ background_url_1 }}-b1.png),
+        url({{ background_url_1 }}-b1.gif);
     }
 
     .tumeric__announcement-container[data-component-id="{{ component_id }}"] .tumeric__padding-box:nth-child(2) .tumeric__announcement-box {
       background-image:
         url({{ background_url_2 }}-b1@2x.jpg),
         url({{ background_url_2 }}-b1@2x.png),
+        url({{ background_url_2 }}-b1@2x.gif),
         url({{ background_url_2 }}-b1.jpg),
-        url({{ background_url_2 }}-b1.png);
+        url({{ background_url_2 }}-b1.png),
+        url({{ background_url_2 }}-b1.gif);
     }
   }
 

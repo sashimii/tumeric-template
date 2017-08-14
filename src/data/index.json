@@ -138,7 +138,7 @@
       "announcement": {
         "a": {
           "component_id": "fdsghaasd",
-          "type_style": "classic titlecase ",
+          "type_style_1": "classic titlecase ",
           "alignment_1": "middle left",
           "colour_1": "white-camel",
           "button_style_1": "fill",
@@ -150,6 +150,7 @@
           "offer_details_1" : "*Offer Details",
           "offer_details_link_1": "#",
           "background_url_1" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Announcement",
+          "type_style_2": "classic titlecase ",
           "alignment_2": "middle left",
           "colour_2": "white",
           "button_style_2": "stroke",
@@ -166,7 +167,7 @@
       "promo": {
         "c": {
           "component_id": "eqrtdsfh",
-          "type_style": "classic uppercase",
+          "type_style_1": "classic uppercase",
           "alignment_1": "middle left",
           "colour_1": "white",
           "button_style_1": "stroke",
@@ -178,6 +179,7 @@
           "offer_details_1" : "*Offer Details",
           "offer_details_link_1": "#",
           "background_url_1" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Announcement",
+          "type_style_2": "classic uppercase",
           "alignment_2": "middle left",
           "colour_2": "white",
           "button_style_2": "stroke",
@@ -189,6 +191,7 @@
           "offer_details_2" : "*Offer Details",
           "offer_details_link_2": "#",
           "background_url_2" : "https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Announcement",
+          "type_style_3": "classic uppercase",
           "alignment_3": "middle left",
           "colour_3": "white",
           "button_style_3": "stroke",
