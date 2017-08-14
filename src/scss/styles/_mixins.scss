@@ -1,0 +1,286 @@
+
+// Typographic Elements
+
+// TM is short for Tumeric
+// Spits out namespaced styles
+@mixin tm($class-name) {
+  .#{$namespace}__#{$class-name} {
+      @content;
+  }
+}
+
+@mixin px($pt_value) {
+  font-size: $pt_value * 1.3333 + 0px;
+}
+
+@mixin pad-hero($attribute, $mobile, $tablet, $desktop) {
+  #{$attribute}: $mobile;
+  @include tablet-up {
+    #{$attribute}: $tablet;
+  }
+  @include desktop-up {
+    #{$attribute}: $desktop;
+  }
+}
+
+@mixin pad-text($mobile, $tablet, $desktop) {
+  @include tm('text-block') {
+    @include tm('eyebrow-text') {
+      margin: 0;
+    }
+    @include tm('eyebrow') {
+      margin: 0 0 #{$mobile} 0;
+    }
+    @include tm('header') {
+      // @include px(40);
+      font-size: 40pt;
+      margin: #{$mobile} 0 #{$mobile} 0;
+    }
+    @include tm('subheader') {
+      margin: #{$mobile} 0 #{$mobile} 0;
+    }
+    @include tm('subcopy') {
+      // @include px(16);
+      font-size: 16px;
+      margin: #{$mobile} 0 #{($mobile + $mobile) } 0;
+    }
+    @include tablet-up() {
+      @include tm('eyebrow-text') {
+        margin: 0;
+      }
+      @include tm('eyebrow') {
+        // @include px((36/2));
+        font-size: (36pt / 3);
+        margin: 0 0 #{$tablet} 0;
+      }
+      @include tm('header') {
+        // @include px((120/2));
+        font-size: 50px;
+        margin: #{$tablet} 0 #{$tablet} 0;
+      }
+      @include tm('subheader') {
+        margin: #{$tablet} 0 #{$tablet} 0;
+      }
+      @include tm('subcopy') {
+        font-size: 16px;
+        margin: #{$tablet} 0 #{$tablet + $tablet} 0;
+      }
+    }
+
+    @include desktop-up() {
+      @include tm('eyebrow-text') {
+        font-size: (24pt/2);
+        margin: 0;
+      }
+      @include tm('eyebrow') {
+        margin: 0 0 #{$desktop} 0;
+      }
+      @include tm('header') {
+        font-size: 50px;
+        margin: #{$desktop} 0 #{$desktop} 0;
+      }
+      @include tm('subheader') {
+        margin: #{$desktop} 0 #{$desktop} 0;
+      }
+      @include tm('subcopy') {
+        // font-size: (22pt/2);
+        margin: #{$desktop} 0 #{$desktop + $desktop} 0;
+      }
+    }
+  }
+}
+
+@mixin subcopy-size($mobile, $tablet, $desktop) {
+  @include tm('text-block') {
+    @include tm('header') {
+      font-size: 40pt;
+    }
+
+    @include tm('subcopy') {
+      font-size: 16pt;
+    }
+    @include tablet-up() {
+      @include tm('eyebrow') {
+        font-size: (36pt / 3);
+      }
+      @include tm('header') {
+        font-size: (120pt / 3);
+      }
+      @include tm('subcopy') {
+        font-size: (28pt / 3);
+      }
+    }
+
+    @include desktop-up() {
+      @include tm('eyebrow-text') {
+        font-size: (24pt/2);
+      }
+      @include tm('header') {
+        font-size: (70pt/2);
+      }
+
+      @include tm('subcopy') {
+        font-size: (22pt/2);
+      }
+    }
+  }
+}
+
+
+
+@mixin text-container-widths($mobile, $tablet, $desktop) {
+  width: $mobile;
+  @include tablet-up {
+    width: $tablet;
+  }
+  @include desktop-up {
+    width: $desktop;
+  }
+}
+
+// Handling Fill vs Stroke
+@mixin cta($style) {
+  &.#{$style} {
+    @include tm('cta') {
+      &-button {
+        @if $style == 'fill' {
+
+          @content;
+        } @else if $style == 'stroke' {
+          @content;
+        } @else if $style == 'none' {
+          font-size: 1.65rem;
+          font-weight: 500;
+          text-decoration: underline;
+          text-transform: capitalize;
+          @content;
+        }
+      }
+    }
+  }
+}
+
+@mixin aspect-ratio($name, $width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .#{$name}-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+// Handling Evergreen Colours
+@mixin cta-evergreen($colour) {
+
+  @if $colour == "black" {
+    @include cta('fill') {
+      background-color: $black;
+      color: $white;
+    }
+    @include cta('stroke') {
+      border-color: $black;
+      color: $black;
+    }
+    @include cta('none') {
+
+      color: $black;
+    }
+  }
+  @else if $colour == "white" {
+    @include cta('fill') {
+      background-color: $white;
+      color: $black;
+    }
+    @include cta('stroke') {
+      border-color: $white;
+      color: $white;
+    }
+    @include cta('none') {
+
+      color: $white;
+    }
+  }
+  @else if $colour == "orange" {
+    @include cta('fill') {
+      background-color: $orange;
+      color: $white;
+    }
+    @include cta('stroke') {
+      border-color: $orange;
+      color: $orange;
+    }
+    @include cta('none') {
+
+      color: $orange;
+    }
+  }
+  @else {
+    @include cta('fill') {
+      background-color: $white;
+      color: $orange;
+    }
+    @include cta('stroke') {
+      border-color: $white;
+      color: $white;
+    }
+    @include cta('none') {
+
+      color: $white;
+    }
+  }
+
+}
+
+// Handling Seasonal Colours
+@mixin cta-seasonal($colour) {
+
+  @if $colour == "navy" {
+    @include cta('fill') {
+      background-color: $navy;
+      color: $white;
+    }
+    @include cta('stroke') {
+      border-color: $navy;
+      color: $navy;
+    }
+  }
+  @else if $colour == "maroon" {
+    @include cta('fill') {
+      background-color: $maroon;
+      color: $white;
+    }
+    @include cta('stroke') {
+      border-color: $maroon;
+      color: $maroon;
+    }
+  }
+  @else if $colour == "camel" {
+    @include cta('fill') {
+      background-color: $camel;
+      color: $navy;
+    }
+    @include cta('stroke') {
+      border-color: $camel;
+      color: $camel;
+    }
+  }
+  @else {
+    @include cta('fill') {
+      background-color: $white;
+      color: $navy;
+    }
+    @include cta('stroke') {
+      border-color: $white;
+      color: $white;
+    }
+  }
+
+}

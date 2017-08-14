@@ -1,163 +1,8 @@
+@import 'variables';
 @import 'colours';
 @import 'fall-fonts';
-
-// Typographic Elements
-
-// TM is short for Tumeric
-// Spits out namespaced styles
-@mixin tm($class-name) {
-  .#{$namespace}__#{$class-name} {
-      @content;
-  }
-}
-
-// Handling Fill vs Stroke
-@mixin cta($style) {
-  &.#{$style} {
-    @include tm('cta') {
-      &-button {
-        @if $style == 'fill' {
-          font-weight: 600;
-          @content;
-        } @else if $style == 'stroke' {
-          font-weight: 600;
-          @content;
-        } @else if $style == 'none' {
-          font-size: 1.65rem;
-          font-weight: 500;
-          text-decoration: underline;
-          text-transform: capitalize;
-          @content;
-        }
-      }
-    }
-  }
-}
-
-@mixin aspect-ratio($name, $width, $height) {
-  position: relative;
-  &:before {
-    display: block;
-    content: "";
-    width: 100%;
-    padding-top: ($height / $width) * 100%;
-  }
-  > .#{$name}-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-}
-
-// Handling Evergreen Colours
-@mixin cta-evergreen($colour) {
-
-  @if $colour == "black" {
-    @include cta('fill') {
-      background-color: $black;
-      color: $white;
-    }
-    @include cta('stroke') {
-      border-color: $black;
-      color: $black;
-    }
-    @include cta('none') {
-
-      color: $black;
-    }
-  }
-  @else if $colour == "white" {
-    @include cta('fill') {
-      background-color: $white;
-      color: $black;
-    }
-    @include cta('stroke') {
-      border-color: $white;
-      color: $white;
-    }
-    @include cta('none') {
-
-      color: $white;
-    }
-  }
-  @else if $colour == "orange" {
-    @include cta('fill') {
-      background-color: $orange;
-      color: $white;
-    }
-    @include cta('stroke') {
-      border-color: $orange;
-      color: $orange;
-    }
-    @include cta('none') {
-
-      color: $orange;
-    }
-  }
-  @else {
-    @include cta('fill') {
-      background-color: $white;
-      color: $orange;
-    }
-    @include cta('stroke') {
-      border-color: $white;
-      color: $white;
-    }
-    @include cta('none') {
-
-      color: $white;
-    }
-  }
-
-}
-
-// Handling Seasonal Colours
-@mixin cta-seasonal($colour) {
-
-  @if $colour == "navy" {
-    @include cta('fill') {
-      background-color: $navy;
-      color: $white;
-    }
-    @include cta('stroke') {
-      border-color: $navy;
-      color: $navy;
-    }
-  }
-  @else if $colour == "maroon" {
-    @include cta('fill') {
-      background-color: $maroon;
-      color: $white;
-    }
-    @include cta('stroke') {
-      border-color: $maroon;
-      color: $maroon;
-    }
-  }
-  @else if $colour == "camel" {
-    @include cta('fill') {
-      background-color: $camel;
-      color: $navy;
-    }
-    @include cta('stroke') {
-      border-color: $camel;
-      color: $camel;
-    }
-  }
-  @else {
-    @include cta('fill') {
-      background-color: $white;
-      color: $navy;
-    }
-    @include cta('stroke') {
-      border-color: $white;
-      color: $white;
-    }
-  }
-
-}
+@import 'kids-fonts';
+@import 'mixins';
 
 @include tm('typography') {
   font-family: 'JFCalibre', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
@@ -174,9 +19,96 @@
   @include tm('copy') {
     float: left;
     width: 100%;
+    &.hero-classic {
+      @include text-container-widths($classic-textbox-width-mobile, $classic-textbox-width-tablet, $classic-textbox-width-desktop)
+    }
+
+    &.hero-header-only {
+      @include text-container-widths($header-textbox-width-mobile, $header-textbox-width-tablet, $header-textbox-width-desktop)
+    }
     margin: 0 0 2rem 0;
+    &.hero-classic {
+      margin: 0;
+    }
     h1, p {
       margin: 0;
+    }
+  }
+
+  .hero-classic {
+    @include pad-text($classic-text-padding-mobile, $classic-text-padding-tablet, $classic-text-padding-desktop);
+  }
+
+  .announcement-text {
+    @include tm('header') {
+        font-size: (26pt / 1.25);
+    }
+    @include tm('subcopy') {
+        font-size: (16pt / 2);
+    }
+    @include desktop-up() {
+      @include tm('header') {
+          font-size: (26pt / 1.5);
+      }
+      @include tm('subcopy') {
+          font-size: (16pt / 1.5);
+      }
+    }
+  }
+
+  .feature-text {
+    @include tm('eyebrow-text') {
+      font-size: ( 22pt / 2 );
+
+    }
+    @include tm('header') {
+      padding-bottom: (35px / 2);
+      font-size: (40pt / 2);
+    }
+    @include tm('subcopy') {
+      padding-bottom: (35px / 2);
+      font-size: (16pt / 2);
+    }
+    @include tablet-up() {
+      @include tm('eyebrow-text') {
+        font-size: ( 22pt / 2 );
+      }
+      @include tm('header') {
+        padding-bottom: (30px / 2);
+        font-size: (120pt / 4);
+      }
+      @include tm('subcopy') {
+        padding-bottom: (30px / 2);
+        font-size: (28pt / 3);
+      }
+    }
+    @include desktop-up() {
+      @include tm('eyebrow-text') {
+        font-size: ( 24pt / 2 );
+      }
+      @include tm('header') {
+        font-size: (70pt / 2);
+      }
+      @include tm('subcopy') {
+        font-size: (22pt / 2);
+      }
+    }
+  }
+
+  .promo-text {
+    @include tm('header') {
+        font-size: (26pt / 1.25);
+    }
+    @include tm('subcopy') {
+        font-size: (16pt / 2);
+    }
+    @include desktop-up() {
+      @include tm('header') {
+          font-size: (26pt / 1.5);
+      }
+      @include tm('subcopy') {
+          font-size: (16pt / 1.5);
+      }
     }
   }
 
@@ -184,21 +116,22 @@
     text-decoration: none;
   }
 
+  // Hero Preset D
   @include tm('text-block') {
     h1 {
       &:first-child:last-child {
-        font-size: 7rem;
+        font-size: 50pt; //(60pt / 1.5);
       }
 
       @include tablet-up() {
         &:first-child:last-child {
-          font-size: 9rem;
+          font-size: 50pt; //(120pt / 2.5);
         }
       }
 
       @include desktop-up() {
         &:first-child:last-child {
-          font-size: 8vh;
+          font-size: 60pt; //(110pt / 2);
         }
       }
 
@@ -224,6 +157,8 @@
 
 
   }
+
+
 
   @include tm('hero-preset-c') {
     float: left;
@@ -374,13 +309,14 @@
   @include tm('eyebrow') {
     display: inline-block;
     background-color: $black;
-    height: 0.5em;
-    width: 2em;
+    height: 0.25em;
+    width: 1.5em;
   }
 
   @include tm('eyebrow-text') {
-    font-size: 2rem;
-    font-weight: 500;
+    font-size: (22pt / 1.75);
+    margin: 0;
+    font-weight: 400;
   }
 
   @include tm('subheader') {
@@ -605,11 +541,28 @@
 
   }
 
+  &.kids {
+    &.sketch {
+      @include tm('header') {
+        font-family: KGSecondChancesSketch, serif;
+        font-weight: normal;
+      }
+    }
+
+    &.solid {
+      @include tm('header') {
+        font-family: KGSecondChancesSolid, serif;
+        font-weight: normal;
+      }
+    }
+  }
+
   &.classic,
   &.semibold,
   &.light,
   &.thin,
-  &.fall {
+  &.fall,
+  &.kids {
     @include tm('header') {
       &:first-letter {
         text-transform: capitalize;
@@ -666,8 +619,43 @@
     width: 100%;
     float:left;
     &-button {
-      padding: 12.5px 25px 7.5px 25px;
-      font-weight: 400;
+      font-size: 10pt;
+      font-weight: 600;
+      padding: 15px 45px 10px 45px;
+      @include tablet-up() {
+        font-size: 9.5pt;
+        padding: 15px 30px 10px 30px;
+      }
+      @include desktop-up() {
+        font-size: 9.5pt;
+        padding: 15px 30px 10px 30px;
+      }
+      &.hero-padding, &.feature-padding {
+        padding: 18px 45px 13px 45px;
+        @include tablet-up() {
+          font-size: 9.5pt;
+          padding: 18px 30px 13px 30px;
+        }
+        @include desktop-up() {
+          font-size: 9.5pt;
+          padding: 18px 30px 13px 30px;
+        }
+      }
+
+      &.announcement-padding, &.promo-padding {
+        padding: 12px 30px 7px 30px;
+        @include tablet-up() {
+          font-size: 9.5pt;
+          padding: 15px 30px 10px 30px;
+        }
+        @include desktop-up() {
+          font-size: 9.5pt;
+          padding: 15px 30px 10px 30px;
+        }
+      }
+
+
+
       text-transform: uppercase;
       &:hover {
         text-decoration: none;
@@ -970,7 +958,7 @@
     // }
 
     @include tablet-up() {
-      @include aspect-ratio('feature',735,795);
+      @include aspect-ratio('feature',(1470 / 2),( 980 / 2));
       // width: 768px;
       // height: 420px;
     }
@@ -987,6 +975,7 @@
 
 @include tm('offer-details') {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 12px;
   float: right;
   position: relative;
   right: 1em;
@@ -1094,7 +1083,19 @@
   &.left {
     float: left;
     position: absolute;
-    padding-left: 2em;
+    &.hero-padding {
+      @include pad-hero('padding-left', $hero-pad-mobile, $hero-pad-tablet, $hero-pad-desktop);
+    }
+    &.announcement-padding {
+      @include pad-hero('padding-left', $announcement-pad-mobile, $announcement-pad-tablet , $announcement-pad-desktop);
+    }
+    &.feature-padding {
+      @include pad-hero('padding-left', $feature-pad-mobile, $feature-pad-tablet , $feature-pad-desktop);
+    }
+    &.promo-padding {
+      @include pad-hero('padding-left', $promo-pad-mobile, $promo-pad-tablet , $promo-pad-desktop);
+    }
+
     @include tm('typography') {
       float: left;
       text-align: left;
@@ -1120,12 +1121,32 @@
   &.right {
     float: right;
     position: absolute;
-    right: 2em;
+    &.hero-padding {
+      @include pad-hero('right', $hero-pad-mobile, $hero-pad-tablet, $hero-pad-desktop);
+    }
+    &.announcement-padding {
+      @include pad-hero('right', $announcement-pad-mobile, $announcement-pad-tablet , $announcement-pad-desktop);
+    }
+    &.feature-padding {
+      @include pad-hero('right', $feature-pad-mobile, $feature-pad-tablet , $feature-pad-desktop);
+    }
+    &.promo-padding {
+      @include pad-hero('right', $promo-pad-mobile, $promo-pad-tablet , $promo-pad-desktop);
+    }
+
     @include tm('typography') {
       float: right;
       text-align: right;
       @include tm('copy') {
-        width:80%;
+        width: 80%;
+        &.hero-classic {
+          @include text-container-widths($classic-textbox-width-mobile, $classic-textbox-width-tablet, $classic-textbox-width-desktop)
+        }
+
+        &.hero-header-only {
+          @include text-container-widths($header-textbox-width-mobile, $header-textbox-width-tablet, $header-textbox-width-desktop)
+        }
+
         float: right;
 
         @include tm("eyebrow") {
@@ -1136,7 +1157,19 @@
   }
 
   &.bottom {
-    bottom: 2em;
+    &.hero-padding {
+      @include pad-hero('bottom', $hero-pad-mobile, $hero-pad-tablet, $hero-pad-desktop);
+    }
+    &.announcement-padding {
+      @include pad-hero('bottom', $announcement-pad-mobile, $announcement-pad-tablet , $announcement-pad-desktop);
+    }
+    &.feature-padding {
+      @include pad-hero('bottom', $feature-pad-mobile, $feature-pad-tablet , $feature-pad-desktop);
+    }
+    &.promo-padding {
+      @include pad-hero('bottom', $promo-pad-mobile, $promo-pad-tablet , $promo-pad-desktop);
+    }
+
   }
 
   &.middle {
@@ -1152,7 +1185,18 @@
   }
 
   &.top {
-    top: 2em;
+    &.hero-padding {
+      @include pad-hero('top', $hero-pad-mobile, $hero-pad-tablet, $hero-pad-desktop);
+    }
+    &.announcement-padding {
+      @include pad-hero('top', $announcement-pad-mobile, $announcement-pad-tablet , $announcement-pad-desktop);
+    }
+    &.feature-padding {
+      @include pad-hero('top', $feature-pad-mobile, $feature-pad-tablet , $feature-pad-desktop);
+    }
+    &.promo-padding {
+      @include pad-hero('top', $promo-pad-mobile, $promo-pad-tablet , $promo-pad-desktop);
+    }
   }
 
 }
@@ -1215,12 +1259,21 @@
 
 @include tm('video') {
   @include tm('video-box') {
-    margin: 0 0 1rem 0;
+    margin: 0 0 15px 0;
+    @include desktop-up() {
+      margin: 0 0 20px 0;
+    }
   }
   @include tm('video-cta') {
     font-family: 'JFCalibre', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
     a {
-      font-size: 1.75rem;
+      font-size: (18pt / 1.5);
+      @include tablet-up() {
+        font-size: (28pt / 2);
+      }
+      @include desktop-up() {
+        font-size: (22pt / 2);
+      }
       color: $black;
       text-decoration: underline;
       &:hover {
