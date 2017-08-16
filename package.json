@@ -19,6 +19,7 @@
   "homepage": "https://github.com/sashimii/CoreWebStarterKit#readme",
   "devDependencies": {
     "axios": "^0.16.2",
+    "bootstrap-sass": "^3.3.7",
     "browser-sync": "^2.18.7",
     "browserify": "^14.0.0",
     "bulkify": "^1.4.2",
