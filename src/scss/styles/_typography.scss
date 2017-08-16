@@ -1110,6 +1110,9 @@
     position: absolute;
     margin: auto;
     width: 100%;
+    @include tm('copy') {
+      width: 100%;
+    }
     @include tm('typography') {
       float: left;
       text-align: center;
@@ -1259,6 +1262,8 @@
 }
 
 @include tm('video') {
+  width: 100%;
+  float: left;
   @include tm('video-box') {
     margin: 0 0 15px 0;
     @include desktop-up() {
@@ -1267,6 +1272,7 @@
   }
   @include tm('video-cta') {
     font-family: 'JFCalibre', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    text-align: center;
     a {
       font-size: (18pt / 1.5);
       @include tablet-up() {

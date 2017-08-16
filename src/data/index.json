@@ -4,7 +4,7 @@
       "hero": {
         "a" : {
           "component_id": "alksjdasd",
-          "alignment": "bottom left",
+          "alignment": "top center",
           "type_style": "classic lowercase",
           "colour": "white",
           "eyebrow_text": "",
