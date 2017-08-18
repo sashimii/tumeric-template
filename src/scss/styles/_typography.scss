@@ -27,7 +27,7 @@
     &.hero-header-only {
       @include text-container-widths($header-textbox-width-mobile, $header-textbox-width-tablet, $header-textbox-width-desktop)
     }
-    margin: 0 0 2rem 0;
+    // margin: 0 0 2rem 0;
     &.hero-classic {
       margin: 0;
     }
@@ -41,19 +41,21 @@
   }
 
   .announcement-text {
+    max-width: 275px;
+    max-height: 99px;
+    margin: 0 0 20px 0;
+
     @include tm('header') {
-        font-size: (26pt / 1.25);
+        font-size: 30px;
+        line-height: 1.1;
     }
     @include tm('subcopy') {
-        font-size: (16pt / 2);
+        font-size: 18px;
+        line-height: 1.22;
     }
     @include desktop-up() {
-      @include tm('header') {
-          font-size: (26pt / 1.5);
-      }
-      @include tm('subcopy') {
-          font-size: (16pt / 1.5);
-      }
+      max-width:350px;
+      max-height: 99px;
     }
   }
 
@@ -335,6 +337,12 @@
       @include tm("eyebrow") {
         background: $black;
       }
+      @include tm('header') {
+        color: $black;
+      };
+      @include tm('subcopy') {
+        color: $black;
+      };
     }
 
     &-orange {
@@ -373,6 +381,9 @@
       &-navy {
         color: $orange;
         @include cta-seasonal("navy");
+        @include tm('header') {
+          color: $orange;
+        };
         @include tm("subcopy") {
           color: $navy;
         }
@@ -388,9 +399,18 @@
       @include tm("eyebrow") {
         background: $white;
       }
+      @include tm('header') {
+        color: $white;
+      };
+      @include tm('subcopy') {
+        color: $white;
+      };
 
       &-navy {
         color: $white;
+        @include tm('header') {
+          color: $white;
+        };
         @include cta-seasonal("navy");
         @include tm("subcopy") {
           color: $navy;
@@ -402,6 +422,9 @@
 
       &-camel {
         color: $white;
+        @include tm('header') {
+          color: $white;
+        };
         @include cta-seasonal("camel");
         @include tm("subcopy") {
           color: $camel;
@@ -413,6 +436,9 @@
 
       &-orange {
         color: $white;
+        @include tm('header') {
+          color: $white;
+        };
         @include cta-evergreen("orange");
         @include tm("eyebrow") {
           background: $white;
@@ -422,6 +448,9 @@
 
     &-navy {
       color: $navy;
+      @include tm('header') {
+        color: $navy;
+      };
       @include cta-seasonal("navy");
       @include tm("eyebrow") {
         background: $navy;
@@ -429,6 +458,9 @@
 
       &-white {
         color: $navy;
+        @include tm('header') {
+          color: $navy;
+        };
         @include cta-evergreen("white");
         @include tm("eyebrow") {
           background: $navy;
@@ -437,6 +469,9 @@
 
       &-orange {
         color: $navy;
+        @include tm('header') {
+          color: $navy;
+        };
         @include cta-evergreen("orange");
         @include tm("eyebrow") {
           background: $navy;
@@ -446,6 +481,9 @@
 
     &-maroon {
       color: $maroon;
+      @include tm('header') {
+        color: $maroon;
+      };
       @include cta-seasonal("maroon");
       @include tm("eyebrow") {
         background: $navy;
@@ -454,6 +492,9 @@
 
     &-camel {
       color: $camel;
+      @include tm('header') {
+        color: $camel;
+      };
       @include cta-seasonal("camel");
       @include tm("eyebrow") {
         background: $camel;
@@ -461,6 +502,9 @@
 
       &-white {
         color: $camel;
+        @include tm('header') {
+          color: $camel;
+        };
         @include cta-evergreen("white");
         @include tm("subcopy") {
           color: $white;
@@ -620,15 +664,15 @@
     width: 100%;
     float:left;
     &-button {
-      font-size: 10pt;
+      font-size: 14px;
       font-weight: 600;
       padding: 15px 45px 10px 45px;
       @include tablet-up() {
-        font-size: 9.5pt;
+        // font-size: 9.5pt;
         padding: 15px 30px 10px 30px;
       }
       @include desktop-up() {
-        font-size: 9.5pt;
+        // font-size: 9.5pt;
         padding: 15px 30px 10px 30px;
       }
       &.hero-padding, &.feature-padding {
@@ -644,15 +688,15 @@
       }
 
       &.announcement-padding, &.promo-padding {
-        padding: 12px 30px 7px 30px;
+        padding: 13px 35px 8px 35px;
         @include tablet-up() {
-          font-size: 9.5pt;
-          padding: 15px 30px 10px 30px;
+          font-size: 14px;
+          padding: 13px 30px 8px 30px;
         }
-        @include desktop-up() {
-          font-size: 9.5pt;
-          padding: 15px 30px 10px 30px;
-        }
+        // @include desktop-up() {
+        //   font-size: 9.5pt;
+        //
+        // }
       }
 
 
@@ -975,8 +1019,9 @@
 }
 
 @include tm('offer-details') {
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 12px;
+  font-family: 'JFCalibre',"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.43;
   float: right;
   position: relative;
   right: 1em;
