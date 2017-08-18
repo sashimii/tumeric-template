@@ -1310,7 +1310,9 @@
   width: 100%;
   float: left;
   @include tm('video-box') {
-    margin: 0 0 15px 0;
+    margin: 0 0 10px 0;
+    @include tablet-up() { }
+      margin: 0 0 15px 0;
     @include desktop-up() {
       margin: 0 0 20px 0;
     }
@@ -1319,12 +1321,15 @@
     font-family: 'JFCalibre', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
     text-align: center;
     a {
-      font-size: (18pt / 1.5);
+      font-size: 18px;
+      line-height: 1.11;
       @include tablet-up() {
-        font-size: (28pt / 2);
+        font-size: 20px;
+        line-height: 1;
       }
       @include desktop-up() {
-        font-size: (22pt / 2);
+        // font-size: 20px;
+        // line-height: 1;
       }
       color: $black;
       text-decoration: underline;
