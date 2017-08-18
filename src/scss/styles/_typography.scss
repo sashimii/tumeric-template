@@ -220,22 +220,24 @@
   @include tm('hero-preset-c') {
     float: left;
     width: 100%;
-    margin-bottom: 1rem;
+
 
 
     &.fr {
 
       @include tm('subheader') {
-        font-size: 1.25em;
+        font-size: 16px;
         margin:0;
       }
 
       @include tm('header') {
-        font-size: 2.5em;
+        font-size: 26px;
         margin:0;
       }
 
       @include tm('subcopy') {
+        font-size: 16px;
+        line-height: 1.25;
         margin:0;
       }
 
@@ -324,6 +326,7 @@
 
     &.fr {
       @include tm('text-block') {
+        margin-bottom:15px;
         float: left;
         width: 100%;
       }
@@ -717,6 +720,16 @@
   @include tm('cta') {
     width: 100%;
     float:left;
+    margin-top: 15px;
+    @include tablet-up() {
+      // font-size: 9.5pt;
+      margin-top: 15px;
+    }
+    @include desktop-up() {
+      // font-size: 9.5pt;
+      margin-top: 15px;
+    }
+
     &-button {
       font-size: 14px;
       font-weight: 600;
