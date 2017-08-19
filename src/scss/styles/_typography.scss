@@ -109,17 +109,19 @@
 
   .promo-text {
     @include tm('header') {
-        font-size: (26pt / 1.25);
+        font-size: 30px;
+        margin-bottom: 13px;
     }
     @include tm('subcopy') {
-        font-size: (16pt / 2);
+        font-size: 18px;
+        margin-bottom: 20px;
     }
-    @include desktop-up() {
+    @include tablet-up() {
       @include tm('header') {
-          font-size: (26pt / 1.5);
+          font-size: 30px;
       }
       @include tm('subcopy') {
-          font-size: (16pt / 1.5);
+          font-size: 18px;
       }
     }
   }
