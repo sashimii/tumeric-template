@@ -4,7 +4,7 @@
       "hero": {
         "a" : {
           "component_id": "alksjdasd",
-          "alignment": "top center",
+          "alignment": "middle left",
           "type_style": "classic lowercase",
           "colour": "white",
           "eyebrow_text": "",
@@ -23,9 +23,9 @@
           "type_style": "classic lowercase",
           "colour": "black",
           "eyebrow_text": "",
-          "header": "lorem ipsum <br/> dolor sit",
-          "subheader" : "eum justo dicunt ponderum te <br/> in posse vivendo menandri nec.",
-          "subcopy": "Etiam ut vestibulum orci. Nam tempus <br/> auctor eleifend. Pellentesque semper.",
+          "header": "lorem ipsum dolor sit",
+          "subheader" : "eum justo dicunt ponderum te in posse vivendo menandri nec.",
+          "subcopy": "Etiam ut vestibulum orci. Nam tempus auctor eleifend. Pellentesque semper.",
           "call_to_action": "Shop Now",
           "cta_link": "#",
           "offer_details": "*Offer Details",

@@ -28,8 +28,15 @@
       @include text-container-widths($header-textbox-width-mobile, $header-textbox-width-tablet, $header-textbox-width-desktop)
     }
     // margin: 0 0 2rem 0;
-    &.hero-classic {
-      margin: 0;
+    @include tm('text-block') {
+      &.hero-classic {
+
+        // @@include ;
+        @include tm('header') {
+          margin: 0;
+          // font-size: 45px;
+        }
+      }
     }
     h1, p {
       margin: 0;
@@ -38,6 +45,8 @@
 
   .hero-classic {
     @include pad-text($classic-text-padding-mobile, $classic-text-padding-tablet, $classic-text-padding-desktop);
+
+
   }
 
   .announcement-text {

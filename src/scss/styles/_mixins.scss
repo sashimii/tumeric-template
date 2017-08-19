@@ -33,15 +33,18 @@
     }
     @include tm('header') {
       // @include px(40);
-      font-size: 40pt;
+      font-size: 45px;
       margin: #{$mobile} 0 #{$mobile} 0;
     }
     @include tm('subheader') {
+      font-size: 20px;
+      line-height: 1.2;
       margin: #{$mobile} 0 #{$mobile} 0;
     }
     @include tm('subcopy') {
       // @include px(16);
-      font-size: 16px;
+      font-size: 18px;
+      line-height: 1.22;
       margin: #{$mobile} 0 #{($mobile + $mobile) } 0;
     }
     @include tablet-up() {
@@ -55,15 +58,21 @@
       }
       @include tm('header') {
         // @include px((120/2));
-        font-size: 50px;
-        margin: #{$tablet} 0 #{$tablet} 0;
+        font-size: 55px;
+        line-height: 0.91;
+        margin-bottom: (12px) / 2;
+        // margin: #{$tablet} 0 #{$tablet} 0;
       }
       @include tm('subheader') {
-        margin: #{$tablet} 0 #{$tablet} 0;
+        font-size: 26px;
+        line-height: 1.15;
+        margin-bottom: (28px) / 2;
+        // margin: #{$tablet} 0 #{$tablet} 0;
       }
       @include tm('subcopy') {
-        font-size: 16px;
-        margin: #{$tablet} 0 #{$tablet + $tablet} 0;
+        font-size: 18px;
+        line-height: 1.22;
+        // margin: #{$tablet} 0 #{$tablet + $tablet} 0;
       }
     }
 
@@ -76,15 +85,20 @@
         margin: 0 0 #{$desktop} 0;
       }
       @include tm('header') {
-        font-size: 50px;
-        margin: #{$desktop} 0 #{$desktop} 0;
+        font-size: 65px;
+        margin-bottom: (5px) / 2;
       }
       @include tm('subheader') {
-        margin: #{$desktop} 0 #{$desktop} 0;
+        font-size: 32px;
+        line-height: 1.12;
+        margin-bottom: (32px) / 2;
       }
       @include tm('subcopy') {
+        font-size: 18px;
+        line-height: 1.22;
+        margin-bottom: (40px) / 2;
         // font-size: (22pt/2);
-        margin: #{$desktop} 0 #{$desktop + $desktop} 0;
+        // margin: #{$desktop} 0 #{$desktop + $desktop} 0;
       }
     }
   }
