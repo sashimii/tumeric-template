@@ -216,12 +216,19 @@
   }
 
 
+  @include tm('3-column') {
+    margin-bottom: 21px;
+    @include tm('eyebrow') {
+      margin-bottom: 30px;
+    }
+    @include mobile-only() {
+      max-width: 271px;
+    }
+  }
 
   @include tm('hero-preset-c') {
     float: left;
     width: 100%;
-
-
 
     &.fr {
 
@@ -243,56 +250,65 @@
 
       @include tablet-up() {
         @include tm('subheader') {
-          font-size: 1em;
+          font-size: 18px;
         }
 
         @include tm('header') {
-          font-size: 2em;
+          font-size: 36px;
         }
 
         @include tm('subcopy') {
-
+          font-size: 18px;
+          line-height: 1.22;
         }
       }
       @include desktop-up() {
         @include tm('subheader') {
-          font-size: 1em;
+          font-size: 24px;
         }
 
         @include tm('header') {
-          font-size: 2em;
+          font-size: 48px;
         }
 
         @include tm('subcopy') {
-
+          font-size: 18px;
+          line-height: 1.22;
         }
       }
     }
     @include tm('subheader') {
-      font-size: 1em;
+      font-size: 16px;
+      line-height: 1;
       margin:0;
     }
 
     @include tm('header') {
-      font-size: 2em;
+      font-size: 32px;
+      line-height: 1;
       margin:0;
     }
 
     @include tm('subcopy') {
+      font-size: 16px;
+      line-height: 1.38;
       margin:0;
     }
 
     @include tablet-up() {
       @include tm('subheader') {
-        font-size: 1.5rem;
+        font-size: 24px;
+        line-height: 1;
       }
 
       @include tm('header') {
-        font-size: 3rem;
+        font-size: 48px;
+        line-height: 1;
       }
 
       @include tm('subcopy') {
-
+        font-size: 18px;
+        line-height: 1.22;
       }
     }
     @include desktop-up() {
@@ -314,7 +330,7 @@
 
         float:left;
         width: 100%;
-        margin: 1rem 0;
+        margin-bottom: 20px;
 
 
         @include tablet-up() {
@@ -1406,6 +1422,15 @@
         text-decoration: underline;
       }
 
+    }
+  }
+}
+
+@include tm('hero-container') {
+  @include tm('cta') {
+    margin-bottom: 20px;
+    &-button {
+      padding: 18px 45px 13px 45px;
     }
   }
 }
