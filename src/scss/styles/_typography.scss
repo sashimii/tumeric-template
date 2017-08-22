@@ -1403,6 +1403,7 @@
 @include tm('video') {
   width: 100%;
   float: left;
+  padding: 1rem;
   @include tm('video-box') {
     margin: 0 0 10px 0;
     @include tablet-up() {
