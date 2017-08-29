@@ -1,3 +1,4 @@
+@import '../black-box';
 @import 'required-bootstrap-styles';
 @import 'variables';
 @import 'colours';
@@ -69,56 +70,70 @@
   }
 
   .feature-text {
+    width: 271px;
+    @include tablet-up() {
+      width: 340px;
+    };
     @include tm('eyebrow-text') {
-      font-size: ( 22pt / 2 );
+      font-size: 20px;
+      line-height: 1;
 
     }
+    @include tm('eyebrow') {
+      margin: 9px 0 30px 0;
+    };
     @include tm('header') {
-      padding-bottom: (35px / 2);
-      font-size: (40pt / 2);
+      padding-bottom: (24px) / 2;
+      margin: 0;
+      line-height: 1;
+      font-size: 36px;
     }
     @include tm('subcopy') {
       padding-bottom: (35px / 2);
-      font-size: (16pt / 2);
+      line-height: 1.19;
+      font-size: 16px;
     }
     @include tablet-up() {
       @include tm('eyebrow-text') {
-        font-size: ( 22pt / 2 );
+        // font-size: 20px;
       }
       @include tm('header') {
         padding-bottom: (30px / 2);
-        font-size: (120pt / 4);
+        font-size: 40px;
+        line-height: 1.02;
       }
       @include tm('subcopy') {
-        padding-bottom: (30px / 2);
-        font-size: (28pt / 3);
+        padding-bottom: (33px);
+        font-size: 18px;
+        line-height: 1.17;
       }
     }
     @include desktop-up() {
       @include tm('eyebrow-text') {
-        font-size: ( 24pt / 2 );
+        font-size: 20px;
       }
       @include tm('header') {
-        font-size: (70pt / 2);
+        font-size: 50px;
       }
       @include tm('subcopy') {
-        font-size: (22pt / 2);
+        font-size: 18px;
+        line-height: 1.17;
       }
     }
   }
 
   .promo-text {
     @include tm('header') {
-        font-size: 30px;
+        font-size: 22px;
         margin-bottom: 13px;
     }
     @include tm('subcopy') {
-        font-size: 18px;
+        font-size: 16px;
         margin-bottom: 20px;
     }
     @include tablet-up() {
       @include tm('header') {
-          font-size: 30px;
+          font-size: 26px;
       }
       @include tm('subcopy') {
           font-size: 18px;
@@ -135,6 +150,7 @@
     h1 {
       &:first-child:last-child {
         font-size: 60px; //(60pt / 1.5);
+        line-height: 1;
       }
 
       @include tablet-up() {
@@ -396,8 +412,8 @@
   @include tm('eyebrow') {
     display: inline-block;
     background-color: $black;
-    height: 0.25em;
-    width: 1.5em;
+    height: 4px;
+    width: 20px;
   }
 
   @include tm('eyebrow-text') {
@@ -869,7 +885,7 @@
         &:nth-child(1) {
           width: 100%;
           @include tm('promotion-box') {
-            @include aspect-ratio('promotion',735,200);
+            @include aspect-ratio('promotion',745,220);
           }
 
         }
@@ -1082,7 +1098,7 @@
   width: 100%;
 
   &-container {
-    background-image: url('https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Hero-b3.jpg');
+    // background-image: url('https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Hero-b3.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1097,7 +1113,7 @@
     // }
 
     @include tablet-up() {
-      @include aspect-ratio('feature',(1470 / 2),( 980 / 2));
+      @include aspect-ratio('feature', 735,795);
       // width: 768px;
       // height: 420px;
     }
@@ -1118,8 +1134,8 @@
   line-height: 1.43;
   float: right;
   position: relative;
-  right: 1em;
-  bottom: 2em;
+  right: 8px;
+  bottom: 23px;
   margin-bottom: -2em;
 
   &.colour,
