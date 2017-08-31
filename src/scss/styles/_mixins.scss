@@ -34,33 +34,35 @@
     @include tm('header') {
       // @include px(40);
       font-size: 45px;
-      margin: #{$mobile} 0 #{$mobile} 0;
+      margin-bottom: 14px;
     }
     @include tm('subheader') {
       font-size: 20px;
       line-height: 1.2;
-      margin: #{$mobile} 0 #{$mobile} 0;
+      margin-bottom: 26px;
     }
     @include tm('subcopy') {
-      // @include px(16);
-      font-size: 18px;
-      line-height: 1.22;
-      margin: #{$mobile} 0 #{($mobile + $mobile) } 0;
+      font-size: 16px;
+      line-height: 1.19;
+      margin-bottom: 31px;
     }
     @include tablet-up() {
       @include tm('eyebrow-text') {
+        font-size: 20px;
         margin: 0;
       }
       @include tm('eyebrow') {
-        // @include px((36/2));
-        font-size: (36pt / 3);
-        margin: 0 0 #{$tablet} 0;
+        margin-bottom: 19.8px;
       }
       @include tm('header') {
-        // @include px((120/2));
-        font-size: 55px;
-        line-height: 0.91;
+        font-size: 50px;
+        line-height: 1;
         margin-bottom: (12px) / 2;
+        &:first-child {
+          font-size: 60px;
+          line-height: 1;
+          margin-bottom: (26px) / 2 ;
+        }
         // margin: #{$tablet} 0 #{$tablet} 0;
       }
       @include tm('subheader') {
@@ -71,22 +73,31 @@
       }
       @include tm('subcopy') {
         font-size: 18px;
-        line-height: 1.22;
+        line-height: 1.17;
+        &:first-child {
+          font-size: 18px;
+          line-height: 1.17;
+          margin-bottom: (36px) / 2 ;
+        }
         // margin: #{$tablet} 0 #{$tablet + $tablet} 0;
       }
     }
 
     @include desktop-up() {
       @include tm('eyebrow-text') {
-        font-size: (24pt/2);
+        font-size: 20px;
         margin: 0;
       }
       @include tm('eyebrow') {
-        margin: 0 0 #{$desktop} 0;
+        margin-bottom: 35px;
       }
       @include tm('header') {
-        font-size: 65px;
+        font-size: 60px;
         margin-bottom: (5px) / 2;
+        &:first-child {
+          font-size: 80px;
+          margin-bottom: 11px;
+        }
       }
       @include tm('subheader') {
         font-size: 32px;
@@ -95,8 +106,9 @@
       }
       @include tm('subcopy') {
         font-size: 18px;
-        line-height: 1.22;
-        margin-bottom: (40px) / 2;
+        line-height: 1.17;
+        margin-bottom: 41px;
+
         // font-size: (22pt/2);
         // margin: #{$desktop} 0 #{$desktop + $desktop} 0;
       }

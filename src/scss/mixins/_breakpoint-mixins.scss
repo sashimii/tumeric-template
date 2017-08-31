@@ -7,7 +7,7 @@
 }
 
 @mixin tablet-only() {
-  @media screen and (min-width:35.625em) and (max-width:59.9375em) { @content; }
+  @media screen and (min-width:35.625em) and (max-width:64.624em) { @content; }
 }
 
 @mixin tablet-up() {
@@ -15,5 +15,5 @@
 }
 
 @mixin desktop-up() {
-  @media screen and (min-width:60em) { @content; }
+  @media screen and (min-width:64.625em) { @content; }
 }

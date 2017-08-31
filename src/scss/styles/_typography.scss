@@ -1,4 +1,4 @@
-@import '../black-box';
+// @import '../black-box';
 @import 'required-bootstrap-styles';
 @import 'variables';
 @import 'colours';
@@ -45,27 +45,222 @@
   }
 
   .hero-classic {
-    @include pad-text($classic-text-padding-mobile, $classic-text-padding-tablet, $classic-text-padding-desktop);
+    @include tm('text-block') {
+      @include tm('eyebrow-text') {
+        margin: 0;
+      }
+      @include tm('eyebrow') {
+        margin-bottom: 20px;
+      }
+      @include tm('header') {
+        // @include px(40);
+        font-size: 45px;
+        margin-bottom: 14px;
+      }
+      @include tm('subheader') {
+        font-size: 20px;
+        line-height: 1.2;
+        margin-bottom: 26px;
+      }
+      @include tm('subcopy') {
+        font-size: 16px;
+        line-height: 1.19;
+        margin-bottom: 31px;
+      }
+      @include tablet-up() {
+        @include tm('eyebrow-text') {
+          font-size: 20px;
+          margin: 0;
+        }
+        @include tm('eyebrow') {
+          margin-bottom: 19.8px;
+        }
+        @include tm('header') {
+          font-size: 50px;
+          line-height: 1;
+          margin-bottom: (12px) / 2;
+          &:first-child {
+            font-size: 60px;
+            line-height: 1;
+            margin-bottom: (26px) / 2 ;
+          }
+          // margin: #{$tablet} 0 #{$tablet} 0;
+        }
+        @include tm('subheader') {
+          font-size: 26px;
+          line-height: 1.15;
+          margin-bottom: (28px) / 2;
+          // margin: #{$tablet} 0 #{$tablet} 0;
+        }
+        @include tm('subcopy') {
+          font-size: 18px;
+          line-height: 1.17;
+          &:first-child {
+            font-size: 18px;
+            line-height: 1.17;
+            margin-bottom: (36px) / 2 ;
+          }
+          // margin: #{$tablet} 0 #{$tablet + $tablet} 0;
+        }
+      }
 
+      @include desktop-up() {
+        @include tm('eyebrow-text') {
+          font-size: 20px;
+          margin: 0;
+        }
+        @include tm('eyebrow') {
+          margin-bottom: 35px;
+        }
+        @include tm('header') {
+          font-size: 60px;
+          margin-bottom: (5px) / 2;
+          &:first-child {
+            font-size: 80px;
+            margin-bottom: 11px;
+          }
+        }
+        @include tm('subheader') {
+          font-size: 32px;
+          line-height: 1.12;
+          margin-bottom: (32px) / 2;
+        }
+        @include tm('subcopy') {
+          font-size: 18px;
+          line-height: 1.17;
+          margin-bottom: 41px;
 
+          // font-size: (22pt/2);
+          // margin: #{$desktop} 0 #{$desktop + $desktop} 0;
+        }
+      }
+    }
+  }
+
+  .hero-long-copy {
+    @include tm('text-block') {
+      @include tm('eyebrow-text') {
+        margin: 0;
+      }
+      @include tm('eyebrow') {
+        margin-bottom: 20px;
+      }
+      @include tm('header') {
+        // @include px(40);
+        font-size: 40px;
+        margin-bottom: 1px;
+      }
+      @include tm('subheader') {
+        font-size: 20px;
+        line-height: 1.2;
+        margin-bottom: 26px;
+      }
+      @include tm('subcopy') {
+        font-size: 16px;
+        line-height: 1.19;
+        margin-bottom: 31px;
+      }
+      @include tablet-up() {
+        width: 420px;
+        @include tm('eyebrow-text') {
+          font-size: 20px;
+          margin: 0;
+        }
+        @include tm('eyebrow') {
+          margin-bottom: 19.8px;
+        }
+        @include tm('header') {
+          font-size: 55px;
+          line-height: 1;
+          margin-bottom: (12px) / 2;
+          // margin: #{$tablet} 0 #{$tablet} 0;
+        }
+        @include tm('subheader') {
+          font-size: 26px;
+          line-height: 1.15;
+          margin-bottom: (28px) / 2;
+          // margin: #{$tablet} 0 #{$tablet} 0;
+        }
+        @include tm('subcopy') {
+          font-size: 18px;
+          line-height: 1.17;
+          &:first-child {
+            font-size: 18px;
+            line-height: 1.17;
+            margin-bottom: (36px) / 2 ;
+          }
+          // margin: #{$tablet} 0 #{$tablet + $tablet} 0;
+        }
+      }
+
+      @include desktop-up() {
+        @include tm('eyebrow-text') {
+          font-size: 20px;
+          margin: 0;
+        }
+        @include tm('eyebrow') {
+          margin-bottom: 35px;
+        }
+        @include tm('header') {
+          font-size: 65px;
+          margin-bottom: (5px) / 2;
+        }
+        @include tm('subheader') {
+          font-size: 32px;
+          line-height: 1.12;
+          margin-bottom: (32px) / 2;
+        }
+        @include tm('subcopy') {
+          font-size: 18px;
+          line-height: 1.17;
+          margin-bottom: 41px;
+
+          // font-size: (22pt/2);
+          // margin: #{$desktop} 0 #{$desktop + $desktop} 0;
+        }
+      }
+    }
   }
 
   .announcement-text {
-    max-width: 275px;
+    max-width: 175px;
     max-height: 99px;
-    margin: 0 0 20px 0;
+    // margin: 0 0 20px 0;
 
     @include tm('header') {
-        font-size: 30px;
-        line-height: 1.1;
+        font-size: 18px;
+        line-height: 1.17;
+        margin-bottom: (21px)/2;
     }
     @include tm('subcopy') {
         font-size: 18px;
         line-height: 1.22;
     }
+    @include tablet-up() {
+      max-width:200px;
+      max-height: 92px;
+      @include tm('header') {
+          font-size: 20px;
+          line-height: 1.15;
+          margin-bottom: (21px)/2;
+      }
+      @include tm('subcopy') {
+          font-size: 18px;
+          line-height: 1.22;
+      }
+    }
     @include desktop-up() {
-      max-width:350px;
-      max-height: 99px;
+      max-width:320px;
+      max-height: 81px;
+      @include tm('header') {
+          font-size: 24px;
+          line-height: 1.15;
+          margin-bottom: (20px)/2;
+      }
+      @include tm('subcopy') {
+          font-size: 18px;
+          line-height: 1.22;
+      }
     }
   }
 
@@ -125,18 +320,24 @@
   .promo-text {
     @include tm('header') {
         font-size: 22px;
-        margin-bottom: 13px;
+        line-height: 1.14;
+        margin-bottom: 11px;
     }
     @include tm('subcopy') {
         font-size: 16px;
-        margin-bottom: 20px;
+        line-height: 1.19;
+        margin-bottom: 17px;
     }
     @include tablet-up() {
       @include tm('header') {
           font-size: 26px;
+          line-height: 1.12;
+          margin-bottom: (14px)/2;
       }
       @include tm('subcopy') {
           font-size: 18px;
+          line-height: 1.17;
+          margin-bottom: (21px)/2;
       }
     }
   }
@@ -793,7 +994,7 @@
         }
         @include desktop-up() {
           font-size: 9.5pt;
-          padding: 18px 30px 13px 30px;
+          padding: 17px 40px 12px 40px;
         }
       }
 
