@@ -177,6 +177,7 @@
         } @else if $style == 'none' {
           font-size: 18px;
           line-height: 1.11;
+          padding: 0;
           @include tablet-up() {
             font-size: 20px;
             line-height: 1;
