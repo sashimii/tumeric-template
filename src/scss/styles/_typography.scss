@@ -1690,3 +1690,7 @@
     }
   }
 }
+
+@include tm('component-padding') {
+  padding: 0 0 75px 0;
+}
