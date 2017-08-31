@@ -346,23 +346,23 @@
     text-decoration: none;
   }
 
-  // Hero Preset D
+  // Hero Preset D // Header Only
   @include tm('text-block') {
     h1 {
       &:first-child:last-child {
-        font-size: 60px; //(60pt / 1.5);
+        font-size: 50px; //(60pt / 1.5);
         line-height: 1;
       }
 
       @include tablet-up() {
         &:first-child:last-child {
-          font-size: 90px; //(120pt / 2.5);
+          font-size: 70px; //(120pt / 2.5);
         }
       }
 
       @include desktop-up() {
         &:first-child:last-child {
-          font-size: 120px; //(110pt / 2);
+          font-size: 80px; //(110pt / 2);
         }
       }
 
