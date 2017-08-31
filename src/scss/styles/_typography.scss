@@ -495,6 +495,7 @@
       @include desktop-up() {
         @include tm('subheader') {
           font-size: 24px;
+          line-height: 1.5;
         }
 
         @include tm('header') {
@@ -543,15 +544,17 @@
     }
     @include desktop-up() {
       @include tm('subheader') {
-        font-size: 2em;
+        font-size: 36px;
       }
 
       @include tm('header') {
-        font-size: 4em;
+        font-size: 76px;
       }
 
       @include tm('subcopy') {
-
+        font-size: 18px;
+        line-height: 1.22;
+        margin-top: -8px;
       }
     }
 
@@ -620,7 +623,7 @@
   }
 
   @include tm('eyebrow-text') {
-    font-size: (22pt / 1.75);
+    font-size: 20px;
     margin: 0;
     font-weight: 400;
   }
