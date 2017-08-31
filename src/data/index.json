@@ -162,6 +162,12 @@
           "offer_details_2" : "*Offer Details",
           "offer_details_link_2": "#",
           "background_url_2" : "img/jf-image-2"
+        },
+        "fullwidth": {
+          "component_id": "jfafw1",
+          "link": "#",
+          "image_src": "https://s3.amazonaws.com/joefresh-resource-prod-new/ContentMedia/2017_P9/WK36-NewHP/announcement-fridayfreshedit/wk36_announcementtile_fullwidth_fridayfreshedit_en_b1.jpg",
+          "image_alt": "full width announcement"
         }
       },
       "promo": {

@@ -1208,6 +1208,28 @@
 
 }
 
+@include tm('announcement-fullwidth') {
+  float: left;
+  width: 100%;
+
+  &-container {
+    float: left;
+    width: 100%;
+
+    @include tm('announcement-img') {
+      overflow: hidden;
+      padding: 0;
+
+      .image-content {
+        display: block;
+        height: auto;
+        width: 100%;
+        margin: 1rem 0;
+      }
+    }
+  }
+}
+
 @include tm('announcement-b') {
   float: left;
   width: 100%;
