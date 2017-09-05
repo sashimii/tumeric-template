@@ -335,7 +335,9 @@
     }
 
     &.first-text-box {
-      max-width: 431px;
+      @include tablet-only() {
+        max-width: 431px;
+      }
     }
 
     @include tm('header') {
