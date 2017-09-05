@@ -37,6 +37,9 @@
           margin: 0;
           // font-size: 45px;
         }
+        // @include tm('subcopy') {
+        //   margin: 0 0 32px 0;
+        // };
       }
     }
     h1, p {
@@ -128,7 +131,7 @@
         @include tm('subcopy') {
           font-size: 18px;
           line-height: 1.17;
-          margin-bottom: 41px;
+          margin-bottom: 32px;
 
           // font-size: (22pt/2);
           // margin: #{$desktop} 0 #{$desktop + $desktop} 0;
@@ -317,7 +320,24 @@
     }
   }
 
+
+
   .promo-text {
+    max-width: 175px;
+    max-height: 75px;
+    @include tablet-up() {
+      max-width: 205px;
+      max-height: 87px;
+    }
+    @include desktop-up() {
+      max-width: 190px;
+      max-height: 116px;
+    }
+
+    &.first-text-box {
+      max-width: 431px;
+    }
+
     @include tm('header') {
         font-size: 22px;
         line-height: 1.14;

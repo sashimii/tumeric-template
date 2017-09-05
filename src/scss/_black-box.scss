@@ -26,12 +26,13 @@
 
     a {
       color: white;
-      font-weight: 100;
+      font-weight: 300;
       padding-bottom: 0.1rem;
       border-bottom-width: 1px;
       border-bottom-color: white;
       border-bottom-style: solid;
-
+      text-decoration: none;
+      
       &:focus, &:hover {
         text-decoration: none;
         color: white;

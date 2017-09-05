@@ -132,6 +132,7 @@
         "video_url_desktop": "img/video-b1.mp4",
         "video_url_tablet": "img/video-b2.mp4",
         "video_url_mobile": "img/video-b3.mp4",
+        "video_still": "",
         "call_to_action": "Shop the Collection",
         "cta_link": "#"
       },
