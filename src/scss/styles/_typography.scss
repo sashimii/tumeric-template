@@ -324,14 +324,14 @@
 
   .promo-text {
     max-width: 175px;
-    max-height: 75px;
+    // max-height: 75px;
     @include tablet-up() {
       max-width: 205px;
-      max-height: 87px;
+      // max-height: 87px;
     }
     @include desktop-up() {
       max-width: 190px;
-      max-height: 116px;
+      // max-height: 116px;
     }
 
     &.first-text-box {
@@ -349,6 +349,7 @@
         font-size: 16px;
         line-height: 1.19;
         margin-bottom: 17px;
+        // float: left;
     }
     @include tablet-up() {
       @include tm('header') {
@@ -674,10 +675,15 @@
     }
 
     &-orange {
-      color: $orange;
       @include cta-evergreen("orange");
       @include tm("eyebrow") {
         background: $orange;
+      }
+      @include tm('header') {
+        color: $orange;
+      }
+      @include tm('subcopy') {
+        color: $orange;
       }
 
       &-black {
@@ -1582,7 +1588,7 @@
   }
 
   &.middle {
-    position: relative;
+    // position: relative;
     top: 50%;
     width: 100%;
     @include tm('typography') {

@@ -1,3 +1,5 @@
+@import 'mixins/core-mixins';
+@import 'variables';
 
 .black-bar-container {
   @include clearfix();
@@ -17,6 +19,8 @@
     // padding: 0.1rem 0 1.1rem 0;
     p {
       margin: 0;
+      overflow: hidden;
+      white-space: nowrap;
       strong {
         font-weight: 700;
         text-transform: uppercase;
@@ -32,7 +36,7 @@
       border-bottom-color: white;
       border-bottom-style: solid;
       text-decoration: none;
-      
+
       &:focus, &:hover {
         text-decoration: none;
         color: white;
