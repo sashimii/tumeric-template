@@ -59,7 +59,7 @@
         "c_fr" : {
           "component_id": "sdfnerg",
           "alignment": "middle left",
-          "type_style": "classic titlecase",
+          "type_style": "classic",
           "colour": "white",
           "eyebrow_text": "Quando Efficiendi",
           "subheader_1": "Achetez-en 2 et",
@@ -138,16 +138,16 @@
       },
       "announcement": {
         "a": {
-          "component_id": "fdsghaasd",
-          "type_style_1": "classic titlecase ",
+          "component_id": "asdasfasd",
+          "type_style_1": "classic",
           "alignment_1": "bottom left",
           "colour_1": "white-camel",
           "button_style_1": "fill",
           "eyebrow_text_1": "",
           "header_1" : "Obtenez 15 % de rabais lorsque vous payez avec Masterpass MC de Mastercard MD",
-          "subcopy_1": "",
+          "subcopy_1": "Modèles sélectionnés au prix courant de 16 $ chacun",
           "call_to_action_1": "En Savoir Plus",
-          "cta_link_2": "#",
+          "cta_link_1": "#",
           "offer_details_1" : "*Offer Details",
           "offer_details_link_1": "#",
           "background_url_1" : "img/jf-image-2",
@@ -163,6 +163,21 @@
           "offer_details_2" : "*Offer Details",
           "offer_details_link_2": "#",
           "background_url_2" : "img/jf-image-2"
+        },
+        "fw": {
+          "component_id": "lasldalskjda",
+          "type_style": "classic",
+          "alignment": "bottom left",
+          "colour": "black",
+          "button_style": "fill",
+          "eyebrow_text": "",
+          "header" : "Obtenez 15 % de rabais lorsque vous payez avec Masterpass MC de Mastercard MD",
+          "subcopy": "Modèles sélectionnés au prix courant de 16 $ chacun",
+          "call_to_action": "En Savoir Plus",
+          "cta_link": "#",
+          "offer_details" : "*Offer Details",
+          "offer_details_link": "#",
+          "background_url" : "img/jf-image-2"
         },
         "fullwidth": {
           "component_id": "jfafw1",

@@ -227,7 +227,12 @@
 
   .announcement-text {
     max-width: 175px;
-    max-height: 99px;
+    &.fullwidth {
+      @include tm('subcopy') {
+        margin-bottom: (21px)/2;
+      }
+    }
+    // max-height: 99px;
     // margin: 0 0 20px 0;
 
     @include tm('header') {
@@ -236,12 +241,13 @@
         margin-bottom: (21px)/2;
     }
     @include tm('subcopy') {
-        font-size: 18px;
+        font-size: 16px;
         line-height: 1.22;
+        font-weight: 300;
     }
     @include tablet-up() {
       max-width:200px;
-      max-height: 92px;
+      // max-height: 92px;
       @include tm('header') {
           font-size: 20px;
           line-height: 1.15;
@@ -251,10 +257,17 @@
           font-size: 18px;
           line-height: 1.22;
       }
+      &.fullwidth {
+        max-width: 450px;
+        @include tm('subcopy') {
+            line-height: 1.17;
+            margin-bottom: (21px)/2;
+        }
+      }
     }
     @include desktop-up() {
       max-width:320px;
-      max-height: 81px;
+      // max-height: 8/1px;
       @include tm('header') {
           font-size: 24px;
           line-height: 1.15;
@@ -263,6 +276,16 @@
       @include tm('subcopy') {
           font-size: 18px;
           line-height: 1.22;
+      }
+      &.fullwidth {
+        max-width: 500px;
+        @include tm('header') {
+            line-height: 1.12;
+        }
+        @include tm('subcopy') {
+            line-height: 1.17;
+            margin-bottom: (21px)/2;
+        }
       }
     }
   }
@@ -944,7 +967,7 @@
   &.kids {
     @include tm('header') {
       &:first-letter {
-        text-transform: capitalize;
+        // text-transform: capitalize;
       }
     }
 
@@ -955,7 +978,9 @@
     }
     &.titlecase {
       @include tm('header') {
-        text-transform: capitalize;
+        &:first-letter {
+          text-transform: capitalize;
+        }
       }
     }
     &.lowercase {
@@ -1022,11 +1047,10 @@
       &.hero-padding, &.feature-padding {
         padding: 18px 45px 13px 45px;
         @include tablet-up() {
-          font-size: 9.5pt;
+          font-size: 14px;
           padding: 18px 30px 13px 30px;
         }
         @include desktop-up() {
-          font-size: 9.5pt;
           padding: 17px 40px 12px 40px;
         }
       }
@@ -1196,6 +1220,11 @@
         width: 50%;
       }
       padding: 1rem;
+      &.fullwidth {
+        @include tablet-up() {
+          width: 100%;
+        }
+      }
     }
 
 
@@ -1219,6 +1248,7 @@
         &:nth-child(2) {
           @include aspect-ratio('announcement',360,215);
         }
+
       }
 
       @include desktop-up() {
@@ -1229,8 +1259,27 @@
         &:nth-child(2) {
           @include aspect-ratio('announcement',510,240);
         }
-        // width: 1280px;
+        // width: 1280px;s
         // height: 465px;
+      }
+      &-fullwidth {
+        background-image: url('https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Hero-b2.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        @include aspect-ratio('announcement',320,250);
+
+        @include tablet-up() {
+          float: left;
+          @include aspect-ratio('announcement',735,215);
+
+        }
+
+        @include desktop-up() {
+          float: left;
+          @include aspect-ratio('announcement',1050,240);
+        }
       }
     }
 
