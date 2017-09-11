@@ -1,0 +1,61 @@
+<div class="tumeric__nav-flyout">
+  <div class="tumeric__nav-flyout-container " data-component-id="{{ component_id }}">
+    <div class="tumeric__padding-box">
+      <div class="tumeric__nav-flyout-box">
+        <div class="nav-flyout-content">
+          <div class="tumeric__alignment nav-flyout-padding {{ alignment }}">
+            <div class="tumeric__typography {{ type_style }} colour-{{ colour }} {{ button_style }}">
+              <div class="tumeric__copy ">
+                <div class="tumeric__text-block nav-flyout-text first-text-box">
+                  <h1 class="tumeric__header">{{ header | safe }}</h1>
+                  <p class="tumeric__subcopy">{{ subcopy | safe }}</p>
+                </div>
+              </div>
+              <div class="tumeric__cta">
+                <a class="tumeric__cta-button promo-padding" href="{{ cta_link }}">{{ call_to_action }}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tumeric__offer-details ">
+        <a class="colour-{{ colour }}" href="{{ offer_details_link }}">{{ offer_details }}</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Styles -->
+
+<style>
+
+
+  .tumeric__nav-flyout-container[data-component-id="{{ component_id }}"] .tumeric__padding-box .tumeric__nav-flyout-box {
+      background-image:
+        url({{ background_url }}_b1.jpg),
+        url({{ background_url }}_b1.png),
+        url({{ background_url }}_b1.gif);
+      color:black;
+  }
+
+  /* Retina */
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.3),
+  only screen and (-o-min-device-pixel-ratio: 13/10),
+  only screen and (min-resolution: 120dpi) {
+
+    .tumeric__nav-flyout-container[data-component-id="{{ component_id }}"] .tumeric__padding-box .tumeric__nav-flyout-box {
+        background-image:
+          url({{ background_url }}_b1_@2x.jpg),
+          url({{ background_url }}_b1_@2x.png),
+          url({{ background_url }}_b1_@2x.gif),
+          url({{ background_url }}_b1.jpg),
+          url({{ background_url }}_b1.png),
+          url({{ background_url }}_b1.gif);
+        color:black;
+    }
+
+  }
+
+
+</style>

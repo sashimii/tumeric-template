@@ -141,6 +141,13 @@
   }
 
   .hero-long-copy {
+    width: 270px;
+    @include tablet-up() {
+      width: 420px;
+    }
+    @include desktop-up() {
+      width: 580px;
+    }
     @include tm('text-block') {
       @include tm('eyebrow-text') {
         margin: 0;
@@ -341,6 +348,23 @@
         line-height: 1.17;
       }
     }
+  }
+
+  .nav-flyout-text {
+    max-width: 226px;
+
+    @include tm('header') {
+      font-size: 26px;
+      line-height: 1.12;
+      margin-bottom: 19px;
+    }
+
+    @include tm('subcopy') {
+      font-size: 18px;
+      line-height: 1.17;
+      margin-bottom: 25px;
+    }
+
   }
 
 
@@ -1055,7 +1079,7 @@
         }
       }
 
-      &.announcement-padding, &.promo-padding {
+      &.announcement-padding, &.promo-padding, &.nav-flyout-padding {
         padding: 13px 35px 8px 35px;
         @include tablet-up() {
           font-size: 14px;
@@ -1123,6 +1147,30 @@
 
   }
 
+}
+
+@include tm('nav-flyout') {
+  float: left;
+  width: 400px;
+
+  &-container {
+    overflow: hidden;
+    background-color: grey;
+    background-image: url('https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Hero-b3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+
+    @include tm('padding-box') {
+      @include tm('nav-flyout-box') {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include aspect-ratio('nav-flyout',400,300);
+      }
+    }
+  }
 }
 
 @include tm('promotion') {
@@ -1556,6 +1604,9 @@
     &.promo-padding {
       @include pad-hero('padding-left', $promo-pad-mobile, $promo-pad-tablet , $promo-pad-desktop);
     }
+    &.nav-flyout-padding {
+      @include pad-hero('padding-left', $nav-flyout-padding, $nav-flyout-padding , $nav-flyout-padding);
+    }
 
     @include tm('typography') {
       float: left;
@@ -1598,6 +1649,10 @@
       @include pad-hero('right', $promo-pad-mobile, $promo-pad-tablet , $promo-pad-desktop);
     }
 
+    &.nav-flyout-padding {
+      @include pad-hero('right', $nav-flyout-padding, $nav-flyout-padding , $nav-flyout-padding);
+    }
+
     @include tm('typography') {
       float: right;
       text-align: right;
@@ -1634,6 +1689,10 @@
       @include pad-hero('bottom', $promo-pad-mobile, $promo-pad-tablet , $promo-pad-desktop);
     }
 
+    &.nav-flyout-padding {
+      @include pad-hero('bottom', $nav-flyout-padding , $nav-flyout-padding  , $nav-flyout-padding );
+    }
+
   }
 
   &.middle {
@@ -1660,6 +1719,9 @@
     }
     &.promo-padding {
       @include pad-hero('top', $promo-pad-mobile, $promo-pad-tablet , $promo-pad-desktop);
+    }
+    &.nav-flyout-padding {
+      @include pad-hero('top', $nav-flyout-padding, $nav-flyout-padding , $nav-flyout-padding);
     }
   }
 

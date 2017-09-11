@@ -20,8 +20,8 @@
         "b" : {
           "component_id": "asdqweasd",
           "alignment": "bottom left",
-          "type_style": "classic lowercase",
-          "colour": "black",
+          "type_style": "classic titlecase",
+          "colour": "orange",
           "eyebrow_text": "",
           "header": "ipsum dolor sit",
           "subheader" : "eum justo dicunt ponderum te in posse vivendo menandri nec.",
@@ -226,6 +226,21 @@
           "offer_details_link_3": "#",
           "background_url_3" : "https://s3.amazonaws.com/joefresh-resource-prod-new/ContentMedia/2017_P9/WK36-NewHP/promotile-womenssleep/wk36_promotile_womensleepwear"
         }
+      },
+      "navFlyout": {
+        "component_id": "eqrtdsfh",
+        "type_style": "classic titlecase",
+        "alignment": "bottom left",
+        "colour": "black",
+        "button_style": "stroke",
+        "eyebrow_text": "",
+        "header" : "2 pour 24 $ Vêtements de nuit pour femmes*",
+        "subcopy": "(Modèles sélectionnés au prix courant de 16 $ chacun)",
+        "call_to_action": "Shop",
+        "cta_link": "#",
+        "offer_details" : "*Offer Details",
+        "offer_details_link": "#",
+        "background_url" : "https://s3.amazonaws.com/joefresh-resource-prod-new/ContentMedia/2017_P9/WK36-NewHP/promotile-newarrivals/wk36_promotile_womensnewarrivals"
       },
       "blackBar" : {
         "text_copy_1" : "Give 25%, <strong>Get $10 off</strong> <a href=\"#\">Refer a Friend</a>",
