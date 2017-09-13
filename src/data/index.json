@@ -5,6 +5,7 @@
         "a" : {
           "component_id": "alksjdasd",
           "alignment": "bottom left",
+          "full_link": true,
           "type_style": "classic lowercase",
           "colour": "white",
           "eyebrow_text": "Quando Efficiendi",
@@ -20,6 +21,7 @@
         "b" : {
           "component_id": "asdqweasd",
           "alignment": "bottom left",
+          "full_link": true,
           "type_style": "classic titlecase",
           "colour": "orange",
           "eyebrow_text": "",
@@ -140,7 +142,7 @@
         "a": {
           "component_id": "asdasfasd",
           "type_style_1": "classic",
-          "alignment_1": "bottom left",
+          "alignment_1": "bottom center",
           "colour_1": "white-camel",
           "button_style_1": "fill",
           "eyebrow_text_1": "",
@@ -230,6 +232,7 @@
       "navFlyout": {
         "component_id": "eqrtdsfh",
         "type_style": "classic titlecase",
+        "full_link": true,
         "alignment": "bottom left",
         "colour": "black",
         "button_style": "stroke",
