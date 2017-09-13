@@ -422,6 +422,7 @@
       &:first-child:last-child {
         font-size: 50px; //(60pt / 1.5);
         line-height: 1;
+        margin-bottom: 23px;
       }
 
       @include tablet-up() {
@@ -433,6 +434,7 @@
       @include desktop-up() {
         &:first-child:last-child {
           font-size: 80px; //(110pt / 2);
+          margin-bottom: 32px;
         }
       }
 
