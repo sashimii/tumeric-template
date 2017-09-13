@@ -1,5 +1,4 @@
 <div id="carousel-black-bar" class="tumeric__carousel carousel slide" data-ride="carousel" data-interval="{{ carousel_interval }}000">
-
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
@@ -11,6 +10,7 @@
         </div>
       </div>
     </div>
+    {% if text_copy_2 %}
     <div class="item">
       <div class="black-bar-container">
         <div class="black-bar-content">
@@ -20,6 +20,8 @@
         </div>
       </div>
     </div>
+    {% endif %}
+    {% if text_copy_3 %}
     <div class="item">
       <div class="black-bar-container">
         <div class="black-bar-content">
@@ -29,9 +31,8 @@
         </div>
       </div>
     </div>
-
+    {% endif %}
   </div>
-
 </div>
 
 
@@ -47,7 +48,7 @@
   float: left;
   margin: auto;
   width: 100%;
-  padding: 14px 0 14px 0; }
+  padding: 12px 0 12px 0; }
   .black-bar-container .black-bar-content {
     text-align: center; }
     .black-bar-container .black-bar-content p {

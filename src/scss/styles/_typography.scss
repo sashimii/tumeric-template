@@ -1830,6 +1830,13 @@
   }
 }
 
+@include tm('full-component-link') {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+
 @include tm('component-padding') {
-  padding: 0 0 75px 0;
+  padding: 0 0 34px 0;
 }
