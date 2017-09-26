@@ -752,11 +752,11 @@
         @include tm('eyebrow-text') {
           color: $black;
         }
+        @include tm("eyebrow") {
+          background: $black;
+        }
         @include tm('header') {
           color: $orange;
-          @include tm("eyebrow") {
-            background: $black;
-          }
         }
         @include tm('subheader') {
           color: $orange;
@@ -770,6 +770,9 @@
         @include cta-evergreen("none");
         @include tm('eyebrow-text') {
           color: $white;
+        }
+        @include tm('eyebrow') {
+          background: $white;
         }
         @include tm('header') {
           color: $orange;
@@ -790,6 +793,9 @@
         @include cta-seasonal("navy");
         @include tm('eyebrow-text') {
           color: $orange;
+        }
+        @include tm('eyebrow') {
+          background: $orange;
         }
         @include tm('header') {
           color: $orange;
@@ -830,6 +836,9 @@
         @include tm('header') {
           color: $white;
         };
+        @include tm('subheader') {
+          color: $white;
+        };
         @include cta-seasonal("navy");
         @include tm("subcopy") {
           color: $navy;
@@ -847,6 +856,9 @@
         @include tm('header') {
           color: $white;
         };
+        @include tm('subheader') {
+          color: $white;
+        };
         @include cta-seasonal("camel");
         @include tm("subcopy") {
           color: $camel;
@@ -861,19 +873,27 @@
 
       &-orange {
         color: $white;
-        @include tm('header') {
-          color: $white;
-        };
-        @include cta-evergreen("orange");
-        @include tm("eyebrow") {
-          background: $white;
-        }
-        @include tm('subcopy') {
-          color: $orange;
-        };
         @include tm('eyebrow-text') {
           color: $white;
         }
+        @include tm("eyebrow") {
+          background: $white;
+        }
+
+        @include tm('header') {
+          color: $white;
+        };
+        @include tm('subheader') {
+          color: $white;
+        };
+
+
+        @include tm('subcopy') {
+          color: $orange;
+        };
+
+        @include cta-evergreen("orange");
+
       }
     }
 
@@ -1728,6 +1748,9 @@
     @include tm('typography') {
       float: left;
       text-align: center;
+      @include tm('text-block') {
+        margin: 0 auto;
+      }
       @include tm("eyebrow") {
         margin: auto;
       }
