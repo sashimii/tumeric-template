@@ -1,32 +1,33 @@
-<div class="tumeric__hero tumeric__component-padding">
-  <a class="tumeric__full-component-link" href="{{ cta_link }}">
-    <div class="tumeric__hero-container" {{ meta_attributes|safe }} data-component-id="{{ component_id }}">
-      <div class="hero-content">
-        <div class="tumeric__alignment hero-padding {{ alignment }}">
-          <div class="tumeric__typography {{ type_style }} colour-{{ colour }} {{ button_style }}">
-            <div class="tumeric__copy hero-classic">
-              <div class="tumeric__text-block">
-                {% if eyebrow_text %}
-                <h3 class="tumeric__eyebrow-text  hidden-xs">{{ eyebrow_text }}</h3>
-                <div class="tumeric__eyebrow  hidden-xs"></div>
-                {% endif %}
-                <h1 class="tumeric__header">{{ header | safe }}</h1>
-                <p class="tumeric__subcopy">{{ subcopy | safe }}</p>
+<div class="tumeric__styles">
+  <div class="tumeric__hero tumeric__component-padding">
+    <a class="tumeric__full-component-link" href="{{ cta_link }}">
+      <div class="tumeric__hero-container" {{ meta_attributes|safe }} data-component-id="{{ component_id }}">
+        <div class="hero-content">
+          <div class="tumeric__alignment hero-padding {{ alignment }}">
+            <div class="tumeric__typography {{ type_style }} colour-{{ colour }} {{ button_style }}">
+              <div class="tumeric__copy hero-classic">
+                <div class="tumeric__text-block">
+                  {% if eyebrow_text %}
+                  <h3 class="tumeric__eyebrow-text  hidden-xs">{{ eyebrow_text }}</h3>
+                  <div class="tumeric__eyebrow  hidden-xs"></div>
+                  {% endif %}
+                  <h1 class="tumeric__header">{{ header | safe }}</h1>
+                  <p class="tumeric__subcopy">{{ subcopy | safe }}</p>
+                </div>
               </div>
-            </div>
-            <div class="tumeric__cta">
-              <a class="tumeric__cta-button hero-padding" href="{{ cta_link }}">{{ call_to_action }}</a>
+              <div class="tumeric__cta">
+                <a class="tumeric__cta-button hero-padding" href="{{ cta_link }}">{{ call_to_action }}</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="tumeric__offer-details">
-      <a class="colour-{{ colour }}" href="{{ offer_details_link }}">{{ offer_details }}</a>
-    </div>
-  </a>
+      <div class="tumeric__offer-details">
+        <a class="colour-{{ colour }}" href="{{ offer_details_link }}">{{ offer_details }}</a>
+      </div>
+    </a>
+  </div>
 </div>
-
 <!-- Styles -->
 
 <style>

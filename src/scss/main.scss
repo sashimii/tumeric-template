@@ -1,6 +1,9 @@
-// @import "tumeric-main";
-@import "variables";
-@import "mixins/mixins";
+.tumeric__styles {
+  // @import "tumeric-main";
+  @import "variables";
+  @import "mixins/mixins";
 
-@import "styles/typography";
-// @import "black-box";
+  @import "styles/typography";
+  // @import "black-box";
+  
+}
