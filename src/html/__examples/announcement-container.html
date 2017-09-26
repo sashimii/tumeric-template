@@ -1,7 +1,7 @@
 <div class="container tumeric__component-padding">
   <div class="tumeric__announcement"  >
-    <h2 class="tumeric__announcement-header">Find Out More</h2>
-    <div class="tumeric__announcement-container" data-component-id="{{ component_id }}">
+    <h2 class="tumeric__announcement-header">{{ announcement_header }}</h2>
+    <div class="tumeric__announcement-container" {{ meta_attributes|safe }} data-component-id="{{ component_id }}">
       <div class="tumeric__padding-box">
         <div class="tumeric__announcement-box">
           <div class="announcement-content">
@@ -57,7 +57,6 @@
     </div>
   </div>
 </div>
-
 
 
 <!-- Styles -->

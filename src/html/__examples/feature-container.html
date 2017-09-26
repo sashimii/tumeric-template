@@ -1,6 +1,6 @@
 <div class="container tumeric__component-padding" >
   <div class="tumeric__feature" >
-    <div class="tumeric__feature-container" data-component-id="{{ component_id }}">
+    <div class="tumeric__feature-container" {{ meta_attributes|safe }} data-component-id="{{ component_id }}">
       <div class="feature-content">
         <div class="tumeric__alignment feature-padding {{ alignment }}">
           <div class="tumeric__typography {{ type_style }} colour-{{ colour }} {{ button_style }}">
@@ -26,7 +26,6 @@
     </div>
   </div>
 </div>
-
 
 <!-- Style -->
 <style>

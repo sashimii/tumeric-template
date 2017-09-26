@@ -1,55 +1,55 @@
 <div class="container tumeric__component-padding">
   <div class="tumeric__video">
     <div class="tumeric__video-box embed-responsive embed-responsive-16by9">
-      <video id="tumeric-video" class="embed-responsive-item" autoplay loop>
+      <video id="tumeric-video" class="embed-responsive-item" poster="{{ video_still_url }}" autoplay loop>
 
       </video>
     </div>
     <p class="tumeric__video-cta text-center"><a href="{{ cta_link }}">{{ call_to_action }}</a></p>
   </div>
 </div>
-
 <script>
-
   var tmFeaturedVideo = function() {
-    var video = $('#tumeric-video');
-
-    var windowWidth = $(window).width();
+    var video = document.getElementById('tumeric-video');
+    var windowWidth = Math.max(
+      document.body.scrollWidth,
+      document.documentElement.scrollWidth,
+      document.body.offsetWidth,
+      document.documentElement.offsetWidth,
+      document.documentElement.clientWidth
+  	);
 
     var imageIfRetina = function(image, breakpoint) {
       var isRetina = function() {
         var minPixelRatio = 1.3;
         return minPixelRatio < window.devicePixelRatio;
       }
-      
-      if(image === '') {
-        if(isRetina()) {
-          return image + '_' + breakpoint + '_@2x' + '.jpg';
-        } else {
-          return image + '_' + breakpoint + '.jpg';
-        }
+      if(isRetina()) {
+        return image + '_' + breakpoint + '_@2x' + '.jpg';
       } else {
-        return null;
+        return image + '_' + breakpoint + '.jpg';
       }
-
     }
 
+    var still;
+    var source;
 
     if (windowWidth <= 425) {
       // Mobile
-      video.attr('poster', imageIfRetina('{{ video_still_url }}', 'b3'));
-      video.append("<source src='{{ video_url_mobile }}' type='video/mp4' >");
+      still = imageIfRetina('{{ video_still_url }}', 'b3');
+      source = '{{ video_url_mobile }}';
     } else if (windowWidth > 425 && windowWidth < 1024 ) {
       // Tablets
-      video.attr('poster', imageIfRetina('{{ video_still_url }}', 'b2'));
-      video.append("<source src='{{ video_url_tablet }}' type='video/mp4' >");
+      still = imageIfRetina('{{ video_still_url }}', 'b2');
+      source = '{{ video_url_tablet }}';
     } else {
       // Desktop
-      video.attr('poster', imageIfRetina('{{ video_still_url }}', 'b1'));
-      video.append("<source src='{{ video_url_desktop }}' type='video/mp4' >");
+      still = imageIfRetina('{{ video_still_url }}', 'b1');
+      source = '{{ video_url_desktop }}';
     }
+
+    video.setAttribute('poster', still);
+    video.innerHTML += '<source src="' + source + '" type="video/mp4">';
   }
   tmFeaturedVideo();
-
-
 </script>
