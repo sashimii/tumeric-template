@@ -721,6 +721,9 @@
       @include tm('header') {
         color: $black;
       };
+      @include tm('subheader') {
+        color: $black;
+      };
       @include tm('subcopy') {
         color: $black;
       };
@@ -737,6 +740,9 @@
       @include tm('header') {
         color: $orange;
       }
+      @include tm('subheader') {
+        color: $orange;
+      };
       @include tm('subcopy') {
         color: $orange;
       }
@@ -752,6 +758,9 @@
             background: $black;
           }
         }
+        @include tm('subheader') {
+          color: $orange;
+        };
         @include tm('subcopy') {
           color: $black;
         }
@@ -768,6 +777,9 @@
             background: $white;
           }
         }
+        @include tm('subheader') {
+          color: $orange;
+        };
         @include tm('subcopy') {
           color: $white;
         }
@@ -780,6 +792,9 @@
           color: $orange;
         }
         @include tm('header') {
+          color: $orange;
+        };
+        @include tm('subheader') {
           color: $orange;
         };
         @include tm("subcopy") {
@@ -801,6 +816,9 @@
         color: $white;
       }
       @include tm('header') {
+        color: $white;
+      };
+      @include tm('subheader') {
         color: $white;
       };
       @include tm('subcopy') {
@@ -864,6 +882,9 @@
       @include tm('header') {
         color: $navy;
       };
+      @include tm('subheader') {
+        color: $navy;
+      };
       @include tm('subcopy') {
         color: $navy;
       };
@@ -878,6 +899,9 @@
       &-white {
         color: $navy;
         @include tm('header') {
+          color: $navy;
+        };
+        @include tm('subheader') {
           color: $navy;
         };
         @include tm('subcopy') {
@@ -895,6 +919,9 @@
       &-orange {
         color: $navy;
         @include tm('header') {
+          color: $navy;
+        };
+        @include tm('subheader') {
           color: $navy;
         };
         @include tm('subcopy') {
@@ -915,6 +942,9 @@
       @include tm('header') {
         color: $maroon;
       };
+      @include tm('subheader') {
+        color: $maroon;
+      };
       @include tm('subcopy') {
         color: $maroon;
       };
@@ -932,6 +962,9 @@
       @include tm('header') {
         color: $camel;
       };
+      @include tm('subheader') {
+        color: $camel;
+      };
       @include tm('subcopy') {
         color: $camel;
       };
@@ -946,6 +979,9 @@
       &-white {
         color: $camel;
         @include tm('header') {
+          color: $camel;
+        };
+        @include tm('subheader') {
           color: $camel;
         };
         @include cta-evergreen("white");
