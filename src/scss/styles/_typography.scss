@@ -712,6 +712,9 @@
     &-black {
       color: $black;
       @include cta-evergreen("black");
+      @include tm('eyebrow-text') {
+        color: $black;
+      }
       @include tm("eyebrow") {
         background: $black;
       }
@@ -728,6 +731,9 @@
       @include tm("eyebrow") {
         background: $orange;
       }
+      @include tm('eyebrow-text') {
+        color: $orange;
+      }
       @include tm('header') {
         color: $orange;
       }
@@ -737,6 +743,9 @@
 
       &-black {
         @include cta-evergreen("black");
+        @include tm('eyebrow-text') {
+          color: $black;
+        }
         @include tm('header') {
           color: $orange;
           @include tm("eyebrow") {
@@ -750,6 +759,9 @@
 
       &-white {
         @include cta-evergreen("none");
+        @include tm('eyebrow-text') {
+          color: $white;
+        }
         @include tm('header') {
           color: $orange;
           @include tm("eyebrow") {
@@ -764,6 +776,9 @@
       &-navy {
         color: $orange;
         @include cta-seasonal("navy");
+        @include tm('eyebrow-text') {
+          color: $orange;
+        }
         @include tm('header') {
           color: $orange;
         };
@@ -782,6 +797,9 @@
       @include tm("eyebrow") {
         background: $white;
       }
+      @include tm('eyebrow-text') {
+        color: $white;
+      }
       @include tm('header') {
         color: $white;
       };
@@ -801,6 +819,9 @@
         @include tm("eyebrow") {
           background: $white;
         }
+        @include tm('eyebrow-text') {
+          color: $white;
+        }
       }
 
       &-camel {
@@ -815,6 +836,9 @@
         @include tm("eyebrow") {
           background: $white;
         }
+        @include tm('eyebrow-text') {
+          color: $white;
+        }
       }
 
       &-orange {
@@ -826,6 +850,12 @@
         @include tm("eyebrow") {
           background: $white;
         }
+        @include tm('subcopy') {
+          color: $orange;
+        };
+        @include tm('eyebrow-text') {
+          color: $white;
+        }
       }
     }
 
@@ -834,9 +864,15 @@
       @include tm('header') {
         color: $navy;
       };
+      @include tm('subcopy') {
+        color: $navy;
+      };
       @include cta-seasonal("navy");
       @include tm("eyebrow") {
         background: $navy;
+      }
+      @include tm('eyebrow-text') {
+        color: $navy;
       }
 
       &-white {
@@ -844,9 +880,15 @@
         @include tm('header') {
           color: $navy;
         };
+        @include tm('subcopy') {
+          color: $white;
+        };
         @include cta-evergreen("white");
         @include tm("eyebrow") {
           background: $navy;
+        }
+        @include tm('eyebrow-text') {
+          color: $navy;
         }
       }
 
@@ -855,9 +897,15 @@
         @include tm('header') {
           color: $navy;
         };
+        @include tm('subcopy') {
+          color: $orange;
+        };
         @include cta-evergreen("orange");
         @include tm("eyebrow") {
           background: $navy;
+        }
+        @include tm('eyebrow-text') {
+          color: $navy;
         }
       }
     }
@@ -867,9 +915,15 @@
       @include tm('header') {
         color: $maroon;
       };
+      @include tm('subcopy') {
+        color: $maroon;
+      };
       @include cta-seasonal("maroon");
       @include tm("eyebrow") {
-        background: $navy;
+        background: $maroon;
+      }
+      @include tm('eyebrow-text') {
+        color: $maroon;
       }
     }
 
@@ -878,9 +932,15 @@
       @include tm('header') {
         color: $camel;
       };
+      @include tm('subcopy') {
+        color: $camel;
+      };
       @include cta-seasonal("camel");
       @include tm("eyebrow") {
         background: $camel;
+      }
+      @include tm('eyebrow-text') {
+        color: $camel;
       }
 
       &-white {
@@ -894,6 +954,9 @@
         }
         @include tm("eyebrow") {
           background: $camel;
+        }
+        @include tm('eyebrow-text') {
+          color: $camel;
         }
       }
     }
@@ -1840,5 +1903,5 @@
 
 
 @include tm('component-padding') {
-  padding: 0 0 34px 0;
+  padding: 0 0 48px 0;
 }
