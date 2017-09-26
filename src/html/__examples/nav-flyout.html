@@ -1,30 +1,32 @@
 <div class="tumeric__nav-flyout">
-  <div class="tumeric__nav-flyout-container " data-component-id="{{ component_id }}">
-    <a class="tumeric__full-component-link" {% if full_link %}href="{{ cta_link }}"{% endif %}>
-      <div class="tumeric__padding-box">
-        <div class="tumeric__nav-flyout-box">
-          <div class="nav-flyout-content">
-            <div class="tumeric__alignment nav-flyout-padding {{ alignment }}">
-              <div class="tumeric__typography {{ type_style }} colour-{{ colour }} {{ button_style }}">
-                <div class="tumeric__copy ">
-                  <div class="tumeric__text-block nav-flyout-text first-text-box">
-                    <h1 class="tumeric__header">{{ header | safe }}</h1>
-                    <p class="tumeric__subcopy">{{ subcopy | safe }}</p>
+  <a class="tumeric__full-component-link" href="{{ cta_link }}">
+    <div class="tumeric__nav-flyout-container " data-component-id="{{ component_id }}">
+      <a class="tumeric__full-component-link" {% if full_link %}href="{{ cta_link }}"{% endif %}>
+        <div class="tumeric__padding-box">
+          <div class="tumeric__nav-flyout-box">
+            <div class="nav-flyout-content">
+              <div class="tumeric__alignment nav-flyout-padding {{ alignment }}">
+                <div class="tumeric__typography {{ type_style }} colour-{{ colour }} {{ button_style }}">
+                  <div class="tumeric__copy ">
+                    <div class="tumeric__text-block nav-flyout-text first-text-box">
+                      <h1 class="tumeric__header">{{ header | safe }}</h1>
+                      <p class="tumeric__subcopy">{{ subcopy | safe }}</p>
+                    </div>
                   </div>
-                </div>
-                <div class="tumeric__cta">
-                  <a class="tumeric__cta-button promo-padding" href="{{ cta_link }}">{{ call_to_action }}</a>
+                  <div class="tumeric__cta">
+                    <a class="tumeric__cta-button promo-padding" href="{{ cta_link }}">{{ call_to_action }}</a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <div class="tumeric__offer-details ">
+            <a class="colour-{{ colour }}" href="{{ offer_details_link }}">{{ offer_details }}</a>
+          </div>
         </div>
-        <div class="tumeric__offer-details ">
-          <a class="colour-{{ colour }}" href="{{ offer_details_link }}">{{ offer_details }}</a>
-        </div>
-      </div>
-    </a>
-  </div>
+      </a>
+    </div>
+  </a>
 </div>
 
 <!-- Styles -->

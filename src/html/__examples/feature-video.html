@@ -1,12 +1,14 @@
 <div class="container tumeric__component-padding">
-  <div class="tumeric__video">
-    <div class="tumeric__video-box embed-responsive embed-responsive-16by9">
-      <video id="tumeric-video" class="embed-responsive-item" poster="{{ video_still_url }}" autoplay loop>
+  <a class="tumeric__full-component-link" href="{{ cta_link }}">
+    <div class="tumeric__video">
+      <div class="tumeric__video-box embed-responsive embed-responsive-16by9">
+        <video id="tumeric-video" class="embed-responsive-item" poster="{{ video_still_url }}" autoplay loop>
 
-      </video>
+        </video>
+      </div>
+      <p class="tumeric__video-cta text-center"><a href="{{ cta_link }}">{{ call_to_action }}</a></p>
     </div>
-    <p class="tumeric__video-cta text-center"><a href="{{ cta_link }}">{{ call_to_action }}</a></p>
-  </div>
+  </a>
 </div>
 <script>
   var tmFeaturedVideo = function() {

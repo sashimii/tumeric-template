@@ -1,42 +1,44 @@
 <div class="tumeric__hero tumeric__component-padding">
-  <div class="tumeric__hero-container" {{ meta_attributes|safe }} data-component-id="{{ component_id }}">
-    <div class="hero-content">
-      <div class="tumeric__alignment hero-padding {{ alignment }}">
-        <div class="tumeric__typography {{ type_style }} colour-{{colour}} {{ button_style }}">
-          <div class="tumeric__copy tumeric__3-column">
-            {% if eyebrow_text %}
-            <p class="tumeric__eyebrow-text hidden-xs ">{{ eyebrow_text }}</p>
-            <div class="tumeric__eyebrow hidden-xs "></div>
-            {% endif %}
-            <div class="tumeric__hero-preset-c fr">
-              <div class="tumeric__text-block">
-                <h3 class="tumeric__subheader">{{ subheader_1 | safe }}</h3>
-                <h2 class="tumeric__header">{{ header_1 | safe }}</h2>
-                <p class="tumeric__subcopy">{{ code_1 | safe }}</p>
+  <a class="tumeric__full-component-link" href="{{ cta_link }}">
+    <div class="tumeric__hero-container" {{ meta_attributes|safe }} data-component-id="{{ component_id }}">
+      <div class="hero-content">
+        <div class="tumeric__alignment hero-padding {{ alignment }}">
+          <div class="tumeric__typography {{ type_style }} colour-{{colour}} {{ button_style }}">
+            <div class="tumeric__copy tumeric__3-column">
+              {% if eyebrow_text %}
+              <p class="tumeric__eyebrow-text hidden-xs ">{{ eyebrow_text }}</p>
+              <div class="tumeric__eyebrow hidden-xs "></div>
+              {% endif %}
+              <div class="tumeric__hero-preset-c fr">
+                <div class="tumeric__text-block">
+                  <h3 class="tumeric__subheader">{{ subheader_1 | safe }}</h3>
+                  <h2 class="tumeric__header">{{ header_1 | safe }}</h2>
+                  <p class="tumeric__subcopy">{{ code_1 | safe }}</p>
+                </div>
+                <div class="tumeric__text-block ">
+                  <h3 class="tumeric__subheader">{{ subheader_2 | safe }}</h3>
+                  <h2 class="tumeric__header">{{ header_2 | safe }}</h2>
+                  <p class="tumeric__subcopy">{{ code_2 | safe }}</p>
+                </div>
+                <div class="tumeric__text-block ">
+                  <h3 class="tumeric__subheader">{{ subheader_3 | safe }}</h3>
+                  <h2 class="tumeric__header">{{ header_3 | safe }}</h2>
+                  <p class="tumeric__subcopy">{{ code_3 | safe }}</p>
+                </div>
               </div>
-              <div class="tumeric__text-block ">
-                <h3 class="tumeric__subheader">{{ subheader_2 | safe }}</h3>
-                <h2 class="tumeric__header">{{ header_2 | safe }}</h2>
-                <p class="tumeric__subcopy">{{ code_2 | safe }}</p>
-              </div>
-              <div class="tumeric__text-block ">
-                <h3 class="tumeric__subheader">{{ subheader_3 | safe }}</h3>
-                <h2 class="tumeric__header">{{ header_3 | safe }}</h2>
-                <p class="tumeric__subcopy">{{ code_3 | safe }}</p>
-              </div>
+              <p class="tumeric__subcopy">{{ subcopy | safe }}</p>
             </div>
-            <p class="tumeric__subcopy">{{ subcopy | safe }}</p>
-          </div>
-          <div class="tumeric__cta">
-            <a class="tumeric__cta-button hero-padding" href="{{ cta_link }}">{{ call_to_action }}</a>
+            <div class="tumeric__cta">
+              <a class="tumeric__cta-button hero-padding" href="{{ cta_link }}">{{ call_to_action }}</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="tumeric__offer-details ">
-    <a class="colour-{{ colour }}" href="{{ offer_details_link }}">{{ offer_details }}</a>
-  </div>
+    <div class="tumeric__offer-details ">
+      <a class="colour-{{ colour }}" href="{{ offer_details_link }}">{{ offer_details }}</a>
+    </div>
+  </a>
 </div>
 
 <!-- Styles -->
