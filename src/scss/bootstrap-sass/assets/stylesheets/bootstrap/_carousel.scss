@@ -12,6 +12,7 @@
   position: relative;
   overflow: hidden;
   width: 100%;
+  min-height: 0;
 
   > .item {
     display: none;
