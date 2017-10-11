@@ -1,3 +1,5 @@
+@import './styles/fall-fonts';
+@import './styles/kids-fonts';
 .tumeric__styles {
   // @import "tumeric-main";
   @import "variables";
@@ -5,5 +7,6 @@
 
   @import "styles/typography";
   // @import "black-box";
-  
+  @include clearfix();
+
 }
