@@ -733,6 +733,26 @@
       @include tm('subcopy') {
         color: $black;
       };
+
+      &-orange {
+        @include cta-evergreen("orange");
+        @include tm("eyebrow") {
+          background: $orange;
+        }
+        @include tm('eyebrow-text') {
+          color: $orange;
+        }
+        @include tm('header') {
+          color: $black;
+        }
+        @include tm('subheader') {
+          color: $black;
+        };
+        @include tm('subcopy') {
+          color: $black;
+        }
+      }
+
     }
 
     &-orange {
