@@ -877,6 +877,46 @@
         }
       }
 
+      &-green {
+        color: $white;
+        @include tm('header') {
+          color: $white;
+        };
+        @include tm('subheader') {
+          color: $white;
+        };
+        @include cta-seasonal("green");
+        @include tm("subcopy") {
+          color: $white;
+        }
+        @include tm("eyebrow") {
+          background: $green;
+        }
+        @include tm('eyebrow-text') {
+          color: $green;
+        }
+      }
+
+      &-red {
+        color: $white;
+        @include tm('header') {
+          color: $white;
+        };
+        @include tm('subheader') {
+          color: $white;
+        };
+        @include cta-seasonal("red");
+        @include tm("subcopy") {
+          color: $white;
+        }
+        @include tm("eyebrow") {
+          background: $red;
+        }
+        @include tm('eyebrow-text') {
+          color: $red;
+        }
+      }
+
       &-camel {
         color: $white;
         @include tm('header') {
@@ -1043,6 +1083,83 @@
       }
     }
 
+    &-green {
+      @include cta-seasonal("green");
+      @include tm("eyebrow") {
+        background: $green;
+      }
+      @include tm('eyebrow-text') {
+        color: $green;
+      }
+      @include tm('header') {
+        color: $green;
+      }
+      @include tm('subheader') {
+        color: $green;
+      };
+      @include tm('subcopy') {
+        color: $green;
+      }
+
+      &-white {
+        color: $green;
+        @include tm('header') {
+          color: $green;
+        };
+        @include tm('subheader') {
+          color: $green;
+        };
+        @include cta-seasonal("green-white");
+        @include tm("subcopy") {
+          color: $white;
+        }
+        @include tm("eyebrow") {
+          background: $green;
+        }
+        @include tm('eyebrow-text') {
+          color: $green;
+        }
+      }
+    }
+
+    &-red {
+      @include cta-seasonal("red");
+      @include tm("eyebrow") {
+        background: $red;
+      }
+      @include tm('eyebrow-text') {
+        color: $red;
+      }
+      @include tm('header') {
+        color: $red;
+      }
+      @include tm('subheader') {
+        color: $red;
+      };
+      @include tm('subcopy') {
+        color: $red;
+      }
+
+      &-white {
+        color: $red;
+        @include tm('header') {
+          color: $red;
+        };
+        @include tm('subheader') {
+          color: $red;
+        };
+        @include cta-seasonal("red-white");
+        @include tm("subcopy") {
+          color: $white;
+        }
+        @include tm("eyebrow") {
+          background: $red;
+        }
+        @include tm('eyebrow-text') {
+          color: $red;
+        }
+      }
+    }
 
     // Stroke or Fill?
     &-fill {
