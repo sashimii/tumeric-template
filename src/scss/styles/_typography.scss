@@ -753,6 +753,45 @@
         }
       }
 
+      &-green {
+        color: $black;
+        @include tm('header') {
+          color: $black;
+        };
+        @include tm('subheader') {
+          color: $black;
+        };
+        @include cta-seasonal("green");
+        @include tm("subcopy") {
+          color: $black;
+        }
+        @include tm("eyebrow") {
+          background: $green;
+        }
+        @include tm('eyebrow-text') {
+          color: $green;
+        }
+      }
+
+      &-red {
+        color: $black;
+        @include tm('header') {
+          color: $black;
+        };
+        @include tm('subheader') {
+          color: $black;
+        };
+        @include cta-seasonal("red");
+        @include tm("subcopy") {
+          color: $black;
+        }
+        @include tm("eyebrow") {
+          background: $red;
+        }
+        @include tm('eyebrow-text') {
+          color: $red;
+        }
+      }
     }
 
     &-orange {
