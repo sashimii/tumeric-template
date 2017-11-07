@@ -1266,7 +1266,7 @@
 
   &-container {
     overflow: hidden;
-    background-image: url('https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Hero-b3.jpg');
+    background-color: grey;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1303,7 +1303,6 @@
   &-container {
     overflow: hidden;
     background-color: grey;
-    background-image: url('https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Hero-b3.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1383,7 +1382,7 @@
 
 
     @include tm('promotion-box') {
-      background-image: url('https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Hero-b2.jpg');
+      background-color: grey;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -1426,7 +1425,7 @@
 
 
     @include tm('announcement-box') {
-      background-image: url('https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Hero-b2.jpg');
+      background-color: grey;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -1460,7 +1459,7 @@
         // height: 465px;
       }
       &-fullwidth {
-        background-image: url('https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Hero-b2.jpg');
+        background-color: grey;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -1604,7 +1603,7 @@
   width: 100%;
 
   &-container {
-    // background-image: url('https://zeid-test.s3.amazonaws.com/cumin/static/uploads/2017-06-15/Fall-Homepage-Mocks-Hero-b3.jpg');
+    background-color: grey;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
