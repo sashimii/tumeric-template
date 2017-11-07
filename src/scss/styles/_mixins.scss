@@ -305,6 +305,62 @@
       color: $camel;
     }
   }
+  @else if $colour == "green" {
+    @include cta('fill') {
+      background-color: $green;
+      color: $white;
+    }
+    @include cta('stroke') {
+      border-color: $green;
+      color: $green;
+    }
+    @include cta('none') {
+
+      color: $green;
+    }
+  }
+  @else if $colour == "green-white" {
+    @include cta('fill') {
+      background-color: $white;
+      color: $green;
+    }
+    @include cta('stroke') {
+      border-color: $white;
+      color: $white;
+    }
+    @include cta('none') {
+
+      color: $green;
+    }
+  }
+  @else if $colour == "red" {
+    @include cta('fill') {
+      background-color: $red;
+      color: $white;
+    }
+    @include cta('stroke') {
+      border-color: $red;
+      color: $red;
+    }
+    @include cta('none') {
+
+      color: $red;
+    }
+  }
+  @else if $colour == "red-white" {
+    @include cta('fill') {
+      background-color: $white;
+      color: $red;
+    }
+    @include cta('stroke') {
+      border-color: $white;
+      color: $white;
+    }
+    @include cta('none') {
+
+      color: $red;
+    }
+  }
   @else {
     @include cta('fill') {
       background-color: $white;
