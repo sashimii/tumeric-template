@@ -1811,6 +1811,16 @@
         color: $orange;
       }
 
+      &-red {
+        text-decoration: underline;
+        color: $red;
+      }
+
+      &-green {
+        text-decoration: underline;
+        color: $green;
+      }
+
     }
 
     &-orange {
@@ -1851,6 +1861,16 @@
         color: $camel;
       }
 
+      &-red {
+        text-decoration: underline;
+        color: $red;
+      }
+
+      &-green {
+        text-decoration: underline;
+        color: $green;
+      }
+
     }
 
     &-navy {
@@ -1878,6 +1898,26 @@
       text-decoration: underline;
       color: $camel;
       &-white {
+        text-decoration: underline;
+        color: $white;
+      }
+    }
+
+    &-green{
+      text-decoration: underline;
+      color: $green;
+
+      &-white{
+        text-decoration: underline;
+        color: $white;
+      }
+    }
+
+    &-red{
+      text-decoration: underline;
+      color: $red;
+
+      &-white{
         text-decoration: underline;
         color: $white;
       }
