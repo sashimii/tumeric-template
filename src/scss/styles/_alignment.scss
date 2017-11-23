@@ -1,0 +1,15 @@
+@import 'required-bootstrap-styles';
+@import 'variables';
+@import 'colours';
+@import 'mixins';
+
+@include tm('alignment') {
+    
+    &.right{
+
+        @include tm('text-block') {
+            float: right;
+        }
+    }
+
+}
