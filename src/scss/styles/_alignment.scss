@@ -1,0 +1,10 @@
+@include tm('alignment') {
+    
+    &.right{
+
+        @include tm('text-block') {
+            float: right;
+        }
+    }
+
+}

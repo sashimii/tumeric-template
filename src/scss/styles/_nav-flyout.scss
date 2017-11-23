@@ -1,0 +1,24 @@
+@import 'required-bootstrap-styles';
+@import 'variables';
+@import 'colours';
+@import 'mixins';
+
+@include tm('nav-flyout') {
+
+    a {
+        &.tumeric__full-component-link {
+            display: block!important;
+        }
+    }
+
+    @include tm('nav-flyout-container') {
+
+        @include tm('typography') {
+
+            @include tm('copy') {
+                text-transform: none;
+                letter-spacing: normal;
+            }
+        }
+    }
+}
