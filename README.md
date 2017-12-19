@@ -10,6 +10,10 @@
 
 ## Usage
 
-Install: `npm install`
+Install NodeJS
+
+Install Gulp: `npm install -g gulp`
+
+Install dependencies: `npm install`
 
 Run Dev Server: `gulp`
