@@ -169,6 +169,7 @@
   &.#{$style} {
     @include tm('cta') {
       &-button {
+        letter-spacing: 0 !important;
         @if $style == 'fill' {
 
           @content;
