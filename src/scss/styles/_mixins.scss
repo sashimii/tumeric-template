@@ -256,6 +256,33 @@
       color: $orange;
     }
   }
+    @else if $colour == "spring-grey" {
+    @include cta('fill') {
+      background-color: $spring_grey;
+      color: white;
+    }
+    @include cta('stroke') {
+      border-color: $spring_grey;
+      color: $spring_grey;
+    }
+    @include cta('none') {
+      color: $spring_grey;
+    }
+  }
+    @else if $colour == "newborn" {
+    @include cta('fill') {
+      background-color: $newborn;
+      color: white;
+    }
+    @include cta('stroke') {
+      border-color: $newborn;
+      color: $newborn;
+    }
+    @include cta('none') {
+      color: $newborn;
+    }
+
+  }
   @else {
     @include cta('fill') {
       background-color: $white;
