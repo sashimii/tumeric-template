@@ -3,6 +3,10 @@
 .tumeric__styles {
   // @import "tumeric-main";
   @import "variables";
+  @import "styles/variables";
+  @import "styles/required-bootstrap-styles";
+  @import "styles/colours";
+  @import "styles/mixins";
   @import "mixins/mixins";
 
   @import "styles/typography";
