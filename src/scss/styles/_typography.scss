@@ -1,4 +1,8 @@
 // @import '../black-box';
+@import 'required-bootstrap-styles';
+@import 'variables';
+@import 'colours';
+@import 'mixins';
 
 @include tm('typography') {
   font-family: 'JFCalibre', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
@@ -1374,6 +1378,10 @@
         background: $orange;
       }
     ;
+      @include tm("offer-details") {
+        color: $orange;
+      }
+      ;
       @include tm('eyebrow-text') {
         color: $orange;
       }
@@ -1397,6 +1405,10 @@
           background: $orange;
         }
       ;
+        @include tm("offer-details") {
+          color: $orange;
+        }
+        ;
         @include tm('eyebrow-text') {
           color: $orange;
         }
@@ -1421,6 +1433,10 @@
         background: $orange;
       }
     ;
+      @include tm("offer-details") {
+        color: $orange;
+      }
+      ;
       @include tm('eyebrow-text') {
         color: $orange;
       }
@@ -1444,6 +1460,9 @@
           background: $orange;
         }
       ;
+        @include tm("offer-details") {
+          color: $spring_grey;
+        };
         @include tm('eyebrow-text') {
           color: $orange;
         }
@@ -1469,6 +1488,10 @@
         background: white;
       }
     ;
+      @include tm("offer-details") {
+        color: white;
+      }
+      ;
       @include tm('eyebrow-text') {
         color: white;
       }
@@ -1492,6 +1515,10 @@
           background: white;
         }
       ;
+        @include tm("offer-details") {
+          color: white;
+        }
+        ;
         @include tm('eyebrow-text') {
           color: white;
         }
